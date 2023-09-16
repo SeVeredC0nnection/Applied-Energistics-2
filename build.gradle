@@ -16,14 +16,8 @@
  * along with Applied Energistics 2.  If not, see <http://www.gnu.org/licenses/lgpl>.
  */
 
-buildscript {
-    dependencies {
-        classpath 'org.spongepowered:mixingradle:0.7-SNAPSHOT'
-    }
-}
-
 plugins {
-    id "net.neoforged.gradle"
+    id "net.neoforged.gradle.userdev"
     id "maven-publish"
     id "com.diffplug.spotless"
     id "com.github.johnrengelman.shadow"
@@ -43,8 +37,6 @@ sourceSets {
     }
     buildtools
 }
-
-apply plugin: 'org.spongepowered.mixin'
 
 configurations {
     shaded {
@@ -74,45 +66,45 @@ dependencies {
     shaded "org.yaml:snakeyaml:${snakeyaml_version}"
     shaded "com.google.flatbuffers:flatbuffers-java:${flatbuffers_version}"
 
-    minecraftLibrary(project(':libs:markdown')) {
+    implementation(project(':libs:markdown')) {
         transitive = false
     }
     // Do not inherit any transitive dependencies here since we rely on those dependencies being
     // present in Minecrafts own dependencies already.
-    minecraftLibrary("io.methvin:directory-watcher:${directory_watcher_version}") {
+    implementation("io.methvin:directory-watcher:${directory_watcher_version}") {
         transitive = false
     }
-    minecraftLibrary("org.yaml:snakeyaml:${snakeyaml_version}") {
+    implementation("org.yaml:snakeyaml:${snakeyaml_version}") {
         transitive = false
     }
-    minecraftLibrary("com.google.flatbuffers:flatbuffers-java:${flatbuffers_version}") {
+    implementation("com.google.flatbuffers:flatbuffers-java:${flatbuffers_version}") {
         transitive = false
     }
     // Used for the guide export
-    minecraftLibrary("org.bytedeco:ffmpeg-platform:6.0-1.5.9")
+    implementation("org.bytedeco:ffmpeg-platform:6.0-1.5.9")
 
-    minecraft "net.neoforged:forge:${minecraft_version}-${neoforge_version}"
+    implementation "net.neoforged:forge:${minecraft_version}-${neoforge_version}"
 
     // compile against provided APIs
-    compileOnly fg.deobf("mezz.jei:jei-${jei_minecraft_version}-common-api:${jei_version}")
-    compileOnly fg.deobf("mezz.jei:jei-${jei_minecraft_version}-forge-api:${jei_version}")
+    compileOnly "mezz.jei:jei-${jei_minecraft_version}-common-api:${jei_version}"
+    compileOnly "mezz.jei:jei-${jei_minecraft_version}-forge-api:${jei_version}"
 
     // Always depend on the REI API to compile
     if (project.runtime_itemlist_mod == "jei") {
-        runtimeOnly fg.deobf("mezz.jei:jei-${jei_minecraft_version}-forge:${jei_version}")
+        runtimeOnly "mezz.jei:jei-${jei_minecraft_version}-forge:${jei_version}"
 
         compileOnly "me.shedaniel.cloth:basic-math:0.6.1"
-        compileOnly fg.deobf("dev.architectury:architectury-forge:${project.architectury_version}")
-        compileOnly fg.deobf("me.shedaniel:RoughlyEnoughItems-forge:${project.rei_version}")
+        compileOnly ("dev.architectury:architectury-forge:${project.architectury_version}")
+        compileOnly ("me.shedaniel:RoughlyEnoughItems-forge:${project.rei_version}")
     } else if (project.runtime_itemlist_mod == "rei") {
         implementation "me.shedaniel.cloth:basic-math:0.6.1"
-        implementation fg.deobf("me.shedaniel.cloth:cloth-config-forge:${project.cloth_config_version}")
-        implementation fg.deobf("dev.architectury:architectury-forge:${project.architectury_version}")
-        implementation fg.deobf("me.shedaniel:RoughlyEnoughItems-forge:${project.rei_version}")
+        implementation ("me.shedaniel.cloth:cloth-config-forge:${project.cloth_config_version}")
+        implementation ("dev.architectury:architectury-forge:${project.architectury_version}")
+        implementation ("me.shedaniel:RoughlyEnoughItems-forge:${project.rei_version}")
     } else {
-        compileOnly fg.deobf("me.shedaniel.cloth:cloth-config-forge:${project.cloth_config_version}")
-        compileOnly fg.deobf("dev.architectury:architectury-forge:${project.architectury_version}")
-        compileOnly fg.deobf("me.shedaniel:RoughlyEnoughItems-forge:${project.rei_version}")
+        compileOnly ("me.shedaniel.cloth:cloth-config-forge:${project.cloth_config_version}")
+        compileOnly ("dev.architectury:architectury-forge:${project.architectury_version}")
+        compileOnly ("me.shedaniel:RoughlyEnoughItems-forge:${project.rei_version}")
     }
 
     // Locally sourced extra mods for runtime (i.e. testing)
@@ -122,25 +114,25 @@ dependencies {
         assert versionSep != -1
         def artifactId = basename.substring(0, versionSep)
         def version = basename.substring(versionSep + 1)
-        runtimeOnly fg.deobf("extra-mods:$artifactId:$version")
+        runtimeOnly ("extra-mods:$artifactId:$version")
     }
 
     if (project.runtime_tooltip_mod == "wthit") {
-        runtimeOnly fg.deobf("mcp.mobius.waila:wthit:forge-${project.wthit_version}")
-        runtimeOnly fg.deobf("lol.bai:badpackets:forge-0.1.2")
+        runtimeOnly ("mcp.mobius.waila:wthit:forge-${project.wthit_version}")
+        runtimeOnly ("lol.bai:badpackets:forge-0.1.2")
     } else {
         compileOnly fg.deobf("mcp.mobius.waila:wthit-api:forge-${project.wthit_version}")
     }
 
     if (project.runtime_tooltip_mod == "jade") {
-        implementation fg.deobf("curse.maven:jade-324717:${project.jade_file_id}")
+        implementation ("curse.maven:jade-324717:${project.jade_file_id}")
     } else {
-        compileOnly fg.deobf("curse.maven:jade-324717:${project.jade_file_id}")
+        compileOnly ("curse.maven:jade-324717:${project.jade_file_id}")
     }
 
     def topDependency = "curse.maven:the-one-probe-245211:4159743"
     if (project.runtime_tooltip_mod == "top") {
-        implementation fg.deobf(topDependency)
+        implementation (topDependency)
     } else {
         compileOnly topDependency
     }
@@ -295,76 +287,81 @@ dependencies {
 /**
  * Configures properties common to all run configurations
  */
+def commonSystemProperties = [
+    'forge.logging.console.level': 'debug',
+    'fml.earlyprogresswindow': 'false',
+    'appeng.tests': 'true',
+]
+
 def commonRunProperties = {
-    workingDirectory project.file('run')
-    property 'forge.logging.console.level', 'debug'
-    property 'fml.earlyprogresswindow', 'false'
-    property 'appeng.tests', 'true'
-    jvmArgs "--add-opens", "java.base/sun.security.util=ALL-UNNAMED"
-    jvmArgs "--add-opens", "java.base/java.util.jar=ALL-UNNAMED"
-    // See https://github.com/Vazkii/Patchouli#mixin-troubleshooting
-    property 'mixin.env.remapRefMap', 'true'
-    property 'mixin.env.refMapRemappingFile', "${projectDir}/build/createSrgToMcp/output.srg"
+    workingDirectory = project.file('run')
+//    jvmArgs "--add-opens", "java.base/sun.security.util=ALL-UNNAMED"
+//    jvmArgs "--add-opens", "java.base/java.util.jar=ALL-UNNAMED"
+    systemProperties = commonSystemProperties
     // property "mixin.debug.export", "true"
-    mods {
-        appliedenergistics2 {
-            source sourceSets.main
-        }
-    }
+    modSources = [sourceSets.main]
 }
 
 ////////////////////
 // Forge/Minecraft
 minecraft {
-    mappings channel: 'official', version: project.minecraft_version
+    mappings {
+        channel = official()
+        version.put "minecraft", project.minecraft_version
+    }
 
-    accessTransformer = file('src/main/resources/META-INF/accesstransformer.cfg')
+    accessTransformers {
+        file('src/main/resources/META-INF/accesstransformer.cfg')
+    }
+}
 
-    runs {
-        client {
-            with commonRunProperties
-            property "appeng.tests", "true"
-            property "guideDev.ae2guide.sources", file("guidebook").absolutePath
-        }
-        gametestWorld {
+runs {
+    client {
+        with commonRunProperties
+        systemProperties = [
+          *:commonSystemProperties,
+          "appeng.tests": "true",
+          "guideDev.ae2guide.sources": file("guidebook").absolutePath,
+        ]
+    }
+    gametestWorld {
             parent runs.client
             args "--username", "AE2Dev", "--quickPlaySingleplayer", "GametestWorld"
             property "appeng.tests", "true"
             property "guideDev.ae2guide.sources", file("guidebook").absolutePath
         }
         guide {
-            parent runs.client
-            with commonRunProperties
-            property "guideDev.ae2guide.sources", file("guidebook").absolutePath
-            property "guideDev.ae2guide.startupPage", "ae2:index.md"
-        }
-        server {
-            with commonRunProperties
-        }
-        data {
-            with commonRunProperties
-            args '--mod', 'ae2', '--all', '--output', file('src/generated/resources/'), "--existing", file("src/main/resources")
-        }
-        guideexport {
-            parent runs.client
-            with commonRunProperties
-            property "appeng.runGuideExportAndExit", "true"
-            property "appeng.guideExportFolder", file("$buildDir/guide").absolutePath
-            property "guideDev.ae2guide.sources", file("guidebook").absolutePath
-        }
-        // Use to run the tests
-        gametest {
-            parent server
-            with commonRunProperties
-            workingDirectory "build/gametest"
-        }
+            configure("client")
+        with commonRunProperties
+        systemProperties = [
+          "guideDev.ae2guide.sources": file("guidebook").absolutePath,
+          "guideDev.ae2guide.startupPage": "ae2:index.md"
+        ]
     }
-}
-
-///////////
-// Mixins
-mixin {
-    add sourceSets.main, "ae2.mixins.refmap.json"
+    server {
+        with commonRunProperties
+    }
+    data {
+        with commonRunProperties
+        programArguments = [
+                '--mod', 'ae2', '--all', '--output', file('src/generated/resources/'), "--existing", file("src/main/resources")
+        ]
+    }
+    guideexport {
+        configure("client")
+        with commonRunProperties
+        systemProperties = [
+          "appeng.runGuideExportAndExit": "true",
+          "appeng.guideExportFolder": file("$buildDir/guide").absolutePath,
+          "guideDev.ae2guide.sources": file("guidebook").absolutePath
+        ]
+    }
+    // Use to run the tests
+    gametest {
+        configure("server")
+        with commonRunProperties
+        workingDirectory = project.file("build/gametest")
+    }
 }
 
 //////////////
@@ -413,35 +410,20 @@ shadowJar {
     archiveClassifier = null
 }
 
-reobf {
-    shadowJar {}
-}
+//reobf {
+//    shadowJar {}
+//}
 
-afterEvaluate {
-    tasks.reobfJar.enabled = false
-}
+//afterEvaluate {
+//    tasks.reobfJar.enabled = false
+//}
 
-tasks.assemble.dependsOn reobfShadowJar
+//tasks.assemble.dependsOn reobfShadowJar
 
 def publicApiIncludePatterns = {
     exclude "**/*Internal.*"
     exclude "**/*Internal\$*.*"
     include "appeng/api/**"
-}
-
-javadoc {
-    source = sourceSets.main.allJava
-    classpath = sourceSets.main.compileClasspath + sourceSets.main.output
-
-    options.addStringOption('Xdoclint:none', '-quiet')
-    options.encoding = 'UTF-8'
-    options.charSet = 'UTF-8'
-}
-javadoc publicApiIncludePatterns
-
-task javadocJar(type: Jar, dependsOn: javadoc, group: "build") {
-    archiveClassifier = "javadoc"
-    from javadoc.destinationDir
 }
 
 task sourcesJar(type: Jar) {
@@ -461,7 +443,6 @@ task apiJar(type: Jar, group: "build") {
 apiJar publicApiIncludePatterns
 
 artifacts {
-    archives javadocJar
     archives sourcesJar
     archives apiJar
 }
@@ -484,7 +465,6 @@ publishing {
             from components.java
             artifact shadowJar
             artifact sourcesJar
-            artifact javadocJar
             artifact apiJar
         }
     }
