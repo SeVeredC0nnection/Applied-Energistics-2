@@ -22,7 +22,7 @@ import java.util.List;
 import java.util.stream.Stream;
 
 import org.jetbrains.annotations.Nullable;
-
+import var;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.nbt.Tag;
 import net.minecraft.network.FriendlyByteBuf;
@@ -31,8 +31,7 @@ import net.minecraft.world.InteractionHand;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.phys.Vec3;
-import net.minecraftforge.client.model.data.ModelData;
-
+import net.neoforged.neoforge.client.model.data.ModelData;
 import appeng.api.config.Actionable;
 import appeng.api.config.PowerMultiplier;
 import appeng.api.config.PowerUnits;

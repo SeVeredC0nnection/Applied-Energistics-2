@@ -10,7 +10,8 @@ import java.util.stream.Collectors;
 import com.google.gson.stream.JsonWriter;
 
 import org.apache.commons.lang3.tuple.Pair;
-
+import record;
+import var;
 import net.minecraft.resources.ResourceLocation;
 
 import appeng.client.guidebook.GuidePageChange;

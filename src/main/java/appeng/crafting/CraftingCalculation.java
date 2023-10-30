@@ -26,9 +26,10 @@ import com.google.common.base.Stopwatch;
 
 import org.jetbrains.annotations.Contract;
 import org.jetbrains.annotations.Nullable;
-
+import record;
+import var;
 import net.minecraft.world.level.Level;
-
+import CraftingPlan;
 import appeng.api.networking.IGrid;
 import appeng.api.networking.crafting.CalculationStrategy;
 import appeng.api.networking.crafting.ICraftingPlan;

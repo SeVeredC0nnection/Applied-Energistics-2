@@ -28,7 +28,7 @@ import net.minecraft.nbt.CompoundTag;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.level.block.entity.BlockEntity;
-
+import var;
 import appeng.api.networking.GridFlags;
 import appeng.api.networking.GridHelper;
 import appeng.api.networking.IGridNode;

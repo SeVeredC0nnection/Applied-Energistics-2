@@ -23,8 +23,8 @@ import org.jetbrains.annotations.Nullable;
 import net.minecraft.client.renderer.DimensionSpecialEffects;
 import net.minecraft.client.renderer.DimensionSpecialEffects.SkyType;
 import net.minecraft.world.phys.Vec3;
-import net.minecraftforge.api.distmarker.Dist;
-import net.minecraftforge.api.distmarker.OnlyIn;
+import net.neoforged.api.distmarker.Dist;
+import net.neoforged.api.distmarker.OnlyIn;
 
 /**
  * Defines properties for how the sky in the spatial storage level is rendered.

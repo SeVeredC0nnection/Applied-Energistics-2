@@ -35,11 +35,10 @@ import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.material.Fluid;
-import net.minecraftforge.api.distmarker.Dist;
-import net.minecraftforge.api.distmarker.OnlyIn;
-import net.minecraftforge.common.SoundActions;
-import net.minecraftforge.registries.GameData;
-
+import net.neoforged.api.distmarker.Dist;
+import net.neoforged.api.distmarker.OnlyIn;
+import net.neoforged.neoforge.common.SoundActions;
+import net.neoforged.neoforge.registries.GameData;
 import appeng.client.render.effects.EnergyParticleData;
 import appeng.core.AELog;
 import appeng.core.AppEngClient;

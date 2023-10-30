@@ -7,8 +7,6 @@ import org.jetbrains.annotations.Nullable;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.world.item.ItemStack;
-import net.minecraftforge.fluids.FluidStack;
-
 import appeng.items.misc.WrappedGenericStack;
 
 /**

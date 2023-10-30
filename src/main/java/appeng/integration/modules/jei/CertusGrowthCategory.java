@@ -4,7 +4,7 @@ import java.util.List;
 
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.ItemStack;
-
+import var;
 import mezz.jei.api.gui.builder.IRecipeLayoutBuilder;
 import mezz.jei.api.gui.drawable.IDrawable;
 import mezz.jei.api.helpers.IJeiHelpers;
@@ -21,7 +21,7 @@ import appeng.integration.modules.jei.widgets.Widget;
 import appeng.integration.modules.jei.widgets.WidgetFactory;
 
 /**
- * Displays information about growing quartz from {@link appeng.decorative.solid.BuddingCertusQuartzBlock}.
+ * Displays information about growing quartz from {@link BuddingCertusQuartzBlock}.
  */
 public class CertusGrowthCategory extends ViewBasedCategory<CertusGrowthCategory.Page> {
 

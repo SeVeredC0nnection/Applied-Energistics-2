@@ -41,7 +41,7 @@ import appeng.block.AEBaseBlock;
 public class MatrixFrameBlock extends AEBaseBlock {
 
     public MatrixFrameBlock() {
-        super(BlockBehaviour.Properties.of().strength(-1.0F, 6000000.0F).noOcclusion().noLootTable());
+        super(Properties.of().strength(-1.0F, 6000000.0F).noOcclusion().noLootTable());
     }
 
     @Override

@@ -25,7 +25,7 @@ import com.google.common.collect.ImmutableSet;
 
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.world.level.Level;
-
+import var;
 import appeng.api.networking.crafting.CalculationStrategy;
 import appeng.api.networking.crafting.ICraftingLink;
 import appeng.api.networking.crafting.ICraftingPlan;

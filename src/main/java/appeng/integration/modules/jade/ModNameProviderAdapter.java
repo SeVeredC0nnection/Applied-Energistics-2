@@ -12,7 +12,7 @@ import snownee.jade.api.Identifiers;
 import snownee.jade.api.config.IPluginConfig;
 import snownee.jade.api.config.IWailaConfig;
 import snownee.jade.api.ui.IElement;
-
+import var;
 import appeng.api.integrations.igtooltip.providers.ModNameProvider;
 
 class ModNameProviderAdapter<T> extends BaseProvider implements IBlockComponentProvider {

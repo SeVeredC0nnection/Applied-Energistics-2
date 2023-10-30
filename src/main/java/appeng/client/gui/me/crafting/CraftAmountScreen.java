@@ -21,7 +21,7 @@ package appeng.client.gui.me.crafting;
 import net.minecraft.client.gui.components.Button;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.entity.player.Inventory;
-
+import var;
 import appeng.client.gui.AEBaseScreen;
 import appeng.client.gui.NumberEntryType;
 import appeng.client.gui.implementations.AESubScreen;

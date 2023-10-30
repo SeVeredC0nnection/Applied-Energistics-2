@@ -7,7 +7,7 @@ import org.apache.commons.lang3.mutable.MutableDouble;
 import org.apache.commons.lang3.mutable.MutableInt;
 import org.apache.commons.lang3.mutable.MutableObject;
 import org.apache.commons.lang3.mutable.MutableShort;
-
+import var;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.world.item.ItemStack;
@@ -15,8 +15,7 @@ import net.minecraft.world.item.Items;
 import net.minecraft.world.level.LightLayer;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.material.Fluids;
-import net.minecraftforge.fluids.FluidStack;
-
+import net.neoforged.neoforge.fluids.FluidStack;
 import appeng.blockentity.networking.EnergyCellBlockEntity;
 import appeng.blockentity.storage.SkyStoneTankBlockEntity;
 import appeng.core.definitions.AEBlocks;

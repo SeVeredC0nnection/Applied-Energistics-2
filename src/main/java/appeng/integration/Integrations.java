@@ -18,9 +18,8 @@
 
 package appeng.integration;
 
-import net.minecraftforge.fml.event.lifecycle.InterModEnqueueEvent;
-
 import appeng.integration.modules.theoneprobe.TOP;
+import net.neoforged.fml.event.lifecycle.InterModEnqueueEvent;
 
 public class Integrations {
 

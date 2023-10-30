@@ -38,7 +38,7 @@ import net.minecraft.world.item.context.UseOnContext;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
-
+import var;
 import appeng.api.networking.GridHelper;
 import appeng.api.networking.IGrid;
 import appeng.api.networking.IGridNode;
@@ -49,7 +49,7 @@ import appeng.util.InteractionUtil;
 
 public class ReplicatorCardItem extends AEBaseItem {
 
-    public ReplicatorCardItem(Item.Properties properties) {
+    public ReplicatorCardItem(Properties properties) {
         super(properties);
     }
 

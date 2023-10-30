@@ -7,7 +7,8 @@ import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.GuiGraphics;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.level.ItemLike;
-
+import record;
+import var;
 import appeng.api.client.AEKeyRendering;
 import appeng.api.stacks.AEItemKey;
 import appeng.api.stacks.AEKey;

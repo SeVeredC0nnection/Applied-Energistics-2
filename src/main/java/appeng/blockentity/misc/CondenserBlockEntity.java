@@ -19,20 +19,18 @@
 package appeng.blockentity.misc;
 
 import org.jetbrains.annotations.Nullable;
-
+import var;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.state.BlockState;
-import net.minecraftforge.common.capabilities.Capability;
-import net.minecraftforge.common.capabilities.ForgeCapabilities;
-import net.minecraftforge.common.util.LazyOptional;
-import net.minecraftforge.fluids.FluidStack;
-import net.minecraftforge.fluids.IFluidTank;
-import net.minecraftforge.fluids.capability.IFluidHandler;
-
+import net.neoforged.neoforge.common.capabilities.Capability;
+import net.neoforged.neoforge.common.util.LazyOptional;
+import net.neoforged.neoforge.fluids.FluidStack;
+import net.neoforged.neoforge.fluids.IFluidTank;
+import net.neoforged.neoforge.fluids.capability.IFluidHandler;
 import appeng.api.config.CondenserOutput;
 import appeng.api.config.Settings;
 import appeng.api.implementations.items.IStorageComponent;
@@ -67,7 +65,7 @@ public class CondenserBlockEntity extends AEBaseInvBlockEntity implements IConfi
 
     /**
      * This is used to expose a fake ME subnetwork that is only composed of this condenser. The purpose of this is to
-     * enable the condenser to override the {@link appeng.api.storage.MEStorage#isPreferredStorageFor} method to make
+     * enable the condenser to override the {@link MEStorage#isPreferredStorageFor} method to make
      * sure a condenser is only ever used if an item can't go anywhere else.
      */
     private final CondenserMEStorage meStorage = new CondenserMEStorage(this);
@@ -196,9 +194,9 @@ public class CondenserBlockEntity extends AEBaseInvBlockEntity implements IConfi
     @SuppressWarnings("unchecked")
     @Override
     public <T> LazyOptional<T> getCapability(Capability<T> capability, @Nullable Direction facing) {
-        if (capability == ForgeCapabilities.ITEM_HANDLER) {
+        if (capability == net.neoforged.neoforge.common.capabilities.Capabilities.ITEM_HANDLER) {
             return (LazyOptional<T>) LazyOptional.of(this.externalInv::toItemHandler);
-        } else if (capability == ForgeCapabilities.FLUID_HANDLER) {
+        } else if (capability == net.neoforged.neoforge.common.capabilities.Capabilities.FLUID_HANDLER) {
             return (LazyOptional<T>) LazyOptional.of(() -> this.fluidHandler);
         } else if (capability == Capabilities.STORAGE) {
             return (LazyOptional<T>) LazyOptional.of(() -> this.meStorage);

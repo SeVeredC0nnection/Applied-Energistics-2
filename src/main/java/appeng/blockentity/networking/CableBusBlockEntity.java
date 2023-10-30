@@ -22,7 +22,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.jetbrains.annotations.Nullable;
-
+import var;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.nbt.CompoundTag;
@@ -41,10 +41,9 @@ import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.phys.Vec3;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.VoxelShape;
-import net.minecraftforge.client.model.data.ModelData;
-import net.minecraftforge.common.capabilities.Capability;
-import net.minecraftforge.common.util.LazyOptional;
-
+import net.neoforged.neoforge.client.model.data.ModelData;
+import net.neoforged.neoforge.common.capabilities.Capability;
+import net.neoforged.neoforge.common.util.LazyOptional;
 import appeng.api.networking.IGridNode;
 import appeng.api.parts.IFacadeContainer;
 import appeng.api.parts.IPart;
@@ -202,13 +201,13 @@ public class CableBusBlockEntity extends AEBaseBlockEntity implements AEMultiBlo
     @Override
     @Nullable
     public <T extends IPart> T addPart(IPartItem<T> partItem, Direction side,
-            @org.jetbrains.annotations.Nullable Player player) {
+            @Nullable Player player) {
         return cb.addPart(partItem, side, player);
     }
 
-    @org.jetbrains.annotations.Nullable
+    @Nullable
     @Override
-    public <T extends IPart> T replacePart(IPartItem<T> partItem, @org.jetbrains.annotations.Nullable Direction side,
+    public <T extends IPart> T replacePart(IPartItem<T> partItem, @Nullable Direction side,
             Player owner, InteractionHand hand) {
         return cb.replacePart(partItem, side, owner, hand);
     }

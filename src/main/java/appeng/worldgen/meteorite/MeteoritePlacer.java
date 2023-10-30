@@ -33,7 +33,7 @@ import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.levelgen.structure.BoundingBox;
 import net.minecraft.world.phys.AABB;
-
+import var;
 import appeng.core.AEConfig;
 import appeng.core.definitions.AEBlocks;
 import appeng.worldgen.meteorite.fallout.Fallout;

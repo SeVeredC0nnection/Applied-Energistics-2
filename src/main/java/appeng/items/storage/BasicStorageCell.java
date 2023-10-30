@@ -34,9 +34,9 @@ import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.item.context.UseOnContext;
 import net.minecraft.world.level.ItemLike;
 import net.minecraft.world.level.Level;
-import net.minecraftforge.api.distmarker.Dist;
-import net.minecraftforge.api.distmarker.OnlyIn;
-
+import net.neoforged.api.distmarker.Dist;
+import net.neoforged.api.distmarker.OnlyIn;
+import var;
 import appeng.api.config.FuzzyMode;
 import appeng.api.stacks.AEKeyType;
 import appeng.api.storage.StorageCells;
@@ -63,14 +63,14 @@ public class BasicStorageCell extends AEBaseItem implements IBasicCellItem, AETo
     protected final int totalTypes;
     private final AEKeyType keyType;
 
-    public BasicStorageCell(Item.Properties properties,
-            ItemLike coreItem,
-            ItemLike housingItem,
-            double idleDrain,
-            int kilobytes,
-            int bytesPerType,
-            int totalTypes,
-            AEKeyType keyType) {
+    public BasicStorageCell(Properties properties,
+                            ItemLike coreItem,
+                            ItemLike housingItem,
+                            double idleDrain,
+                            int kilobytes,
+                            int bytesPerType,
+                            int totalTypes,
+                            AEKeyType keyType) {
         super(properties);
         this.idleDrain = idleDrain;
         this.totalBytes = kilobytes * 1024;

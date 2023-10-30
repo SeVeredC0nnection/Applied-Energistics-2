@@ -4,7 +4,7 @@ import java.util.List;
 import java.util.Objects;
 
 import org.jetbrains.annotations.Nullable;
-
+import var;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.nbt.CompoundTag;
@@ -15,8 +15,7 @@ import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.material.Fluid;
-import net.minecraftforge.fluids.FluidStack;
-
+import net.neoforged.neoforge.fluids.FluidStack;
 import appeng.api.storage.AEKeyFilter;
 import appeng.core.AELog;
 import appeng.util.Platform;

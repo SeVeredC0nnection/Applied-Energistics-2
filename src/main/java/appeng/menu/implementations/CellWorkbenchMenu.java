@@ -26,7 +26,7 @@ import java.util.Objects;
 import com.google.common.collect.Iterators;
 
 import org.jetbrains.annotations.NotNull;
-
+import var;
 import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.inventory.MenuType;
 import net.minecraft.world.item.ItemStack;

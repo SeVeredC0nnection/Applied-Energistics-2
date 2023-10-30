@@ -49,7 +49,7 @@ public class MeteoritePlacerItem extends AEBaseItem {
 
     private static final String MODE_TAG = "mode";
 
-    public MeteoritePlacerItem(Item.Properties properties) {
+    public MeteoritePlacerItem(Properties properties) {
         super(properties);
     }
 

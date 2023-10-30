@@ -28,7 +28,7 @@ import net.minecraft.nbt.Tag;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.crafting.CraftingRecipe;
-
+import var;
 import appeng.api.stacks.GenericStack;
 
 /**

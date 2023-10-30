@@ -25,7 +25,7 @@ import java.nio.file.StandardCopyOption;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.function.DoubleSupplier;
-
+import var;
 import appeng.api.config.CondenserOutput;
 import appeng.api.config.PowerMultiplier;
 import appeng.api.config.PowerUnits;

@@ -28,9 +28,8 @@ import net.minecraft.world.InteractionHand;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.phys.Vec3;
-import net.minecraftforge.common.capabilities.Capability;
-import net.minecraftforge.common.util.LazyOptional;
-
+import net.neoforged.neoforge.common.capabilities.Capability;
+import net.neoforged.neoforge.common.util.LazyOptional;
 import appeng.api.inventories.InternalInventory;
 import appeng.api.networking.GridHelper;
 import appeng.api.networking.IGridNode;
@@ -53,7 +52,7 @@ public class InterfacePart extends AEBasePart implements InterfaceLogicHost {
 
     public static final ResourceLocation MODEL_BASE = new ResourceLocation(AppEng.MOD_ID, "part/interface_base");
 
-    private static final IGridNodeListener<InterfacePart> NODE_LISTENER = new AEBasePart.NodeListener<>() {
+    private static final IGridNodeListener<InterfacePart> NODE_LISTENER = new NodeListener<>() {
         @Override
         public void onGridChanged(InterfacePart nodeOwner, IGridNode node) {
             super.onGridChanged(nodeOwner, node);

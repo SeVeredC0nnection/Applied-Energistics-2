@@ -22,7 +22,7 @@ import java.util.EnumMap;
 import java.util.Map;
 
 import org.jetbrains.annotations.Nullable;
-
+import var;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.server.level.ServerLevel;
@@ -85,7 +85,7 @@ public class SkyChestBlock extends AEBaseEntityBlock<SkyChestBlockEntity> implem
 
     public final SkyChestType type;
 
-    public SkyChestBlock(SkyChestType type, BlockBehaviour.Properties props) {
+    public SkyChestBlock(SkyChestType type, Properties props) {
         super(props);
         this.type = type;
         registerDefaultState(defaultBlockState().setValue(WATERLOGGED, false));

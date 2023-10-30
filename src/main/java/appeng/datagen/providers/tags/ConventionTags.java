@@ -31,7 +31,7 @@ import net.minecraft.world.item.DyeColor;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.biome.Biome;
 import net.minecraft.world.level.block.Block;
-import net.minecraftforge.common.Tags;
+import net.neoforged.neoforge.common.Tags;
 
 /**
  * Contains various tags:

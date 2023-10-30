@@ -14,8 +14,8 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.level.ItemLike;
-import net.minecraftforge.common.crafting.DifferenceIngredient;
-
+import net.neoforged.neoforge.common.crafting.DifferenceIngredient;
+import var;
 import appeng.api.ids.AETags;
 import appeng.api.stacks.AEKeyType;
 import appeng.api.util.AEColor;

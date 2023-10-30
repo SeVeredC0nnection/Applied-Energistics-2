@@ -3,7 +3,7 @@ package appeng.util;
 import com.google.gson.JsonParseException;
 
 import org.jetbrains.annotations.Nullable;
-
+import var;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.nbt.Tag;
 import net.minecraft.network.chat.Component;
@@ -11,7 +11,7 @@ import net.minecraft.world.item.ItemStack;
 
 /**
  * Allows serializing custom names to and from NBT data in the same format as
- * {@link net.minecraft.world.item.ItemStack}.
+ * {@link ItemStack}.
  */
 public final class CustomNameUtil {
     private CustomNameUtil() {

@@ -37,7 +37,7 @@ import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.RenderShape;
 import net.minecraft.world.level.block.state.BlockState;
-
+import var;
 import appeng.api.ids.AETags;
 import appeng.api.implementations.items.IFacadeItem;
 import appeng.api.parts.IFacadePart;
@@ -52,7 +52,7 @@ public class FacadeItem extends AEBaseItem implements IFacadeItem {
 
     private static final String NBT_ITEM_ID = "item";
 
-    public FacadeItem(Item.Properties properties) {
+    public FacadeItem(Properties properties) {
         super(properties);
     }
 

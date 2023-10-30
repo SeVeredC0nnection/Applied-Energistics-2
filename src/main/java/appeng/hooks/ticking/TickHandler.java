@@ -43,15 +43,15 @@ import net.minecraft.world.level.ChunkPos;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.block.entity.BlockEntity;
-import net.minecraftforge.common.MinecraftForge;
-import net.minecraftforge.event.TickEvent.LevelTickEvent;
-import net.minecraftforge.event.TickEvent.Phase;
-import net.minecraftforge.event.TickEvent.ServerTickEvent;
-import net.minecraftforge.event.level.ChunkEvent;
-import net.minecraftforge.event.level.LevelEvent;
-import net.minecraftforge.eventbus.api.EventPriority;
-import net.minecraftforge.fml.LogicalSide;
-
+import net.neoforged.bus.api.EventPriority;
+import net.neoforged.fml.LogicalSide;
+import net.neoforged.neoforge.common.NeoForge;
+import net.neoforged.neoforge.event.TickEvent.LevelTickEvent;
+import net.neoforged.neoforge.event.TickEvent.Phase;
+import net.neoforged.neoforge.event.TickEvent.ServerTickEvent;
+import net.neoforged.neoforge.event.level.ChunkEvent;
+import net.neoforged.neoforge.event.level.LevelEvent;
+import var;
 import appeng.blockentity.AEBaseBlockEntity;
 import appeng.core.AEConfig;
 import appeng.core.AELog;
@@ -95,11 +95,11 @@ public class TickHandler {
     }
 
     public void init() {
-        MinecraftForge.EVENT_BUS.addListener(this::onServerTick);
-        MinecraftForge.EVENT_BUS.addListener(this::onLevelTick);
-        MinecraftForge.EVENT_BUS.addListener(this::onUnloadChunk);
+        NeoForge.EVENT_BUS.addListener(this::onServerTick);
+        NeoForge.EVENT_BUS.addListener(this::onLevelTick);
+        NeoForge.EVENT_BUS.addListener(this::onUnloadChunk);
         // Try to go last for level unloads since we use it to clean-up state
-        MinecraftForge.EVENT_BUS.addListener(EventPriority.LOWEST, this::onUnloadLevel);
+        NeoForge.EVENT_BUS.addListener(EventPriority.LOWEST, this::onUnloadLevel);
     }
 
     public void addCallable(LevelAccessor level, Runnable c) {

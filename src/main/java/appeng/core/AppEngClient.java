@@ -24,7 +24,7 @@ import com.mojang.brigadier.builder.LiteralArgumentBuilder;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-
+import var;
 import net.minecraft.client.Minecraft;
 import net.minecraft.commands.CommandSourceStack;
 import net.minecraft.commands.Commands;
@@ -34,27 +34,26 @@ import net.minecraft.world.InteractionHand;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.phys.HitResult;
-import net.minecraftforge.api.distmarker.Dist;
-import net.minecraftforge.api.distmarker.OnlyIn;
-import net.minecraftforge.client.event.ClientPlayerNetworkEvent;
-import net.minecraftforge.client.event.EntityRenderersEvent;
-import net.minecraftforge.client.event.InputEvent;
-import net.minecraftforge.client.event.ModelEvent;
-import net.minecraftforge.client.event.ModelEvent.RegisterGeometryLoaders;
-import net.minecraftforge.client.event.RegisterClientCommandsEvent;
-import net.minecraftforge.client.event.RegisterClientTooltipComponentFactoriesEvent;
-import net.minecraftforge.client.event.RegisterColorHandlersEvent;
-import net.minecraftforge.client.event.RegisterKeyMappingsEvent;
-import net.minecraftforge.client.event.RegisterParticleProvidersEvent;
-import net.minecraftforge.common.MinecraftForge;
-import net.minecraftforge.event.TickEvent;
-import net.minecraftforge.event.server.ServerStartingEvent;
-import net.minecraftforge.eventbus.api.EventPriority;
-import net.minecraftforge.eventbus.api.IEventBus;
-import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
-import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
-import net.minecraftforge.fml.loading.FMLLoader;
-
+import net.neoforged.api.distmarker.Dist;
+import net.neoforged.api.distmarker.OnlyIn;
+import net.neoforged.bus.api.EventPriority;
+import net.neoforged.bus.api.IEventBus;
+import net.neoforged.fml.event.lifecycle.FMLClientSetupEvent;
+import net.neoforged.fml.javafmlmod.FMLJavaModLoadingContext;
+import net.neoforged.fml.loading.FMLLoader;
+import net.neoforged.neoforge.client.event.ClientPlayerNetworkEvent;
+import net.neoforged.neoforge.client.event.EntityRenderersEvent;
+import net.neoforged.neoforge.client.event.InputEvent;
+import net.neoforged.neoforge.client.event.ModelEvent;
+import net.neoforged.neoforge.client.event.ModelEvent.RegisterGeometryLoaders;
+import net.neoforged.neoforge.client.event.RegisterClientCommandsEvent;
+import net.neoforged.neoforge.client.event.RegisterClientTooltipComponentFactoriesEvent;
+import net.neoforged.neoforge.client.event.RegisterColorHandlersEvent;
+import net.neoforged.neoforge.client.event.RegisterKeyMappingsEvent;
+import net.neoforged.neoforge.client.event.RegisterParticleProvidersEvent;
+import net.neoforged.neoforge.common.NeoForge;
+import net.neoforged.neoforge.event.TickEvent;
+import net.neoforged.neoforge.event.server.ServerStartingEvent;
 import appeng.api.parts.CableRenderMode;
 import appeng.api.parts.PartHelper;
 import appeng.client.EffectType;
@@ -135,7 +134,7 @@ public class AppEngClient extends AppEngBase {
         guide = createGuide();
         OpenGuideHotkey.init();
 
-        MinecraftForge.EVENT_BUS.addListener(EventPriority.LOWEST, (TickEvent.ClientTickEvent e) -> {
+        NeoForge.EVENT_BUS.addListener(EventPriority.LOWEST, (TickEvent.ClientTickEvent e) -> {
             if (e.phase == TickEvent.Phase.START) {
                 updateCableRenderMode();
             }
@@ -145,12 +144,12 @@ public class AppEngClient extends AppEngBase {
 
         INSTANCE = this;
 
-        MinecraftForge.EVENT_BUS.addListener((ClientPlayerNetworkEvent.LoggingIn evt) -> {
+        NeoForge.EVENT_BUS.addListener((ClientPlayerNetworkEvent.LoggingIn evt) -> {
             PendingCraftingJobs.clearPendingJobs();
             PinnedKeys.clearPinnedKeys();
         });
 
-        MinecraftForge.EVENT_BUS.addListener((TickEvent.ClientTickEvent e) -> {
+        NeoForge.EVENT_BUS.addListener((TickEvent.ClientTickEvent e) -> {
             if (e.phase == TickEvent.Phase.END) {
                 tickPinnedKeys(Minecraft.getInstance());
                 Hotkeys.checkHotkeys();
@@ -159,7 +158,7 @@ public class AppEngClient extends AppEngBase {
     }
 
     private void registerClientCommands() {
-        MinecraftForge.EVENT_BUS.addListener((RegisterClientCommandsEvent evt) -> {
+        NeoForge.EVENT_BUS.addListener((RegisterClientCommandsEvent evt) -> {
             var dispatcher = evt.getDispatcher();
 
             LiteralArgumentBuilder<CommandSourceStack> builder = Commands.literal("ae2client");
@@ -173,7 +172,7 @@ public class AppEngClient extends AppEngBase {
     }
 
     private Guide createGuide() {
-        MinecraftForge.EVENT_BUS.addListener((ServerStartingEvent evt) -> {
+        NeoForge.EVENT_BUS.addListener((ServerStartingEvent evt) -> {
             var server = evt.getServer();
             var dispatcher = server.getCommands().getDispatcher();
             GuidebookStructureCommands.register(dispatcher);
@@ -239,8 +238,8 @@ public class AppEngClient extends AppEngBase {
             }
         });
 
-        MinecraftForge.EVENT_BUS.addListener(this::wheelEvent);
-        MinecraftForge.EVENT_BUS.register(OverlayManager.getInstance());
+        NeoForge.EVENT_BUS.addListener(this::wheelEvent);
+        NeoForge.EVENT_BUS.register(OverlayManager.getInstance());
     }
 
     private void registerEntityRenderers(EntityRenderersEvent.RegisterRenderers event) {

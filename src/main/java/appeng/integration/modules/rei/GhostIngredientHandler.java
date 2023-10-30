@@ -24,7 +24,7 @@ import java.util.List;
 import java.util.stream.Stream;
 
 import org.jetbrains.annotations.Nullable;
-
+import var;
 import net.minecraft.client.gui.screens.Screen;
 import net.minecraft.world.inventory.Slot;
 import net.minecraft.world.item.ItemStack;

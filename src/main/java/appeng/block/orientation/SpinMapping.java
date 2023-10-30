@@ -1,6 +1,7 @@
 package appeng.block.orientation;
 
 import net.minecraft.core.Direction;
+import var;
 
 /**
  * Defines the final rotation around the axis the block is facing. (a.k.a. spin).

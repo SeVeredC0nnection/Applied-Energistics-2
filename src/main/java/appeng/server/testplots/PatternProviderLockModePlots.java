@@ -5,7 +5,7 @@ import net.minecraft.core.Direction;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.level.block.Blocks;
-
+import var;
 import appeng.api.config.Actionable;
 import appeng.api.config.LockCraftingMode;
 import appeng.api.config.Settings;

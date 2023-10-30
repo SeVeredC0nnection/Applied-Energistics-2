@@ -3,12 +3,9 @@ package appeng.integration.modules.jei;
 import com.google.common.primitives.Ints;
 
 import org.jetbrains.annotations.Nullable;
-
-import net.minecraftforge.fluids.FluidStack;
-
 import mezz.jei.api.forge.ForgeTypes;
 import mezz.jei.api.ingredients.IIngredientType;
-
+import net.neoforged.neoforge.fluids.FluidStack;
 import appeng.api.integrations.jei.IngredientConverter;
 import appeng.api.stacks.AEFluidKey;
 import appeng.api.stacks.GenericStack;

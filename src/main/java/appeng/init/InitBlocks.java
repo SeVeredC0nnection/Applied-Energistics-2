@@ -19,8 +19,7 @@
 package appeng.init;
 
 import net.minecraft.world.level.block.Block;
-import net.minecraftforge.registries.IForgeRegistry;
-
+import net.neoforged.neoforge.registries.IForgeRegistry;
 import appeng.core.definitions.AEBlocks;
 import appeng.core.definitions.BlockDefinition;
 

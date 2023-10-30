@@ -2,15 +2,15 @@ package appeng.blockentity.misc;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
+import CondenserBlockEntity;
 import java.util.Map;
 
 import org.junit.jupiter.api.Test;
-
+import var;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.level.material.Fluids;
-import net.minecraftforge.fluids.FluidStack;
-import net.minecraftforge.fluids.capability.IFluidHandler;
-
+import net.neoforged.neoforge.fluids.FluidStack;
+import net.neoforged.neoforge.fluids.capability.IFluidHandler;
 import appeng.api.config.Actionable;
 import appeng.api.config.CondenserOutput;
 import appeng.api.config.Settings;

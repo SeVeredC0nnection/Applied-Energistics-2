@@ -2,6 +2,7 @@ package appeng.me;
 
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
+import GridNode;
 import java.util.Set;
 
 import org.junit.jupiter.api.BeforeEach;
@@ -9,7 +10,7 @@ import org.mockito.Mock;
 import org.mockito.MockedStatic;
 import org.mockito.junit.jupiter.MockitoSettings;
 import org.mockito.quality.Strictness;
-
+import var;
 import net.minecraft.server.level.ServerLevel;
 
 import appeng.api.networking.GridFlags;

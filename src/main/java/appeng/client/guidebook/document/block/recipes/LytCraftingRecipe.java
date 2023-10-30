@@ -5,7 +5,7 @@ import net.minecraft.world.item.crafting.CraftingRecipe;
 import net.minecraft.world.item.crafting.ShapedRecipe;
 import net.minecraft.world.item.crafting.ShapelessRecipe;
 import net.minecraft.world.level.block.Blocks;
-
+import var;
 import appeng.client.guidebook.document.DefaultStyles;
 import appeng.client.guidebook.document.LytRect;
 import appeng.client.guidebook.document.block.LytSlot;

@@ -4,7 +4,7 @@ import java.util.Objects;
 import java.util.function.Predicate;
 import java.util.regex.Pattern;
 import java.util.regex.PatternSyntaxException;
-
+import var;
 import appeng.core.AEConfig;
 import appeng.menu.me.common.GridInventoryEntry;
 import appeng.util.Platform;

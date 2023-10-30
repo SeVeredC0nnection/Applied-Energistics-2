@@ -23,9 +23,8 @@
 
 package appeng.api.features;
 
+import net.neoforged.neoforge.common.ToolAction;
 import org.jetbrains.annotations.ApiStatus;
-
-import net.minecraftforge.common.ToolAction;
 
 /**
  * Tool actions defined by AE.

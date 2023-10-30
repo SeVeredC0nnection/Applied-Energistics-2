@@ -24,7 +24,7 @@ import java.util.Collections;
 import com.mojang.brigadier.CommandDispatcher;
 
 import org.jetbrains.annotations.Nullable;
-
+import var;
 import net.minecraft.commands.CommandSourceStack;
 import net.minecraft.core.Registry;
 import net.minecraft.core.registries.BuiltInRegistries;
@@ -40,25 +40,24 @@ import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.entity.BlockEntity;
-import net.minecraftforge.common.MinecraftForge;
-import net.minecraftforge.event.RegisterGameTestsEvent;
-import net.minecraftforge.event.entity.player.PlayerInteractEvent;
-import net.minecraftforge.event.server.ServerAboutToStartEvent;
-import net.minecraftforge.event.server.ServerStartingEvent;
-import net.minecraftforge.event.server.ServerStoppedEvent;
-import net.minecraftforge.event.server.ServerStoppingEvent;
-import net.minecraftforge.eventbus.api.Event;
-import net.minecraftforge.eventbus.api.EventPriority;
-import net.minecraftforge.eventbus.api.IEventBus;
-import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
-import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
-import net.minecraftforge.registries.ForgeRegistries;
-import net.minecraftforge.registries.IForgeRegistry;
-import net.minecraftforge.registries.NewRegistryEvent;
-import net.minecraftforge.registries.RegisterEvent;
-import net.minecraftforge.registries.RegistryBuilder;
-import net.minecraftforge.server.ServerLifecycleHooks;
-
+import net.neoforged.bus.api.Event;
+import net.neoforged.bus.api.EventPriority;
+import net.neoforged.bus.api.IEventBus;
+import net.neoforged.fml.event.lifecycle.FMLCommonSetupEvent;
+import net.neoforged.fml.javafmlmod.FMLJavaModLoadingContext;
+import net.neoforged.neoforge.common.NeoForge;
+import net.neoforged.neoforge.event.RegisterGameTestsEvent;
+import net.neoforged.neoforge.event.entity.player.PlayerInteractEvent;
+import net.neoforged.neoforge.event.server.ServerAboutToStartEvent;
+import net.neoforged.neoforge.event.server.ServerStartingEvent;
+import net.neoforged.neoforge.event.server.ServerStoppedEvent;
+import net.neoforged.neoforge.event.server.ServerStoppingEvent;
+import net.neoforged.neoforge.registries.ForgeRegistries;
+import net.neoforged.neoforge.registries.IForgeRegistry;
+import net.neoforged.neoforge.registries.NewRegistryEvent;
+import net.neoforged.neoforge.registries.RegisterEvent;
+import net.neoforged.neoforge.registries.RegistryBuilder;
+import net.neoforged.neoforge.server.ServerLifecycleHooks;
 import appeng.api.parts.CableRenderMode;
 import appeng.api.stacks.AEKeyType;
 import appeng.api.stacks.AEKeyTypes;
@@ -165,17 +164,17 @@ public abstract class AppEngBase implements AppEng {
 
         TickHandler.instance().init();
 
-        MinecraftForge.EVENT_BUS.addListener(this::onServerAboutToStart);
-        MinecraftForge.EVENT_BUS.addListener(this::serverStopped);
-        MinecraftForge.EVENT_BUS.addListener(this::serverStopping);
-        MinecraftForge.EVENT_BUS.addListener(this::registerCommands);
+        NeoForge.EVENT_BUS.addListener(this::onServerAboutToStart);
+        NeoForge.EVENT_BUS.addListener(this::serverStopped);
+        NeoForge.EVENT_BUS.addListener(this::serverStopping);
+        NeoForge.EVENT_BUS.addListener(this::registerCommands);
 
-        MinecraftForge.EVENT_BUS.addListener(WrenchHook::onPlayerUseBlockEvent);
-        MinecraftForge.EVENT_BUS.addListener(SkyStoneBreakSpeed::handleBreakFaster);
-        MinecraftForge.EVENT_BUS.addGenericListener(BlockEntity.class, InitCapabilities::registerGenericInvWrapper);
+        NeoForge.EVENT_BUS.addListener(WrenchHook::onPlayerUseBlockEvent);
+        NeoForge.EVENT_BUS.addListener(SkyStoneBreakSpeed::handleBreakFaster);
+        NeoForge.EVENT_BUS.addGenericListener(BlockEntity.class, InitCapabilities::registerGenericInvWrapper);
         // Workaround for https://github.com/MinecraftForge/MinecraftForge/issues/9158.
         // Can be removed once it's fixed in Forge.
-        MinecraftForge.EVENT_BUS.addListener(EventPriority.LOWEST, (PlayerInteractEvent.RightClickBlock event) -> {
+        NeoForge.EVENT_BUS.addListener(EventPriority.LOWEST, (PlayerInteractEvent.RightClickBlock event) -> {
             if (event.getItemStack().getItem() instanceof MemoryCardItem && event.getEntity().isSecondaryUseActive()) {
                 event.setUseBlock(Event.Result.ALLOW);
             }

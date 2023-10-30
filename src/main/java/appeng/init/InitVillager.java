@@ -5,7 +5,7 @@ import java.util.Set;
 import com.google.common.collect.ImmutableSet;
 
 import org.apache.commons.lang3.ArrayUtils;
-
+import var;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
@@ -15,8 +15,7 @@ import net.minecraft.world.entity.npc.VillagerProfession;
 import net.minecraft.world.entity.npc.VillagerTrades;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.level.ItemLike;
-import net.minecraftforge.registries.ForgeRegistries;
-
+import net.neoforged.neoforge.registries.ForgeRegistries;
 import it.unimi.dsi.fastutil.ints.Int2ObjectOpenHashMap;
 
 import appeng.core.AppEng;

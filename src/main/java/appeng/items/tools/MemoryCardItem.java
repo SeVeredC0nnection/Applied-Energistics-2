@@ -25,7 +25,7 @@ import java.util.List;
 import java.util.Set;
 
 import org.jetbrains.annotations.Nullable;
-
+import var;
 import net.minecraft.ChatFormatting;
 import net.minecraft.ResourceLocationException;
 import net.minecraft.client.resources.language.I18n;
@@ -46,9 +46,8 @@ import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.item.context.UseOnContext;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.LevelReader;
-import net.minecraftforge.api.distmarker.Dist;
-import net.minecraftforge.api.distmarker.OnlyIn;
-
+import net.neoforged.api.distmarker.Dist;
+import net.neoforged.api.distmarker.OnlyIn;
 import appeng.api.implementations.items.IMemoryCard;
 import appeng.api.implementations.items.MemoryCardMessages;
 import appeng.api.inventories.InternalInventory;
@@ -74,7 +73,7 @@ public class MemoryCardItem extends AEBaseItem implements IMemoryCard, DyeableLe
             AEColor.TRANSPARENT, AEColor.TRANSPARENT, AEColor.TRANSPARENT, AEColor.TRANSPARENT, AEColor.TRANSPARENT,
             AEColor.TRANSPARENT, };
 
-    public MemoryCardItem(Item.Properties properties) {
+    public MemoryCardItem(Properties properties) {
         super(properties);
     }
 

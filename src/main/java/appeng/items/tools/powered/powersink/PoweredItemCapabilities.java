@@ -22,11 +22,10 @@ import javax.annotation.Nullable;
 
 import net.minecraft.core.Direction;
 import net.minecraft.world.item.ItemStack;
-import net.minecraftforge.common.capabilities.Capability;
-import net.minecraftforge.common.capabilities.ICapabilityProvider;
-import net.minecraftforge.common.util.LazyOptional;
-import net.minecraftforge.energy.IEnergyStorage;
-
+import net.neoforged.neoforge.common.capabilities.Capability;
+import net.neoforged.neoforge.common.capabilities.ICapabilityProvider;
+import net.neoforged.neoforge.common.util.LazyOptional;
+import net.neoforged.neoforge.energy.IEnergyStorage;
 import appeng.api.config.Actionable;
 import appeng.api.config.PowerUnits;
 import appeng.api.implementations.items.IAEItemPowerStorage;

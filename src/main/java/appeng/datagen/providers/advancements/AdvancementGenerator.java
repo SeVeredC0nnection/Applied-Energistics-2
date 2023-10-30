@@ -55,7 +55,7 @@ import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
-
+import var;
 import appeng.api.util.AEColor;
 import appeng.core.AppEng;
 import appeng.core.definitions.AEBlocks;

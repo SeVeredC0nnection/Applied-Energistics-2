@@ -20,7 +20,7 @@ package appeng.menu.implementations;
 
 import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.inventory.MenuType;
-
+import var;
 import appeng.api.config.LockCraftingMode;
 import appeng.api.config.Settings;
 import appeng.api.config.YesNo;

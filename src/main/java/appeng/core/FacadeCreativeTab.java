@@ -27,7 +27,7 @@ import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.ItemStackLinkedSet;
 import net.minecraft.world.item.Items;
-
+import var;
 import appeng.api.ids.AECreativeTabIds;
 import appeng.core.definitions.AEItems;
 import appeng.core.localization.GuiText;

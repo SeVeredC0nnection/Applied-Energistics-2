@@ -10,7 +10,8 @@ import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 import org.jetbrains.annotations.Nullable;
-
+import record;
+import var;
 import net.minecraft.client.multiplayer.ClientLevel;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
@@ -51,7 +52,7 @@ import net.minecraft.world.ticks.LevelTickAccess;
 
 import it.unimi.dsi.fastutil.longs.LongOpenHashSet;
 import it.unimi.dsi.fastutil.longs.LongSet;
-
+import Bounds;
 import appeng.core.AppEng;
 import appeng.util.Platform;
 

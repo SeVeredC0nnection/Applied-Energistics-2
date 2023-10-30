@@ -16,7 +16,7 @@ import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.blaze3d.vertex.VertexFormat;
 
 import org.lwjgl.opengl.GL11;
-
+import var;
 import net.minecraft.client.Camera;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.multiplayer.ClientLevel;
@@ -33,9 +33,8 @@ import net.minecraft.world.phys.AABB;
 import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.phys.HitResult;
 import net.minecraft.world.phys.shapes.Shapes;
-import net.minecraftforge.client.event.RenderHighlightEvent;
-import net.minecraftforge.common.MinecraftForge;
-
+import net.neoforged.neoforge.client.event.RenderHighlightEvent;
+import net.neoforged.neoforge.common.NeoForge;
 import appeng.api.implementations.items.IFacadeItem;
 import appeng.api.parts.IFacadePart;
 import appeng.api.parts.IPart;
@@ -73,7 +72,7 @@ public class RenderBlockOutlineHook {
                     .createCompositeState(false));
 
     public static void install() {
-        MinecraftForge.EVENT_BUS.addListener(RenderBlockOutlineHook::handleEvent);
+        NeoForge.EVENT_BUS.addListener(RenderBlockOutlineHook::handleEvent);
     }
 
     private static void handleEvent(RenderHighlightEvent.Block evt) {

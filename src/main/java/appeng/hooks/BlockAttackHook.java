@@ -6,11 +6,11 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.phys.Vec3;
-import net.minecraftforge.api.distmarker.Dist;
-import net.minecraftforge.api.distmarker.OnlyIn;
-import net.minecraftforge.common.MinecraftForge;
-import net.minecraftforge.event.entity.player.PlayerInteractEvent;
-
+import net.neoforged.api.distmarker.Dist;
+import net.neoforged.api.distmarker.OnlyIn;
+import net.neoforged.neoforge.common.NeoForge;
+import net.neoforged.neoforge.event.entity.player.PlayerInteractEvent;
+import var;
 import appeng.api.parts.IPartHost;
 import appeng.core.sync.network.NetworkHandler;
 import appeng.core.sync.packets.PartLeftClickPacket;
@@ -18,7 +18,7 @@ import appeng.util.InteractionUtil;
 
 /**
  * Handles the client->server interaction when a player left-clicks on an {@link appeng.api.parts.IPart} attached to a
- * {@link appeng.api.parts.IPartHost}, and that part implements {@link appeng.api.parts.IPart#onClicked(Player, Vec3)}
+ * {@link IPartHost}, and that part implements {@link appeng.api.parts.IPart#onClicked(Player, Vec3)}
  * or {@link appeng.api.parts.IPart#onShiftClicked(Player, Vec3)}.
  */
 @OnlyIn(Dist.CLIENT)
@@ -27,7 +27,7 @@ public final class BlockAttackHook {
     }
 
     public static void install() {
-        MinecraftForge.EVENT_BUS.addListener(BlockAttackHook::onBlockAttackedOnClientEvent);
+        NeoForge.EVENT_BUS.addListener(BlockAttackHook::onBlockAttackedOnClientEvent);
     }
 
     /**

@@ -32,7 +32,7 @@ import appeng.util.Platform;
 
 public class ChargedStaffItem extends AEBasePoweredItem {
 
-    public ChargedStaffItem(Item.Properties props) {
+    public ChargedStaffItem(Properties props) {
         super(AEConfig.instance().getChargedStaffBattery(), props);
     }
 

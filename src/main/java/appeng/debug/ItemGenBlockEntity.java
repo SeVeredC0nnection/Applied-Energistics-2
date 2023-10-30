@@ -33,10 +33,10 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.state.BlockState;
-import net.minecraftforge.common.capabilities.Capability;
-import net.minecraftforge.common.capabilities.ForgeCapabilities;
-import net.minecraftforge.common.util.LazyOptional;
-
+import net.neoforged.neoforge.common.capabilities.Capabilities;
+import net.neoforged.neoforge.common.capabilities.Capability;
+import net.neoforged.neoforge.common.util.LazyOptional;
+import var;
 import appeng.api.inventories.InternalInventory;
 import appeng.blockentity.AEBaseBlockEntity;
 import appeng.util.inv.AppEngInternalInventory;
@@ -87,7 +87,7 @@ public class ItemGenBlockEntity extends AEBaseBlockEntity implements InternalInv
     @Override
     @Nullable
     public <T> LazyOptional<T> getCapability(Capability<T> capability, @Nullable Direction facing) {
-        if (ForgeCapabilities.ITEM_HANDLER == capability) {
+        if (Capabilities.ITEM_HANDLER == capability) {
             return (LazyOptional<T>) LazyOptional.of(this.inv::toItemHandler);
         }
         return super.getCapability(capability, facing);

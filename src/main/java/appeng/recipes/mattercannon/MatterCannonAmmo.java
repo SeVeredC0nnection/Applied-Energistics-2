@@ -26,7 +26,7 @@ import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
 
 import org.jetbrains.annotations.Nullable;
-
+import record;
 import net.minecraft.core.NonNullList;
 import net.minecraft.core.RegistryAccess;
 import net.minecraft.data.recipes.FinishedRecipe;
@@ -41,10 +41,9 @@ import net.minecraft.world.item.crafting.RecipeSerializer;
 import net.minecraft.world.item.crafting.RecipeType;
 import net.minecraft.world.level.ItemLike;
 import net.minecraft.world.level.Level;
-import net.minecraftforge.common.crafting.CraftingHelper;
-import net.minecraftforge.common.crafting.conditions.NotCondition;
-import net.minecraftforge.common.crafting.conditions.TagEmptyCondition;
-
+import net.neoforged.neoforge.common.crafting.CraftingHelper;
+import net.neoforged.neoforge.common.crafting.conditions.NotCondition;
+import net.neoforged.neoforge.common.crafting.conditions.TagEmptyCondition;
 import appeng.core.AppEng;
 import appeng.init.InitRecipeTypes;
 

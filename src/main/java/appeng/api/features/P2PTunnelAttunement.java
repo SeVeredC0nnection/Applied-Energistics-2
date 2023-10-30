@@ -37,8 +37,9 @@ import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.ItemLike;
-import net.minecraftforge.common.capabilities.Capability;
-
+import net.neoforged.neoforge.common.capabilities.Capability;
+import record;
+import var;
 import appeng.core.definitions.AEParts;
 import appeng.items.parts.PartItem;
 import appeng.parts.p2p.P2PTunnelPart;

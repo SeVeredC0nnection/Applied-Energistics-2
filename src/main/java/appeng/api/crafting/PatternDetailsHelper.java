@@ -30,7 +30,7 @@ import java.util.concurrent.CopyOnWriteArrayList;
 import com.google.common.base.Preconditions;
 
 import org.jetbrains.annotations.Nullable;
-
+import var;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.crafting.CraftingRecipe;
 import net.minecraft.world.item.crafting.SmithingRecipe;

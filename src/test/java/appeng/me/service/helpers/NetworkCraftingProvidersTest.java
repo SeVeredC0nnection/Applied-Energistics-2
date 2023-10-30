@@ -8,7 +8,7 @@ import java.util.List;
 import java.util.Set;
 
 import org.junit.jupiter.api.Test;
-
+import var;
 import net.minecraft.world.item.Items;
 
 import appeng.api.crafting.IPatternDetails;

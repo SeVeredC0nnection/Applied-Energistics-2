@@ -16,7 +16,7 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.levelgen.SingleThreadedRandomSource;
 import net.minecraft.world.level.levelgen.structure.templatesystem.StructurePlaceSettings;
 import net.minecraft.world.level.levelgen.structure.templatesystem.StructureTemplate;
-
+import var;
 import appeng.client.guidebook.compiler.IdUtils;
 import appeng.client.guidebook.compiler.PageCompiler;
 import appeng.client.guidebook.document.LytErrorSink;

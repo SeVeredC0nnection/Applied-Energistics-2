@@ -7,7 +7,7 @@ import net.minecraft.client.gui.screens.Screen;
 import net.minecraft.client.gui.screens.inventory.tooltip.ClientTooltipComponent;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.ItemStack;
-
+import var;
 import appeng.siteexport.ResourceExporter;
 
 public class ItemTooltip implements GuideTooltip {

@@ -30,7 +30,7 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.inventory.AbstractContainerMenu;
 import net.minecraft.world.inventory.MenuType;
-
+import var;
 import appeng.client.gui.AEBaseScreen;
 import appeng.client.gui.implementations.CellWorkbenchScreen;
 import appeng.client.gui.implementations.ChestScreen;

@@ -43,10 +43,9 @@ import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.phys.AABB;
-import net.minecraftforge.entity.IEntityAdditionalSpawnData;
-import net.minecraftforge.event.ForgeEventFactory;
-import net.minecraftforge.network.NetworkHooks;
-
+import net.neoforged.neoforge.entity.IEntityAdditionalSpawnData;
+import net.neoforged.neoforge.event.EventHooks;
+import net.neoforged.neoforge.network.NetworkHooks;
 import appeng.core.AEConfig;
 import appeng.core.AppEng;
 import appeng.core.definitions.AEBlocks;
@@ -147,7 +146,7 @@ public final class TinyTNTPrimedEntity extends PrimedTnt implements IEntityAddit
                 this.getX() + 1.5, this.getY() + 1.5, this.getZ() + 1.5);
         final List<Entity> list = this.level().getEntities(this, area);
 
-        ForgeEventFactory.onExplosionDetonate(this.level(), ex, list, 0.2f * 2d);
+        EventHooks.onExplosionDetonate(this.level(), ex, list, 0.2f * 2d);
 
         for (Entity e : list) {
             e.hurt(level().damageSources().explosion(ex), 6);

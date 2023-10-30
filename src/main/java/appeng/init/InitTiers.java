@@ -3,8 +3,7 @@ package appeng.init;
 import java.util.List;
 
 import net.minecraft.world.item.Tiers;
-import net.minecraftforge.common.TierSortingRegistry;
-
+import net.neoforged.neoforge.common.TierSortingRegistry;
 import appeng.core.AppEng;
 import appeng.items.tools.fluix.FluixToolType;
 import appeng.items.tools.quartz.QuartzToolType;

@@ -3,7 +3,7 @@ package appeng.client.guidebook;
 import org.jetbrains.annotations.Nullable;
 
 import net.minecraft.resources.ResourceLocation;
-
+import GuidePage;
 import appeng.client.guidebook.compiler.ParsedGuidePage;
 import appeng.client.guidebook.indices.PageIndex;
 import appeng.client.guidebook.navigation.NavigationTree;

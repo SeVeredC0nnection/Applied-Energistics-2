@@ -30,7 +30,7 @@ import com.google.common.base.Preconditions;
 
 import org.jetbrains.annotations.ApiStatus;
 import org.jetbrains.annotations.Nullable;
-
+import var;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.world.Container;
@@ -38,9 +38,8 @@ import net.minecraft.world.inventory.AbstractContainerMenu;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.entity.BlockEntity;
-import net.minecraftforge.common.capabilities.ForgeCapabilities;
-import net.minecraftforge.items.IItemHandler;
-
+import net.neoforged.neoforge.common.capabilities.Capabilities;
+import net.neoforged.neoforge.items.IItemHandler;
 import appeng.api.config.FuzzyMode;
 import appeng.util.helpers.ItemComparisonHelper;
 
@@ -52,7 +51,7 @@ public interface InternalInventory extends Iterable<ItemStack>, ItemTransfer {
             return null;
         }
 
-        return be.getCapability(ForgeCapabilities.ITEM_HANDLER, side)
+        return be.getCapability(Capabilities.ITEM_HANDLER, side)
                 .map(PlatformInventoryWrapper::new)
                 .orElse(null);
     }

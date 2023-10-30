@@ -7,7 +7,7 @@ import net.minecraft.client.gui.GuiGraphics;
 import net.minecraft.client.gui.components.Button;
 import net.minecraft.client.gui.components.Tooltip;
 import net.minecraft.network.chat.Component;
-
+import var;
 import appeng.client.gui.style.Blitter;
 import appeng.client.guidebook.GuidebookText;
 import appeng.client.guidebook.color.LightDarkMode;

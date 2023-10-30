@@ -1,7 +1,7 @@
 package appeng.integration.modules.igtooltip.parts;
 
 import org.jetbrains.annotations.Nullable;
-
+import var;
 import net.minecraft.core.Direction;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.nbt.CompoundTag;

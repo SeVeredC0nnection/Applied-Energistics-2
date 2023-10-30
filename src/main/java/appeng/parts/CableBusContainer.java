@@ -24,7 +24,7 @@ import java.util.EnumSet;
 import java.util.List;
 
 import org.jetbrains.annotations.Nullable;
-
+import var;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.nbt.CompoundTag;
@@ -758,7 +758,7 @@ public class CableBusContainer implements AEMultiBlockEntity, ICableBusContainer
         return updateBlock;
     }
 
-    private static int getSideIndex(@org.jetbrains.annotations.Nullable Direction side) {
+    private static int getSideIndex(@Nullable Direction side) {
         return side == null ? 6 : side.ordinal();
     }
 

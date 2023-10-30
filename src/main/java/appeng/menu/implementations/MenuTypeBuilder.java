@@ -23,7 +23,7 @@ import java.util.function.Function;
 import com.google.common.base.Preconditions;
 
 import org.jetbrains.annotations.Nullable;
-
+import var;
 import net.minecraft.client.Minecraft;
 import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.network.chat.Component;
@@ -37,9 +37,8 @@ import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.inventory.AbstractContainerMenu;
 import net.minecraft.world.inventory.MenuType;
-import net.minecraftforge.common.extensions.IForgeMenuType;
-import net.minecraftforge.network.NetworkHooks;
-
+import net.neoforged.neoforge.common.extensions.IMenuTypeExtension;
+import net.neoforged.neoforge.network.NetworkHooks;
 import appeng.core.AppEng;
 import appeng.init.InitMenuTypes;
 import appeng.menu.AEBaseMenu;
@@ -175,7 +174,7 @@ public final class MenuTypeBuilder<M extends AEBaseMenu, I> {
         Preconditions.checkState(this.id == null, "id should not be set");
 
         this.id = AppEng.makeId(id);
-        menuType = IForgeMenuType.create(this::fromNetwork);
+        menuType = IMenuTypeExtension.create(this::fromNetwork);
         InitMenuTypes.queueRegistration(this.id, menuType);
         MenuOpener.addOpener(menuType, this::open);
         return menuType;

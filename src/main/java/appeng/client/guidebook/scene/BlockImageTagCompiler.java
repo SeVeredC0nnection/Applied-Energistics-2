@@ -3,7 +3,7 @@ package appeng.client.guidebook.scene;
 import java.util.Set;
 
 import net.minecraft.core.BlockPos;
-
+import var;
 import appeng.client.guidebook.compiler.PageCompiler;
 import appeng.client.guidebook.compiler.tags.BlockTagCompiler;
 import appeng.client.guidebook.compiler.tags.MdxAttrs;

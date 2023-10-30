@@ -48,7 +48,7 @@ public class EraserItem extends AEBaseItem {
     private static final int BLOCK_ERASE_LIMIT = BOX_SIZE * BOX_SIZE * BOX_SIZE;
     final static Set<Block> COMMON_BLOCKS = new HashSet<>();
 
-    public EraserItem(Item.Properties properties) {
+    public EraserItem(Properties properties) {
         super(properties);
     }
 

@@ -25,7 +25,7 @@ import net.minecraft.world.level.block.state.BlockState;
 
 public class QuartzGlassBlock extends AbstractGlassBlock {
 
-    public QuartzGlassBlock(BlockBehaviour.Properties props) {
+    public QuartzGlassBlock(Properties props) {
         super(props);
     }
 

@@ -25,7 +25,7 @@ package appeng.api.networking.crafting;
 
 import java.util.List;
 import java.util.Set;
-
+import var;
 import appeng.api.crafting.IPatternDetails;
 import appeng.api.networking.IGridNodeService;
 import appeng.api.networking.IManagedGridNode;

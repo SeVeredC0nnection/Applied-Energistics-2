@@ -27,8 +27,7 @@ import org.jetbrains.annotations.Nullable;
 
 import net.minecraft.core.Direction;
 import net.minecraft.world.level.block.entity.BlockEntity;
-import net.minecraftforge.common.capabilities.AutoRegisterCapability;
-
+import net.neoforged.neoforge.common.capabilities.AutoRegisterCapability;
 import appeng.api.util.AECableType;
 
 /**

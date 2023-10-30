@@ -30,10 +30,10 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.level.Level;
-import net.minecraftforge.api.distmarker.Dist;
-import net.minecraftforge.api.distmarker.OnlyIn;
-import net.minecraftforge.common.capabilities.ICapabilityProvider;
-
+import net.neoforged.api.distmarker.Dist;
+import net.neoforged.api.distmarker.OnlyIn;
+import net.neoforged.neoforge.common.capabilities.ICapabilityProvider;
+import var;
 import appeng.api.config.AccessRestriction;
 import appeng.api.config.Actionable;
 import appeng.api.implementations.items.IAEItemPowerStorage;
@@ -47,7 +47,7 @@ public abstract class AEBasePoweredItem extends AEBaseItem implements IAEItemPow
     private static final String MAX_POWER_NBT_KEY = "internalMaxPower";
     private final DoubleSupplier powerCapacity;
 
-    public AEBasePoweredItem(DoubleSupplier powerCapacity, Item.Properties props) {
+    public AEBasePoweredItem(DoubleSupplier powerCapacity, Properties props) {
         super(props);
         this.powerCapacity = powerCapacity;
     }

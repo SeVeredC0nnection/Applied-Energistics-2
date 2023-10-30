@@ -23,8 +23,7 @@ import java.util.concurrent.CompletableFuture;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.tags.BiomeTags;
-import net.minecraftforge.common.data.ExistingFileHelper;
-
+import net.neoforged.neoforge.common.data.ExistingFileHelper;
 import appeng.core.AppEng;
 import appeng.datagen.providers.IAE2DataProvider;
 import appeng.worldgen.meteorite.MeteoriteStructure;

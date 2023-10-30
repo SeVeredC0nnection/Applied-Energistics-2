@@ -4,7 +4,8 @@ import java.util.Collection;
 import java.util.List;
 import java.util.Set;
 import java.util.function.Supplier;
-
+import record;
+import ExtensionPoint;
 import appeng.client.guidebook.compiler.TagCompiler;
 import appeng.client.guidebook.compiler.tags.ATagCompiler;
 import appeng.client.guidebook.compiler.tags.BoxFlowDirection;

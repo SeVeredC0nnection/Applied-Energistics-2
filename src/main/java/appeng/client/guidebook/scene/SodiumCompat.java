@@ -9,7 +9,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import net.minecraft.client.renderer.texture.TextureAtlasSprite;
-import net.minecraftforge.fml.ModList;
+import net.neoforged.fml.ModList;
 
 public class SodiumCompat {
     private static final Logger LOGGER = LoggerFactory.getLogger(SodiumCompat.class);

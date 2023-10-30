@@ -24,7 +24,7 @@ import java.util.List;
 import com.mojang.blaze3d.vertex.PoseStack;
 
 import org.joml.Matrix4f;
-
+import var;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.GuiGraphics;
 import net.minecraft.client.renderer.MultiBufferSource;
@@ -37,8 +37,7 @@ import net.minecraft.world.item.ItemDisplayContext;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.level.Level;
-import net.minecraftforge.client.extensions.common.IClientFluidTypeExtensions;
-
+import net.neoforged.neoforge.client.extensions.common.IClientFluidTypeExtensions;
 import appeng.api.client.AEKeyRenderHandler;
 import appeng.api.client.AEKeyRendering;
 import appeng.api.stacks.AEFluidKey;

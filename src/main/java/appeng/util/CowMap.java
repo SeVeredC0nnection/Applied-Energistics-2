@@ -5,6 +5,7 @@ import java.util.IdentityHashMap;
 import java.util.Map;
 import java.util.Objects;
 import java.util.function.IntFunction;
+import var;
 
 /**
  * Thread-safe copy-on-write map wrapper. Does not accept null keys or values.

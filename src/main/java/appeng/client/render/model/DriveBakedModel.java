@@ -27,7 +27,7 @@ import javax.annotation.Nullable;
 import com.mojang.math.Transformation;
 
 import org.joml.Vector3f;
-
+import var;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.block.model.BakedQuad;
 import net.minecraft.client.resources.model.BakedModel;
@@ -36,8 +36,7 @@ import net.minecraft.util.RandomSource;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.level.block.state.BlockState;
-import net.minecraftforge.client.model.data.ModelData;
-
+import net.neoforged.neoforge.client.model.data.ModelData;
 import appeng.client.render.DelegateBakedModel;
 import appeng.thirdparty.fabric.MutableQuadView;
 import appeng.thirdparty.fabric.RenderContext;

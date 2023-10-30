@@ -6,7 +6,7 @@ import net.minecraft.client.gui.components.AbstractButton;
 import net.minecraft.client.gui.narration.NarratedElementType;
 import net.minecraft.client.gui.narration.NarrationElementOutput;
 import net.minecraft.network.chat.Component;
-
+import var;
 import appeng.client.gui.style.Blitter;
 import appeng.client.gui.style.PaletteColor;
 import appeng.client.gui.style.ScreenStyle;

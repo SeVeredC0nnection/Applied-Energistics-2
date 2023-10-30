@@ -29,7 +29,7 @@ import java.util.Set;
 import java.util.function.Supplier;
 
 import org.jetbrains.annotations.Nullable;
-
+import var;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.color.block.BlockColors;
 import net.minecraft.client.renderer.RenderType;
@@ -46,8 +46,7 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.BlockAndTintGetter;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.phys.AABB;
-import net.minecraftforge.client.model.data.ModelData;
-
+import net.neoforged.neoforge.client.model.data.ModelData;
 import appeng.api.parts.PartHelper;
 import appeng.api.util.AEAxisAlignedBB;
 import appeng.parts.misc.CableAnchorPart;

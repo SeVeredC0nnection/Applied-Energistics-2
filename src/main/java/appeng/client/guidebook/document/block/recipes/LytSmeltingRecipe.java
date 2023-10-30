@@ -3,7 +3,7 @@ package appeng.client.guidebook.document.block.recipes;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.crafting.SmeltingRecipe;
 import net.minecraft.world.level.block.Blocks;
-
+import var;
 import appeng.client.guidebook.document.DefaultStyles;
 import appeng.client.guidebook.document.LytRect;
 import appeng.client.guidebook.document.block.LytSlot;

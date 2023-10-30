@@ -21,14 +21,13 @@ package appeng.me.cluster.implementations;
 import java.util.Iterator;
 
 import org.jetbrains.annotations.Nullable;
-
+import var;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.entity.BlockEntity;
-import net.minecraftforge.common.MinecraftForge;
-import net.minecraftforge.event.level.LevelEvent;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
-
+import net.neoforged.bus.api.SubscribeEvent;
+import net.neoforged.neoforge.common.NeoForge;
+import net.neoforged.neoforge.event.level.LevelEvent;
 import appeng.api.features.Locatables;
 import appeng.api.networking.GridHelper;
 import appeng.api.networking.IGridNode;
@@ -202,7 +201,7 @@ public class QuantumCluster implements IAECluster, IActionHost {
         MBCalculator.setModificationInProgress(this);
         try {
             if (this.registered) {
-                MinecraftForge.EVENT_BUS.unregister(this);
+                NeoForge.EVENT_BUS.unregister(this);
                 this.registered = false;
             }
 
@@ -245,7 +244,7 @@ public class QuantumCluster implements IAECluster, IActionHost {
 
     void setCenter(QuantumBridgeBlockEntity c) {
         this.registered = true;
-        MinecraftForge.EVENT_BUS.register(this);
+        NeoForge.EVENT_BUS.register(this);
         this.center = c;
     }
 

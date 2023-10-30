@@ -25,7 +25,7 @@ import java.util.List;
 import java.util.Optional;
 
 import org.jetbrains.annotations.Nullable;
-
+import var;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
@@ -59,7 +59,7 @@ import appeng.util.Platform;
 
 public class NetworkToolItem extends AEBaseItem implements IMenuItem, AEToolItem {
 
-    public NetworkToolItem(Item.Properties properties) {
+    public NetworkToolItem(Properties properties) {
         super(properties);
     }
 

@@ -7,7 +7,7 @@ import net.minecraft.client.gui.GuiGraphics;
 import net.minecraft.client.gui.components.toasts.Toast;
 import net.minecraft.client.gui.components.toasts.ToastComponent;
 import net.minecraft.util.FormattedCharSequence;
-
+import var;
 import appeng.api.client.AEKeyRendering;
 import appeng.api.stacks.AEKey;
 import appeng.api.stacks.AmountFormat;
@@ -60,7 +60,7 @@ public class FinishedJobToast implements Toast {
         }
         AEKeyRendering.drawInGui(minecraft, guiGraphics, 8, 8, what);
 
-        return timeSinceLastVisible >= TIME_VISIBLE ? Toast.Visibility.HIDE : Toast.Visibility.SHOW;
+        return timeSinceLastVisible >= TIME_VISIBLE ? Visibility.HIDE : Visibility.SHOW;
     }
 
     @Override

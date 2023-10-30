@@ -19,7 +19,7 @@
 package appeng.items;
 
 import org.jetbrains.annotations.Nullable;
-
+import var;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.CreativeModeTab;
@@ -27,7 +27,7 @@ import net.minecraft.world.item.Item;
 
 public abstract class AEBaseItem extends Item {
 
-    public AEBaseItem(Item.Properties properties) {
+    public AEBaseItem(Properties properties) {
         super(properties);
     }
 

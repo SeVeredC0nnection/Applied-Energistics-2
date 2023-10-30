@@ -4,7 +4,7 @@ import java.util.Objects;
 
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.ItemStack;
-
+import var;
 import appeng.items.contents.NetworkToolMenuHost;
 import appeng.items.tools.NetworkToolItem;
 import appeng.menu.slot.RestrictedInputSlot;

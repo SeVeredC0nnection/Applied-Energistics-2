@@ -22,12 +22,11 @@ import net.minecraft.core.BlockPos;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.world.level.ChunkPos;
 import net.minecraft.world.level.block.entity.BlockEntity;
-import net.minecraftforge.common.world.ForgeChunkManager;
-import net.minecraftforge.common.world.ForgeChunkManager.LoadingValidationCallback;
-import net.minecraftforge.common.world.ForgeChunkManager.TicketHelper;
-import net.minecraftforge.event.server.ServerAboutToStartEvent;
-import net.minecraftforge.event.server.ServerStoppingEvent;
-
+import net.neoforged.neoforge.common.world.ForcedChunkManager;
+import net.neoforged.neoforge.common.world.ForcedChunkManager.LoadingValidationCallback;
+import net.neoforged.neoforge.common.world.ForcedChunkManager.TicketHelper;
+import net.neoforged.neoforge.event.server.ServerAboutToStartEvent;
+import net.neoforged.neoforge.event.server.ServerStoppingEvent;
 import appeng.blockentity.spatial.SpatialAnchorBlockEntity;
 import appeng.core.AppEng;
 
@@ -39,7 +38,7 @@ public class ChunkLoadingService implements LoadingValidationCallback {
     private boolean running = true;
 
     public static void register() {
-        ForgeChunkManager.setForcedChunkLoadingCallback(AppEng.MOD_ID, INSTANCE);
+        ForcedChunkManager.setForcedChunkLoadingCallback(AppEng.MOD_ID, INSTANCE);
     }
 
     public void onServerAboutToStart(ServerAboutToStartEvent evt) {
@@ -74,7 +73,7 @@ public class ChunkLoadingService implements LoadingValidationCallback {
 
     public boolean forceChunk(ServerLevel level, BlockPos owner, ChunkPos position, boolean ticking) {
         if (running) {
-            return ForgeChunkManager.forceChunk(level, AppEng.MOD_ID, owner, position.x, position.z, true, true);
+            return ForcedChunkManager.forceChunk(level, AppEng.MOD_ID, owner, position.x, position.z, true, true);
         }
 
         return false;
@@ -82,7 +81,7 @@ public class ChunkLoadingService implements LoadingValidationCallback {
 
     public boolean releaseChunk(ServerLevel level, BlockPos owner, ChunkPos position, boolean ticking) {
         if (running) {
-            return ForgeChunkManager.forceChunk(level, AppEng.MOD_ID, owner, position.x, position.z, false, true);
+            return ForcedChunkManager.forceChunk(level, AppEng.MOD_ID, owner, position.x, position.z, false, true);
         }
 
         return false;

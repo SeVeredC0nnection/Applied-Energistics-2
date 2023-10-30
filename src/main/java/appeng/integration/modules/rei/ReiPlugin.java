@@ -31,8 +31,8 @@ import net.minecraft.client.renderer.Rect2i;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.crafting.Ingredient;
-import net.minecraftforge.api.distmarker.Dist;
-
+import net.neoforged.api.distmarker.Dist;
+import var;
 import dev.architectury.event.CompoundEventResult;
 import me.shedaniel.math.Rectangle;
 import me.shedaniel.rei.api.client.plugins.REIClientPlugin;

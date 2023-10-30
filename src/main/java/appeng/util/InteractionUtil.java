@@ -33,8 +33,8 @@ import net.minecraft.world.phys.AABB;
 import net.minecraft.world.phys.EntityHitResult;
 import net.minecraft.world.phys.HitResult;
 import net.minecraft.world.phys.Vec3;
-import net.minecraftforge.common.ForgeMod;
-
+import net.neoforged.neoforge.common.NeoForgeMod;
+import var;
 import appeng.datagen.providers.tags.ConventionTags;
 import appeng.items.tools.NetworkToolItem;
 
@@ -83,7 +83,7 @@ public final class InteractionUtil {
     }
 
     public static LookDirection getPlayerRay(Player playerIn) {
-        double reachDistance = playerIn.getAttribute(ForgeMod.BLOCK_REACH.get()).getValue();
+        double reachDistance = playerIn.getAttribute(NeoForgeMod.BLOCK_REACH.get()).getValue();
         return getPlayerRay(playerIn, reachDistance);
     }
 

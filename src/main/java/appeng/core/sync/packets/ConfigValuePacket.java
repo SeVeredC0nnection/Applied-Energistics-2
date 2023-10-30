@@ -24,7 +24,7 @@ import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.inventory.AbstractContainerMenu;
-
+import var;
 import appeng.api.config.Setting;
 import appeng.api.util.IConfigManager;
 import appeng.api.util.IConfigurableObject;

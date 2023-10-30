@@ -1,10 +1,9 @@
 package appeng.parts;
 
 import org.jetbrains.annotations.Nullable;
-
+import var;
 import net.minecraft.server.level.ServerLevel;
-import net.minecraftforge.common.capabilities.Capability;
-
+import net.neoforged.neoforge.common.capabilities.Capability;
 import appeng.util.BlockApiCache;
 import appeng.util.Platform;
 

@@ -23,7 +23,7 @@ import java.util.Map;
 import java.util.WeakHashMap;
 
 import org.jetbrains.annotations.Nullable;
-
+import var;
 import net.minecraft.ChatFormatting;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.InteractionHand;
@@ -37,9 +37,8 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.item.context.UseOnContext;
 import net.minecraft.world.level.Level;
-import net.minecraftforge.api.distmarker.Dist;
-import net.minecraftforge.api.distmarker.OnlyIn;
-
+import net.neoforged.api.distmarker.Dist;
+import net.neoforged.api.distmarker.OnlyIn;
 import appeng.api.crafting.IPatternDetails;
 import appeng.api.stacks.AEItemKey;
 import appeng.api.stacks.AmountFormat;
@@ -55,7 +54,7 @@ public abstract class EncodedPatternItem extends AEBaseItem {
     // rather simple client side caching.
     private static final Map<ItemStack, ItemStack> SIMPLE_CACHE = new WeakHashMap<>();
 
-    public EncodedPatternItem(Item.Properties properties) {
+    public EncodedPatternItem(Properties properties) {
         super(properties);
     }
 

@@ -23,7 +23,7 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.jetbrains.annotations.Nullable;
 import org.lwjgl.opengl.GL11;
-
+import var;
 import net.minecraft.ChatFormatting;
 import net.minecraft.DetectedVersion;
 import net.minecraft.client.Minecraft;
@@ -54,13 +54,12 @@ import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.levelgen.SingleThreadedRandomSource;
 import net.minecraft.world.level.material.Fluid;
 import net.minecraft.world.level.material.Fluids;
-import net.minecraftforge.api.distmarker.Dist;
-import net.minecraftforge.api.distmarker.OnlyIn;
-import net.minecraftforge.client.extensions.common.IClientFluidTypeExtensions;
-import net.minecraftforge.common.MinecraftForge;
-import net.minecraftforge.event.TickEvent;
-import net.minecraftforge.fluids.FluidStack;
-
+import net.neoforged.api.distmarker.Dist;
+import net.neoforged.api.distmarker.OnlyIn;
+import net.neoforged.neoforge.client.extensions.common.IClientFluidTypeExtensions;
+import net.neoforged.neoforge.common.NeoForge;
+import net.neoforged.neoforge.event.TickEvent;
+import net.neoforged.neoforge.fluids.FluidStack;
 import appeng.api.features.P2PTunnelAttunement;
 import appeng.api.features.P2PTunnelAttunementInternal;
 import appeng.api.util.AEColor;
@@ -129,7 +128,7 @@ public final class SiteExporter implements ResourceExporter {
         if (Boolean.getBoolean("appeng.runGuideExportAndExit")) {
             Path outputFolder = Paths.get(System.getProperty("appeng.guideExportFolder"));
 
-            MinecraftForge.EVENT_BUS.addListener((TickEvent.ClientTickEvent evt) -> {
+            NeoForge.EVENT_BUS.addListener((TickEvent.ClientTickEvent evt) -> {
                 if (evt.phase == TickEvent.Phase.END) {
                     var client = Minecraft.getInstance();
                     if (client.getOverlay() instanceof LoadingOverlay) {

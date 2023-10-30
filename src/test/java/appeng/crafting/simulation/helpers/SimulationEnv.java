@@ -19,7 +19,7 @@ import com.google.common.collect.ImmutableList;
 import com.google.common.collect.ImmutableSet;
 
 import org.jetbrains.annotations.Nullable;
-
+import var;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.level.Level;
 

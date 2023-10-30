@@ -40,7 +40,7 @@ import net.minecraft.world.level.levelgen.structure.Structure.StructureSettings;
 import net.minecraft.world.level.levelgen.structure.StructureSet;
 import net.minecraft.world.level.levelgen.structure.StructureType;
 import net.minecraft.world.level.levelgen.structure.pieces.StructurePiecesBuilder;
-
+import var;
 import appeng.core.AppEng;
 import appeng.datagen.providers.tags.ConventionTags;
 import appeng.worldgen.meteorite.fallout.FalloutMode;

@@ -49,7 +49,7 @@ public class TinyTNTBlock extends AEBaseBlock {
     private static final VoxelShape SHAPE = Shapes
             .create(new AABB(0.25f, 0.0f, 0.25f, 0.75f, 0.5f, 0.75f));
 
-    public TinyTNTBlock(BlockBehaviour.Properties props) {
+    public TinyTNTBlock(Properties props) {
         super(props);
     }
 

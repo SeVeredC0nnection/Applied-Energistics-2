@@ -22,6 +22,7 @@ import appeng.api.networking.IGridNode;
 import appeng.api.networking.pathing.ChannelMode;
 import appeng.api.parts.IPart;
 import appeng.me.GridNode;
+import var;
 
 /**
  * Extended part that provides info about channel capacity and usage to probes like HWYLA and TheOneProbe.

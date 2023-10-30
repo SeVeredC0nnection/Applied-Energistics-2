@@ -23,7 +23,7 @@ import java.util.Objects;
 import com.google.common.base.Preconditions;
 
 import org.jetbrains.annotations.Nullable;
-
+import var;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.nbt.ListTag;
 import net.minecraft.nbt.Tag;
@@ -52,7 +52,7 @@ public class GenericStackInv implements MEStorage, GenericInternalInventory {
     private boolean suppressOnChange;
     private boolean onChangeSuppressed;
     private final Reference2LongMap<AEKeyType> capacities = new Reference2LongArrayMap<>();
-    @org.jetbrains.annotations.Nullable
+    @Nullable
     private AEKeyFilter filter;
     protected final Mode mode;
     private Component description = Component.empty();

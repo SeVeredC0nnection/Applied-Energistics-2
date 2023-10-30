@@ -19,7 +19,7 @@
 package appeng.util.inv;
 
 import net.minecraft.world.item.ItemStack;
-
+import var;
 import appeng.api.inventories.BaseInternalInventory;
 import appeng.api.inventories.InternalInventory;
 

@@ -21,7 +21,7 @@ package appeng.client.gui.implementations;
 import net.minecraft.client.gui.GuiGraphics;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.entity.player.Inventory;
-
+import var;
 import appeng.api.config.AccessRestriction;
 import appeng.api.config.ActionItems;
 import appeng.api.config.FuzzyMode;

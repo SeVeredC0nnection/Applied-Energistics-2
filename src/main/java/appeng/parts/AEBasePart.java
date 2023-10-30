@@ -23,7 +23,7 @@ import java.util.Objects;
 
 import org.jetbrains.annotations.MustBeInvokedByOverriders;
 import org.jetbrains.annotations.Nullable;
-
+import var;
 import net.minecraft.CrashReportCategory;
 import net.minecraft.core.Direction;
 import net.minecraft.nbt.CompoundTag;
@@ -97,9 +97,9 @@ public abstract class AEBasePart
      * @param reason Indicates which of the properties has changed.
      */
     @MustBeInvokedByOverriders
-    protected void onMainNodeStateChanged(IGridNodeListener.State reason) {
+    protected void onMainNodeStateChanged(State reason) {
         // Client flags shouldn't depend on grid boot, optimize!
-        if (reason != IGridNodeListener.State.GRID_BOOT) {
+        if (reason != State.GRID_BOOT) {
             markForUpdateIfClientFlagsChanged();
         }
     }

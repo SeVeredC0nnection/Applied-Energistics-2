@@ -19,7 +19,7 @@
 package appeng.api.implementations.menuobjects;
 
 import org.jetbrains.annotations.Nullable;
-
+import var;
 import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.inventory.AbstractContainerMenu;

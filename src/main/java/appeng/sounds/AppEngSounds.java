@@ -2,8 +2,7 @@ package appeng.sounds;
 
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.sounds.SoundEvent;
-import net.minecraftforge.registries.IForgeRegistry;
-
+import net.neoforged.neoforge.registries.IForgeRegistry;
 import appeng.core.AppEng;
 
 public final class AppEngSounds {

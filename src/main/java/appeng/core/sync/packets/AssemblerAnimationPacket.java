@@ -24,9 +24,8 @@ import net.minecraft.core.BlockPos;
 import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.level.block.entity.BlockEntity;
-import net.minecraftforge.api.distmarker.Dist;
-import net.minecraftforge.api.distmarker.OnlyIn;
-
+import net.neoforged.api.distmarker.Dist;
+import net.neoforged.api.distmarker.OnlyIn;
 import appeng.api.stacks.AEKey;
 import appeng.blockentity.crafting.MolecularAssemblerBlockEntity;
 import appeng.client.render.crafting.AssemblerAnimationStatus;

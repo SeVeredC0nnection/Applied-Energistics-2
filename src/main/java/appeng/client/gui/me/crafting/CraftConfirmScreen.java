@@ -21,7 +21,7 @@ package appeng.client.gui.me.crafting;
 import java.text.NumberFormat;
 
 import org.lwjgl.glfw.GLFW;
-
+import var;
 import net.minecraft.client.gui.GuiGraphics;
 import net.minecraft.client.gui.components.Button;
 import net.minecraft.network.chat.Component;

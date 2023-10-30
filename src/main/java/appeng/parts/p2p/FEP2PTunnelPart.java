@@ -19,9 +19,7 @@
 package appeng.parts.p2p;
 
 import java.util.List;
-
-import net.minecraftforge.energy.IEnergyStorage;
-
+import net.neoforged.neoforge.energy.IEnergyStorage;
 import appeng.api.config.PowerUnits;
 import appeng.api.parts.IPartItem;
 import appeng.api.parts.IPartModel;

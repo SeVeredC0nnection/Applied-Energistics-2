@@ -20,7 +20,7 @@ package appeng.parts.automation;
 
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.world.inventory.MenuType;
-
+import var;
 import appeng.api.behaviors.StackImportStrategy;
 import appeng.api.networking.IGrid;
 import appeng.api.parts.IPartCollisionHelper;

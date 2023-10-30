@@ -13,12 +13,12 @@ import net.minecraft.data.models.blockstates.Variant;
 import net.minecraft.data.models.blockstates.VariantProperties;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
-import net.minecraftforge.client.model.generators.BlockModelBuilder;
-import net.minecraftforge.client.model.generators.ConfiguredModel;
-import net.minecraftforge.client.model.generators.ModelFile;
-import net.minecraftforge.client.model.generators.MultiPartBlockStateBuilder;
-import net.minecraftforge.common.data.ExistingFileHelper;
-
+import net.neoforged.neoforge.client.model.generators.BlockModelBuilder;
+import net.neoforged.neoforge.client.model.generators.ConfiguredModel;
+import net.neoforged.neoforge.client.model.generators.ModelFile;
+import net.neoforged.neoforge.client.model.generators.MultiPartBlockStateBuilder;
+import net.neoforged.neoforge.common.data.ExistingFileHelper;
+import var;
 import appeng.api.orientation.BlockOrientation;
 import appeng.block.crafting.AbstractCraftingUnitBlock;
 import appeng.block.crafting.PatternProviderBlock;

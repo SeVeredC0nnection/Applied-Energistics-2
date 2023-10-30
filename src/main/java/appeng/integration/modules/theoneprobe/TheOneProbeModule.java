@@ -21,6 +21,7 @@ package appeng.integration.modules.theoneprobe;
 import java.util.function.Function;
 
 import mcjty.theoneprobe.api.ITheOneProbe;
+import var;
 
 public class TheOneProbeModule implements Function<ITheOneProbe, Void> {
 

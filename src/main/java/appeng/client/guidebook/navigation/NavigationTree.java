@@ -12,11 +12,11 @@ import org.apache.commons.lang3.tuple.Pair;
 import org.jetbrains.annotations.Nullable;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-
+import var;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.ItemStack;
-
+import NavigationNode;
 import appeng.client.guidebook.compiler.ParsedGuidePage;
 
 public class NavigationTree {

@@ -3,7 +3,7 @@ package appeng.siteexport.model;
 import java.util.List;
 
 import net.minecraft.world.item.ItemStack;
-
+import var;
 import appeng.client.guidebook.navigation.NavigationNode;
 
 public class NavigationNodeJson {

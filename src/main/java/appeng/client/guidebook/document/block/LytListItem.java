@@ -1,7 +1,7 @@
 package appeng.client.guidebook.document.block;
 
 import net.minecraft.client.renderer.MultiBufferSource;
-
+import var;
 import appeng.client.guidebook.color.SymbolicColor;
 import appeng.client.guidebook.document.DefaultStyles;
 import appeng.client.guidebook.document.LytRect;

@@ -7,7 +7,8 @@ import java.util.List;
 import com.google.common.collect.Iterables;
 
 import org.jetbrains.annotations.Nullable;
-
+import record;
+import var;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.SectionPos;
 import net.minecraft.network.chat.Component;

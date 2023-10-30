@@ -3,7 +3,7 @@ package appeng.client.guidebook.scene.annotation;
 import java.util.Set;
 
 import org.jetbrains.annotations.Nullable;
-
+import var;
 import appeng.client.guidebook.color.ConstantColor;
 import appeng.client.guidebook.compiler.PageCompiler;
 import appeng.client.guidebook.compiler.tags.MdxAttrs;

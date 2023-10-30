@@ -20,8 +20,7 @@ package appeng.init;
 
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.crafting.RecipeSerializer;
-import net.minecraftforge.registries.IForgeRegistry;
-
+import net.neoforged.neoforge.registries.IForgeRegistry;
 import appeng.core.AppEng;
 import appeng.core.definitions.AEItems;
 import appeng.items.parts.FacadeItem;

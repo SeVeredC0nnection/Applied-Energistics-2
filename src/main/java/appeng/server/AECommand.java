@@ -24,7 +24,7 @@ import com.mojang.brigadier.CommandDispatcher;
 import com.mojang.brigadier.builder.LiteralArgumentBuilder;
 
 import net.minecraft.commands.CommandSourceStack;
-
+import var;
 import appeng.core.AEConfig;
 import appeng.core.AppEng;
 

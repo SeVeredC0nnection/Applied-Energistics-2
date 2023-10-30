@@ -26,7 +26,7 @@ import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.entity.BlockEntity;
-
+import var;
 import appeng.api.networking.IGridNode;
 import appeng.api.networking.IGridNodeListener;
 import appeng.api.networking.ticking.IGridTickable;

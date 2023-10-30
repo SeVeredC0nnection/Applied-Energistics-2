@@ -37,8 +37,8 @@ import net.minecraft.world.level.entity.Visibility;
 import net.minecraft.world.level.portal.PortalInfo;
 import net.minecraft.world.phys.AABB;
 import net.minecraft.world.phys.Vec3;
-import net.minecraftforge.common.util.ITeleporter;
-
+import net.neoforged.neoforge.common.util.ITeleporter;
+import var;
 import it.unimi.dsi.fastutil.longs.LongOpenHashSet;
 import it.unimi.dsi.fastutil.longs.LongSet;
 

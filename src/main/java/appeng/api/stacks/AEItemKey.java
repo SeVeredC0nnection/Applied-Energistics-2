@@ -8,7 +8,7 @@ import java.util.Objects;
 import java.util.WeakHashMap;
 
 import org.jetbrains.annotations.Nullable;
-
+import var;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.nbt.CompoundTag;
@@ -21,8 +21,7 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.ItemLike;
 import net.minecraft.world.level.Level;
-import net.minecraftforge.common.capabilities.CapabilityProvider;
-
+import net.neoforged.neoforge.common.capabilities.CapabilityProvider;
 import appeng.api.storage.AEKeyFilter;
 import appeng.core.AELog;
 import appeng.util.Platform;

@@ -20,7 +20,7 @@ package appeng.menu.implementations;
 
 import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.inventory.MenuType;
-
+import var;
 import appeng.api.config.CondenserOutput;
 import appeng.api.config.Settings;
 import appeng.blockentity.misc.CondenserBlockEntity;

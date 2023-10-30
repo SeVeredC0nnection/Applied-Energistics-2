@@ -35,7 +35,7 @@ import com.google.common.collect.ImmutableList;
 import com.google.common.collect.MutableClassToInstanceMap;
 
 import org.jetbrains.annotations.Nullable;
-
+import var;
 import net.minecraft.CrashReportCategory;
 import net.minecraft.core.Direction;
 import net.minecraft.core.registries.BuiltInRegistries;
@@ -234,7 +234,7 @@ public class GridNode implements IGridNode, IPathItem {
      * security system. Called instead of loadFromNBT when initially placed, once set never required again, the value is
      * saved with the Node NBT.
      *
-     * @param ownerPlayerId ME player id of the owner. See {@link appeng.api.features.IPlayerRegistry}.
+     * @param ownerPlayerId ME player id of the owner. See {@link IPlayerRegistry}.
      */
     public void setOwningPlayerId(int ownerPlayerId) {
         if (ownerPlayerId >= 0 && this.owningPlayerId != ownerPlayerId) {

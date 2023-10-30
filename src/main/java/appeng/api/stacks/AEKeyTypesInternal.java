@@ -1,13 +1,12 @@
 package appeng.api.stacks;
 
 import java.util.function.Supplier;
-
+import net.neoforged.neoforge.registries.ForgeRegistry;
+import net.neoforged.neoforge.registries.IForgeRegistry;
 import com.google.common.base.Preconditions;
 
 import org.jetbrains.annotations.ApiStatus;
-
-import net.minecraftforge.registries.ForgeRegistry;
-import net.minecraftforge.registries.IForgeRegistry;
+import var;
 
 /**
  * Manages the registry used to synchronize key spaces to the client.

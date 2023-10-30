@@ -20,9 +20,9 @@ package appeng.parts.p2p;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.level.BlockGetter;
-import net.minecraftforge.common.capabilities.Capability;
-import net.minecraftforge.common.util.LazyOptional;
-
+import net.neoforged.neoforge.common.capabilities.Capability;
+import net.neoforged.neoforge.common.util.LazyOptional;
+import var;
 import appeng.api.parts.IPartItem;
 import appeng.hooks.ticking.TickHandler;
 

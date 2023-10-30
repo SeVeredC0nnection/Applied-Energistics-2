@@ -27,7 +27,7 @@ import appeng.items.AEBaseItem;
 public class StorageComponentItem extends AEBaseItem implements IStorageComponent {
     private final int storageInKb;
 
-    public StorageComponentItem(Item.Properties properties, int storageInKb) {
+    public StorageComponentItem(Properties properties, int storageInKb) {
         super(properties);
         this.storageInKb = storageInKb;
     }

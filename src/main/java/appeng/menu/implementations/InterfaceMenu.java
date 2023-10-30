@@ -21,7 +21,7 @@ package appeng.menu.implementations;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.inventory.MenuType;
-
+import var;
 import appeng.api.config.Settings;
 import appeng.api.util.IConfigManager;
 import appeng.client.gui.implementations.InterfaceScreen;

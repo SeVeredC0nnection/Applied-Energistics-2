@@ -13,15 +13,14 @@ import org.junit.jupiter.api.extension.Extension;
 import org.junit.jupiter.api.extension.ExtensionContext;
 import org.junit.platform.commons.util.ReflectionUtils;
 import org.mockito.Mockito;
-
+import var;
 import net.minecraft.SharedConstants;
 import net.minecraft.server.Bootstrap;
-import net.minecraftforge.common.ForgeHooks;
-import net.minecraftforge.fluids.FluidType;
-import net.minecraftforge.registries.ForgeRegistries;
-import net.minecraftforge.registries.NewRegistryEvent;
-import net.minecraftforge.registries.RegistryBuilder;
-
+import net.neoforged.neoforge.common.CommonHooks;
+import net.neoforged.neoforge.fluids.FluidType;
+import net.neoforged.neoforge.registries.ForgeRegistries;
+import net.neoforged.neoforge.registries.NewRegistryEvent;
+import net.neoforged.neoforge.registries.RegistryBuilder;
 import appeng.api.stacks.AEKeyType;
 import appeng.api.stacks.AEKeyTypes;
 import appeng.api.stacks.AEKeyTypesInternal;
@@ -81,7 +80,7 @@ public class BootstrapMinecraftExtension implements Extension, BeforeAllCallback
 
     private void mockForgeFluidTypes() {
         // Otherwise constructing ANY FluidKey will crash
-        var mocked = Mockito.mockStatic(ForgeHooks.class, Mockito.CALLS_REAL_METHODS);
+        var mocked = Mockito.mockStatic(CommonHooks.class, Mockito.CALLS_REAL_METHODS);
         var props = FluidType.Properties.create();
         props.descriptionId("fluid");
         mocked.when(() -> ForgeHooks.getVanillaFluidType(any()))

@@ -19,8 +19,7 @@
 package appeng.init.client;
 
 import net.minecraft.core.particles.ParticleType;
-import net.minecraftforge.registries.IForgeRegistry;
-
+import net.neoforged.neoforge.registries.IForgeRegistry;
 import appeng.client.render.effects.ParticleTypes;
 import appeng.core.AppEng;
 

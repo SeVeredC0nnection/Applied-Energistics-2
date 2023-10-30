@@ -33,9 +33,9 @@ import net.minecraft.tags.BlockTags;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
-import net.minecraftforge.common.Tags;
-import net.minecraftforge.common.data.ExistingFileHelper;
-
+import net.neoforged.neoforge.common.Tags;
+import net.neoforged.neoforge.common.data.ExistingFileHelper;
+import var;
 import appeng.api.ids.AETags;
 import appeng.core.AppEng;
 import appeng.core.definitions.AEBlocks;
@@ -146,7 +146,7 @@ public class BlockTagsProvider extends IntrinsicHolderTagsProvider<Block> implem
 
     }
 
-    private TagsProvider.TagAppender<Block> tag(String name) {
+    private TagAppender<Block> tag(String name) {
         return tag(TagKey.create(Registries.BLOCK, new ResourceLocation(name)));
     }
 }

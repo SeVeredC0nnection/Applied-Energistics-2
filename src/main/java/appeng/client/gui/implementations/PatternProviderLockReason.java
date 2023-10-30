@@ -1,7 +1,7 @@
 package appeng.client.gui.implementations;
 
 import org.jetbrains.annotations.Nullable;
-
+import var;
 import net.minecraft.ChatFormatting;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.GuiGraphics;

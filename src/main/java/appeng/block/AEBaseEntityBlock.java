@@ -22,7 +22,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.jetbrains.annotations.Nullable;
-
+import var;
 import net.minecraft.core.BlockPos;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.chat.contents.LiteralContents;
@@ -72,7 +72,7 @@ public abstract class AEBaseEntityBlock<T extends AEBaseBlockEntity> extends AEB
     @Nullable
     private BlockEntityTicker<T> clientTicker;
 
-    public AEBaseEntityBlock(BlockBehaviour.Properties props) {
+    public AEBaseEntityBlock(Properties props) {
         super(props);
     }
 

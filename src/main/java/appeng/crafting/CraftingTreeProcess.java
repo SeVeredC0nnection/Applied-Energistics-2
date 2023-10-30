@@ -20,7 +20,7 @@ package appeng.crafting;
 
 import java.util.LinkedHashMap;
 import java.util.Map;
-
+import var;
 import appeng.api.config.Actionable;
 import appeng.api.crafting.IPatternDetails;
 import appeng.api.networking.crafting.ICraftingService;

@@ -30,9 +30,9 @@ import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.item.context.UseOnContext;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.entity.BlockEntity;
-import net.minecraftforge.api.distmarker.Dist;
-import net.minecraftforge.api.distmarker.OnlyIn;
-
+import net.neoforged.api.distmarker.Dist;
+import net.neoforged.api.distmarker.OnlyIn;
+import var;
 import appeng.api.parts.IPartHost;
 import appeng.api.parts.SelectedPart;
 import appeng.api.upgrades.IUpgradeInventory;
@@ -45,7 +45,7 @@ import appeng.util.InteractionUtil;
 
 public class UpgradeCardItem extends AEBaseItem {
 
-    public UpgradeCardItem(Item.Properties properties) {
+    public UpgradeCardItem(Properties properties) {
         super(properties);
     }
 

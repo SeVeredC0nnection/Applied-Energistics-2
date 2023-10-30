@@ -24,7 +24,7 @@ import java.util.Map;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
-
+import var;
 import appeng.api.util.AEColor;
 
 public final class ColoredItemDefinition<T extends Item> {

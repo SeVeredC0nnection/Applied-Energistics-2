@@ -4,7 +4,7 @@ import java.util.ServiceLoader;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-
+import var;
 import appeng.api.integrations.igtooltip.BaseClassRegistration;
 import appeng.api.integrations.igtooltip.ClientRegistration;
 import appeng.api.integrations.igtooltip.CommonRegistration;

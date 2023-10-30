@@ -30,7 +30,7 @@ import net.minecraft.world.level.levelgen.structure.StructureType;
 import net.minecraft.world.level.levelgen.structure.TerrainAdjustment;
 import net.minecraft.world.level.levelgen.structure.placement.RandomSpreadStructurePlacement;
 import net.minecraft.world.level.levelgen.structure.placement.RandomSpreadType;
-
+import var;
 import appeng.worldgen.meteorite.MeteoriteStructure;
 import appeng.worldgen.meteorite.MeteoriteStructurePiece;
 

@@ -37,9 +37,10 @@ import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.item.crafting.Recipe;
 import net.minecraft.world.item.crafting.RecipeType;
 import net.minecraft.world.level.Level;
-
+import record;
+import var;
 import it.unimi.dsi.fastutil.objects.Object2IntOpenHashMap;
-
+import MissingIngredientSlots;
 import appeng.api.inventories.ISegmentedInventory;
 import appeng.api.inventories.InternalInventory;
 import appeng.api.stacks.AEItemKey;

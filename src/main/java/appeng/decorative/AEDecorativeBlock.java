@@ -23,7 +23,7 @@ import net.minecraft.world.level.block.state.BlockBehaviour;
 import appeng.block.AEBaseBlock;
 
 public class AEDecorativeBlock extends AEBaseBlock {
-    public AEDecorativeBlock(BlockBehaviour.Properties props) {
+    public AEDecorativeBlock(Properties props) {
         super(props);
     }
 }

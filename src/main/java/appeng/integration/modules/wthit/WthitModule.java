@@ -1,7 +1,7 @@
 package appeng.integration.modules.wthit;
 
 import org.jetbrains.annotations.Nullable;
-
+import var;
 import net.minecraft.ChatFormatting;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;

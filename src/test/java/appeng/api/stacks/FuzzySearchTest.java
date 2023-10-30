@@ -22,11 +22,12 @@ import static org.assertj.core.api.Assertions.assertThat;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertFalse;
 
+import AEItemKey;
 import java.util.Arrays;
 
 import org.junit.jupiter.api.Nested;
 import org.junit.jupiter.api.Test;
-
+import var;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 

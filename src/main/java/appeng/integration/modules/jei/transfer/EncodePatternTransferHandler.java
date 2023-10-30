@@ -8,7 +8,8 @@ import java.util.Optional;
 import java.util.stream.Collectors;
 
 import org.jetbrains.annotations.Nullable;
-
+import record;
+import var;
 import net.minecraft.client.gui.GuiGraphics;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.inventory.MenuType;
@@ -24,7 +25,7 @@ import mezz.jei.api.recipe.transfer.IRecipeTransferError;
 import mezz.jei.api.recipe.transfer.IRecipeTransferHandler;
 import mezz.jei.api.recipe.transfer.IRecipeTransferHandlerHelper;
 import mezz.jei.api.runtime.IIngredientVisibility;
-
+import Type;
 import appeng.api.stacks.GenericStack;
 import appeng.core.localization.ItemModText;
 import appeng.integration.abstraction.JEIFacade;

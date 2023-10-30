@@ -9,7 +9,7 @@ import org.jetbrains.annotations.Nullable;
 import org.lwjgl.glfw.GLFW;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-
+import var;
 import net.minecraft.ChatFormatting;
 import net.minecraft.client.KeyMapping;
 import net.minecraft.client.Minecraft;
@@ -19,11 +19,10 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.util.Mth;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.TooltipFlag;
-import net.minecraftforge.client.settings.KeyConflictContext;
-import net.minecraftforge.common.MinecraftForge;
-import net.minecraftforge.event.TickEvent;
-import net.minecraftforge.event.entity.player.ItemTooltipEvent;
-
+import net.neoforged.neoforge.client.settings.KeyConflictContext;
+import net.neoforged.neoforge.common.NeoForge;
+import net.neoforged.neoforge.event.TickEvent;
+import net.neoforged.neoforge.event.entity.player.ItemTooltipEvent;
 import appeng.client.guidebook.GuidebookText;
 import appeng.client.guidebook.PageAnchor;
 import appeng.client.guidebook.indices.ItemIndex;
@@ -65,9 +64,9 @@ public final class OpenGuideHotkey {
 
     public static void init() {
         if (AEConfig.instance().isGuideHotkeyEnabled()) {
-            MinecraftForge.EVENT_BUS.addListener(
+            NeoForge.EVENT_BUS.addListener(
                     (ItemTooltipEvent evt) -> handleTooltip(evt.getItemStack(), evt.getFlags(), evt.getToolTip()));
-            MinecraftForge.EVENT_BUS.addListener((TickEvent.ClientTickEvent evt) -> newTick = true);
+            NeoForge.EVENT_BUS.addListener((TickEvent.ClientTickEvent evt) -> newTick = true);
         } else {
             LOG.info("AE2 guide hotkey is disabled via config.");
         }

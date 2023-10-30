@@ -1,7 +1,7 @@
 package appeng.parts.automation;
 
 import java.util.Map;
-
+import var;
 import appeng.api.behaviors.PlacementStrategy;
 import appeng.api.config.Actionable;
 import appeng.api.stacks.AEKey;

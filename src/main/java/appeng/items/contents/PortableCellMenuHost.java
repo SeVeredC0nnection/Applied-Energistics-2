@@ -24,7 +24,7 @@ import java.util.function.BiConsumer;
 import com.google.common.base.Preconditions;
 
 import org.jetbrains.annotations.Nullable;
-
+import var;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.inventory.AbstractContainerMenu;
 import net.minecraft.world.item.ItemStack;
@@ -48,7 +48,7 @@ import appeng.menu.ISubMenu;
 import appeng.util.ConfigManager;
 
 /**
- * Hosts the terminal interface for a {@link appeng.items.tools.powered.AbstractPortableCell}.
+ * Hosts the terminal interface for a {@link AbstractPortableCell}.
  */
 public class PortableCellMenuHost extends ItemMenuHost implements IPortableTerminal {
     private final BiConsumer<Player, ISubMenu> returnMainMenu;

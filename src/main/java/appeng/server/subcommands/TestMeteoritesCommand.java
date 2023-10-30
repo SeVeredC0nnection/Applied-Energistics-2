@@ -48,7 +48,7 @@ import net.minecraft.world.level.chunk.ChunkAccess;
 import net.minecraft.world.level.chunk.ChunkStatus;
 import net.minecraft.world.level.levelgen.Heightmap.Types;
 import net.minecraft.world.level.levelgen.structure.Structure;
-
+import var;
 import appeng.server.ISubCommand;
 import appeng.worldgen.meteorite.MeteoriteStructure;
 import appeng.worldgen.meteorite.MeteoriteStructurePiece;

@@ -11,7 +11,7 @@ import appeng.client.guidebook.scene.annotation.SceneAnnotation;
 import appeng.client.guidebook.scene.level.GuidebookLevel;
 
 /**
- * Provides a way to generate a {@link appeng.client.guidebook.scene.annotation.SceneAnnotation} on the fly if no
+ * Provides a way to generate a {@link SceneAnnotation} on the fly if no
  * explicit annotation could be found under the mouse.
  */
 public interface ImplicitAnnotationStrategy extends Extension {

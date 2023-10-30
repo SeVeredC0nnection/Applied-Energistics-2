@@ -7,9 +7,10 @@ import java.util.UUID;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.player.LocalPlayer;
 import net.minecraft.world.item.ItemStack;
-import net.minecraftforge.api.distmarker.Dist;
-import net.minecraftforge.api.distmarker.OnlyIn;
-
+import net.neoforged.api.distmarker.Dist;
+import net.neoforged.api.distmarker.OnlyIn;
+import record;
+import var;
 import appeng.api.client.AEKeyRendering;
 import appeng.api.stacks.AEKey;
 import appeng.core.AEConfig;

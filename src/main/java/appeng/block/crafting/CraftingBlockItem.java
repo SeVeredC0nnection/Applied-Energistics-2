@@ -43,7 +43,7 @@ public class CraftingBlockItem extends AEBaseBlockItem {
      */
     protected final Supplier<ItemLike> disassemblyExtra;
 
-    public CraftingBlockItem(Block id, Item.Properties props, Supplier<ItemLike> disassemblyExtra) {
+    public CraftingBlockItem(Block id, Properties props, Supplier<ItemLike> disassemblyExtra) {
         super(id, props);
         this.disassemblyExtra = disassemblyExtra;
     }

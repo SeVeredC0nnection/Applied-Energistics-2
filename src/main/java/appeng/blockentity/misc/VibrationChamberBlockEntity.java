@@ -21,7 +21,7 @@ package appeng.blockentity.misc;
 import java.util.List;
 
 import org.jetbrains.annotations.Nullable;
-
+import var;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.nbt.CompoundTag;
@@ -33,8 +33,7 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.state.BlockState;
-import net.minecraftforge.common.ForgeHooks;
-
+import net.neoforged.neoforge.common.CommonHooks;
 import appeng.api.config.Actionable;
 import appeng.api.inventories.ISegmentedInventory;
 import appeng.api.inventories.InternalInventory;
@@ -309,7 +308,7 @@ public class VibrationChamberBlockEntity extends AENetworkInvBlockEntity impleme
     }
 
     public static int getBurnTime(ItemStack is) {
-        return ForgeHooks.getBurnTime(is, null);
+        return CommonHooks.getBurnTime(is, null);
     }
 
     public static boolean hasBurnTime(ItemStack is) {

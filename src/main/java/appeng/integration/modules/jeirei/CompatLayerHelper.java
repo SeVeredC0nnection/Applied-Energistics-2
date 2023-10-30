@@ -1,6 +1,6 @@
 package appeng.integration.modules.jeirei;
 
-import net.minecraftforge.fml.ModList;
+import net.neoforged.fml.ModList;
 
 /**
  * We prevent most of the REI compat from loading when the JEI compat is loaded. Two exceptions:

@@ -19,7 +19,7 @@
 package appeng.block.qnb;
 
 import org.jetbrains.annotations.Nullable;
-
+import var;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.world.item.context.BlockPlaceContext;
@@ -56,7 +56,7 @@ public abstract class QuantumBaseBlock extends AEBaseEntityBlock<QuantumBridgeBl
         SHAPE = Shapes.create(new AABB(shave, shave, shave, 1.0f - shave, 1.0f - shave, 1.0f - shave));
     }
 
-    public QuantumBaseBlock(BlockBehaviour.Properties props) {
+    public QuantumBaseBlock(Properties props) {
         super(props);
         this.registerDefaultState(this.defaultBlockState().setValue(FORMED, false)
                 .setValue(WATERLOGGED, false));

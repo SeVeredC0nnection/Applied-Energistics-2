@@ -25,7 +25,7 @@ import net.minecraft.client.gui.components.Button;
 import net.minecraft.client.gui.components.Button.OnPress;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.entity.player.Inventory;
-
+import var;
 import appeng.api.config.FuzzyMode;
 import appeng.api.config.Settings;
 import appeng.client.gui.Icon;

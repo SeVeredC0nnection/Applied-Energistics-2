@@ -4,7 +4,7 @@ import java.util.function.Consumer;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
-
+import var;
 import appeng.block.qnb.QuantumBaseBlock;
 import appeng.blockentity.qnb.QuantumBridgeBlockEntity;
 import appeng.core.definitions.AEBlocks;

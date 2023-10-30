@@ -18,11 +18,10 @@
 
 package appeng.helpers;
 
-import net.minecraftforge.energy.IEnergyStorage;
-
 import appeng.api.config.Actionable;
 import appeng.api.config.PowerUnits;
 import appeng.blockentity.powersink.IExternalPowerSink;
+import net.neoforged.neoforge.energy.IEnergyStorage;
 
 /**
  * Adapts an {@link IExternalPowerSink} to Forges {@link IEnergyStorage}.

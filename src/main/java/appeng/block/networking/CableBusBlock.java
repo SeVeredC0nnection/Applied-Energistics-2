@@ -24,7 +24,7 @@ import java.util.Objects;
 import java.util.function.Consumer;
 
 import org.jetbrains.annotations.Nullable;
-
+import var;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.multiplayer.ClientLevel;
 import net.minecraft.client.particle.Particle;
@@ -68,9 +68,8 @@ import net.minecraft.world.phys.Vec3;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.Shapes;
 import net.minecraft.world.phys.shapes.VoxelShape;
-import net.minecraftforge.client.extensions.common.IClientBlockExtensions;
-import net.minecraftforge.client.model.data.ModelData;
-
+import net.neoforged.neoforge.client.extensions.common.IClientBlockExtensions;
+import net.neoforged.neoforge.client.model.data.ModelData;
 import appeng.api.parts.IFacadeContainer;
 import appeng.api.parts.IFacadePart;
 import appeng.api.util.AEColor;
@@ -173,7 +172,7 @@ public class CableBusBlock extends AEBaseEntityBlock<CableBusBlockEntity> implem
 
     @Override
     public boolean canConnectRedstone(BlockState state, BlockGetter level, BlockPos pos,
-            @org.jetbrains.annotations.Nullable Direction side) {
+            @Nullable Direction side) {
         if (side == null) {
             return false;
         }

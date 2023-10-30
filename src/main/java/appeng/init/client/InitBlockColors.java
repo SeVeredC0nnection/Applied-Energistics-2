@@ -19,9 +19,8 @@
 package appeng.init.client;
 
 import net.minecraft.client.color.block.BlockColors;
-import net.minecraftforge.api.distmarker.Dist;
-import net.minecraftforge.api.distmarker.OnlyIn;
-
+import net.neoforged.api.distmarker.Dist;
+import net.neoforged.api.distmarker.OnlyIn;
 import appeng.api.util.AEColor;
 import appeng.block.networking.CableBusColor;
 import appeng.client.render.ColorableBlockEntityBlockColor;

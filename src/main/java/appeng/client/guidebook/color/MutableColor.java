@@ -2,6 +2,7 @@ package appeng.client.guidebook.color;
 
 import net.minecraft.util.FastColor;
 import net.minecraft.util.Mth;
+import var;
 
 /**
  * A helper for mutating color values.

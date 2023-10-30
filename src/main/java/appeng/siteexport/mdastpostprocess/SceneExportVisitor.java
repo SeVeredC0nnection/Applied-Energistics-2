@@ -7,7 +7,7 @@ import com.google.common.collect.Multimap;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-
+import var;
 import appeng.client.guidebook.document.block.LytNode;
 import appeng.client.guidebook.scene.BlockImageTagCompiler;
 import appeng.client.guidebook.scene.LytGuidebookScene;

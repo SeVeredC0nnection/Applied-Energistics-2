@@ -30,9 +30,9 @@ import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.level.ItemLike;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.material.Fluid;
-import net.minecraftforge.api.distmarker.Dist;
-import net.minecraftforge.api.distmarker.OnlyIn;
-
+import net.neoforged.api.distmarker.Dist;
+import net.neoforged.api.distmarker.OnlyIn;
+import var;
 import appeng.api.client.AEKeyRendering;
 import appeng.api.config.FuzzyMode;
 import appeng.api.stacks.AEFluidKey;

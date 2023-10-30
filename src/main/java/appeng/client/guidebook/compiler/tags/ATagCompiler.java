@@ -2,7 +2,7 @@ package appeng.client.guidebook.compiler.tags;
 
 import java.net.URI;
 import java.util.Set;
-
+import var;
 import appeng.client.guidebook.PageAnchor;
 import appeng.client.guidebook.compiler.LinkParser;
 import appeng.client.guidebook.compiler.PageCompiler;

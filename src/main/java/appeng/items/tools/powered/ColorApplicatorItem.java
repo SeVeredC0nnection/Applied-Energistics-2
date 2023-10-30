@@ -30,7 +30,7 @@ import com.google.common.collect.BiMap;
 import com.google.common.collect.EnumHashBiMap;
 
 import org.jetbrains.annotations.Nullable;
-
+import var;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.nbt.CompoundTag;
@@ -58,9 +58,8 @@ import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.properties.Property;
-import net.minecraftforge.api.distmarker.Dist;
-import net.minecraftforge.api.distmarker.OnlyIn;
-
+import net.neoforged.api.distmarker.Dist;
+import net.neoforged.api.distmarker.OnlyIn;
 import appeng.api.config.Actionable;
 import appeng.api.config.FuzzyMode;
 import appeng.api.implementations.blockentities.IColorableBlockEntity;
@@ -126,7 +125,7 @@ public class ColorApplicatorItem extends AEBasePoweredItem
 
     private static final String TAG_COLOR = "color";
 
-    public ColorApplicatorItem(Item.Properties props) {
+    public ColorApplicatorItem(Properties props) {
         super(AEConfig.instance().getColorApplicatorBattery(), props);
     }
 

@@ -31,7 +31,7 @@ import com.google.common.collect.MultimapBuilder;
 import com.google.common.collect.SetMultimap;
 
 import org.jetbrains.annotations.Nullable;
-
+import var;
 import net.minecraft.CrashReportCategory;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.world.level.Level;

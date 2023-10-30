@@ -31,7 +31,7 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.crafting.Recipe;
 import net.minecraft.world.item.crafting.RecipeType;
 import net.minecraft.world.level.Level;
-
+import var;
 import appeng.api.config.Actionable;
 import appeng.api.inventories.InternalInventory;
 import appeng.api.networking.energy.IEnergySource;

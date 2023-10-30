@@ -32,7 +32,7 @@ import com.google.common.base.Preconditions;
 import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
-
+import var;
 import appeng.api.stacks.GenericStack;
 
 /**

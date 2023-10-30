@@ -4,7 +4,7 @@ import java.util.List;
 
 import org.jetbrains.annotations.Contract;
 import org.jetbrains.annotations.Nullable;
-
+import var;
 import net.minecraft.ResourceLocationException;
 import net.minecraft.core.BlockPos;
 import net.minecraft.nbt.CompoundTag;
@@ -22,7 +22,7 @@ import appeng.core.AELog;
  * Uniquely identifies something that "stacks" within an ME inventory.
  * <p/>
  * For example for items, this is the combination of an {@link net.minecraft.world.item.Item} and optional
- * {@link net.minecraft.nbt.CompoundTag}. To account for common indexing scenarios, a key is (optionally) split into a
+ * {@link CompoundTag}. To account for common indexing scenarios, a key is (optionally) split into a
  * primary and secondary component, which serves two purposes:
  * <ul>
  * <li>Fuzzy cards allow setting filters for the primary component of a key, i.e. for an

@@ -2,13 +2,12 @@ package appeng.parts.automation;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-
+import var;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.server.level.ServerLevel;
-import net.minecraftforge.common.capabilities.Capability;
-import net.minecraftforge.common.capabilities.ForgeCapabilities;
-
+import net.neoforged.neoforge.common.capabilities.Capabilities;
+import net.neoforged.neoforge.common.capabilities.Capability;
 import appeng.api.behaviors.StackExportStrategy;
 import appeng.api.behaviors.StackTransferContext;
 import appeng.api.config.Actionable;
@@ -96,7 +95,7 @@ public class StorageExportStrategy<C, S> implements StackExportStrategy {
 
     public static StackExportStrategy createItem(ServerLevel level, BlockPos fromPos, Direction fromSide) {
         return new StorageExportStrategy<>(
-                ForgeCapabilities.ITEM_HANDLER,
+                Capabilities.ITEM_HANDLER,
                 HandlerStrategy.ITEMS,
                 level,
                 fromPos,
@@ -105,7 +104,7 @@ public class StorageExportStrategy<C, S> implements StackExportStrategy {
 
     public static StackExportStrategy createFluid(ServerLevel level, BlockPos fromPos, Direction fromSide) {
         return new StorageExportStrategy<>(
-                ForgeCapabilities.FLUID_HANDLER,
+                Capabilities.FLUID_HANDLER,
                 HandlerStrategy.FLUIDS,
                 level,
                 fromPos,

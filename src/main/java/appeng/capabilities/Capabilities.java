@@ -18,16 +18,15 @@
 
 package appeng.capabilities;
 
-import net.minecraftforge.common.capabilities.Capability;
-import net.minecraftforge.common.capabilities.CapabilityManager;
-import net.minecraftforge.common.capabilities.CapabilityToken;
-import net.minecraftforge.energy.IEnergyStorage;
-
 import appeng.api.behaviors.GenericInternalInventory;
 import appeng.api.implementations.blockentities.ICraftingMachine;
 import appeng.api.implementations.blockentities.ICrankable;
 import appeng.api.networking.IInWorldGridNodeHost;
 import appeng.api.storage.MEStorage;
+import net.neoforged.neoforge.common.capabilities.Capability;
+import net.neoforged.neoforge.common.capabilities.CapabilityManager;
+import net.neoforged.neoforge.common.capabilities.CapabilityToken;
+import net.neoforged.neoforge.energy.IEnergyStorage;
 
 /**
  * Utility class that holds various capabilities, both by AE2 and other Mods.

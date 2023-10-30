@@ -19,7 +19,7 @@
 package appeng.menu.slot;
 
 import net.minecraft.world.item.ItemStack;
-
+import var;
 import appeng.api.inventories.InternalInventory;
 import appeng.client.Point;
 import appeng.menu.implementations.MolecularAssemblerMenu;

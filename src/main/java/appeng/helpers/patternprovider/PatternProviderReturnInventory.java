@@ -24,9 +24,9 @@ import java.util.function.Consumer;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
-import net.minecraftforge.common.capabilities.Capability;
-import net.minecraftforge.common.util.LazyOptional;
-
+import net.neoforged.neoforge.common.capabilities.Capability;
+import net.neoforged.neoforge.common.util.LazyOptional;
+import var;
 import appeng.api.behaviors.GenericInternalInventory;
 import appeng.api.config.Actionable;
 import appeng.api.networking.security.IActionSource;

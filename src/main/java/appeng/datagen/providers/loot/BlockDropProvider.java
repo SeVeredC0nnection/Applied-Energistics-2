@@ -30,7 +30,7 @@ import com.google.common.collect.ImmutableMap;
 import com.google.gson.JsonElement;
 
 import org.jetbrains.annotations.NotNull;
-
+import var;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.data.CachedOutput;
 import net.minecraft.data.DataProvider;

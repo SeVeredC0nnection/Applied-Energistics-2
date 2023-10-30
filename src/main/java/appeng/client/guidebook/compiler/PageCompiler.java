@@ -16,10 +16,10 @@ import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-
+import var;
 import net.minecraft.ResourceLocationException;
 import net.minecraft.resources.ResourceLocation;
-
+import Frontmatter;
 import appeng.client.guidebook.GuidePage;
 import appeng.client.guidebook.PageAnchor;
 import appeng.client.guidebook.PageCollection;

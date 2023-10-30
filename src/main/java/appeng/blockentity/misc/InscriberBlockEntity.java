@@ -25,7 +25,7 @@ import java.util.Map;
 import java.util.Set;
 
 import org.jetbrains.annotations.Nullable;
-
+import var;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.nbt.CompoundTag;
@@ -35,9 +35,8 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.state.BlockState;
-import net.minecraftforge.common.capabilities.Capability;
-import net.minecraftforge.common.util.LazyOptional;
-
+import net.neoforged.neoforge.common.capabilities.Capability;
+import net.neoforged.neoforge.common.util.LazyOptional;
 import appeng.api.config.Actionable;
 import appeng.api.config.PowerMultiplier;
 import appeng.api.config.PowerUnits;
@@ -506,7 +505,7 @@ public class InscriberBlockEntity extends AENetworkPowerBlockEntity
     /**
      * Allow cranking from any side other than the front.
      */
-    @org.jetbrains.annotations.Nullable
+    @Nullable
     public ICrankable getCrankable(Direction direction) {
         if (direction != getFront()) {
             return new Crankable();

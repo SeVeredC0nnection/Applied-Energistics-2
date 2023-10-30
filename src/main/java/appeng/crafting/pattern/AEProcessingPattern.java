@@ -21,7 +21,7 @@ package appeng.crafting.pattern;
 import java.util.Objects;
 
 import org.jetbrains.annotations.Nullable;
-
+import var;
 import net.minecraft.world.level.Level;
 
 import appeng.api.crafting.IPatternDetails;

@@ -35,7 +35,8 @@ import org.jetbrains.annotations.Nullable;
 import org.lwjgl.glfw.GLFW;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-
+import record;
+import var;
 import net.minecraft.ChatFormatting;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.GuiGraphics;
@@ -55,7 +56,7 @@ import net.minecraft.world.inventory.ClickType;
 import net.minecraft.world.inventory.Slot;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.block.entity.BlockEntity;
-
+import StackWithBounds;
 import appeng.api.behaviors.ContainerItemStrategies;
 import appeng.api.behaviors.EmptyingAction;
 import appeng.api.implementations.menuobjects.ItemMenuHost;
@@ -1001,7 +1002,7 @@ public abstract class AEBaseScreen<T extends AEBaseMenu> extends AbstractContain
         }
     }
 
-    @org.jetbrains.annotations.Nullable
+    @Nullable
     protected PageAnchor getHelpTopic() {
         // Help topic may be overridden via screen style
         String helpTopic = style.getHelpTopic();

@@ -41,7 +41,7 @@ import appeng.menu.locator.MenuLocators;
 public class QuartzCuttingKnifeItem extends AEBaseItem implements IMenuItem {
     private final RandomSource random = RandomSource.create();
 
-    public QuartzCuttingKnifeItem(Item.Properties props, QuartzToolType type) {
+    public QuartzCuttingKnifeItem(Properties props, QuartzToolType type) {
         super(props);
     }
 

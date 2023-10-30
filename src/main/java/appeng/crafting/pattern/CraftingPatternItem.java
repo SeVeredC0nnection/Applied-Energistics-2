@@ -3,7 +3,7 @@ package appeng.crafting.pattern;
 import java.util.Arrays;
 
 import org.jetbrains.annotations.Nullable;
-
+import var;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.inventory.CraftingContainer;

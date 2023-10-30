@@ -46,7 +46,7 @@ public abstract class AbstractCraftingUnitBlock<T extends CraftingBlockEntity> e
 
     public final ICraftingUnitType type;
 
-    public AbstractCraftingUnitBlock(BlockBehaviour.Properties props, ICraftingUnitType type) {
+    public AbstractCraftingUnitBlock(Properties props, ICraftingUnitType type) {
         super(props);
         this.type = type;
         this.registerDefaultState(defaultBlockState().setValue(FORMED, false).setValue(POWERED, false));

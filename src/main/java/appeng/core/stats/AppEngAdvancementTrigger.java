@@ -41,7 +41,7 @@ import appeng.core.AppEng;
 public class AppEngAdvancementTrigger
         implements CriterionTrigger<AppEngAdvancementTrigger.Instance>, IAdvancementTrigger {
     private final ResourceLocation id;
-    private final Map<PlayerAdvancements, AppEngAdvancementTrigger.Listeners> listeners = new HashMap<>();
+    private final Map<PlayerAdvancements, Listeners> listeners = new HashMap<>();
 
     public AppEngAdvancementTrigger(String id) {
         super();
@@ -59,11 +59,11 @@ public class AppEngAdvancementTrigger
 
     @Override
     public void addPlayerListener(PlayerAdvancements playerAdvancementsIn,
-            CriterionTrigger.Listener<Instance> listener) {
-        AppEngAdvancementTrigger.Listeners l = this.listeners.get(playerAdvancementsIn);
+            Listener<Instance> listener) {
+        Listeners l = this.listeners.get(playerAdvancementsIn);
 
         if (l == null) {
-            l = new AppEngAdvancementTrigger.Listeners(playerAdvancementsIn);
+            l = new Listeners(playerAdvancementsIn);
             this.listeners.put(playerAdvancementsIn, l);
         }
 
@@ -72,8 +72,8 @@ public class AppEngAdvancementTrigger
 
     @Override
     public void removePlayerListener(PlayerAdvancements playerAdvancementsIn,
-            CriterionTrigger.Listener<Instance> listener) {
-        AppEngAdvancementTrigger.Listeners l = this.listeners.get(playerAdvancementsIn);
+            Listener<Instance> listener) {
+        Listeners l = this.listeners.get(playerAdvancementsIn);
 
         if (l != null) {
             l.remove(listener);
@@ -91,12 +91,12 @@ public class AppEngAdvancementTrigger
 
     @Override
     public Instance createInstance(JsonObject object, DeserializationContext conditions) {
-        return new AppEngAdvancementTrigger.Instance(this.getId());
+        return new Instance(this.getId());
     }
 
     @Override
     public void trigger(ServerPlayer parPlayer) {
-        AppEngAdvancementTrigger.Listeners l = this.listeners.get(parPlayer.getAdvancements());
+        Listeners l = this.listeners.get(parPlayer.getAdvancements());
 
         if (l != null) {
             l.trigger(parPlayer);
@@ -127,7 +127,7 @@ public class AppEngAdvancementTrigger
 
     static class Listeners {
         private final PlayerAdvancements playerAdvancements;
-        private final Set<CriterionTrigger.Listener<Instance>> listeners = new HashSet<>();
+        private final Set<Listener<Instance>> listeners = new HashSet<>();
 
         Listeners(PlayerAdvancements playerAdvancementsIn) {
             this.playerAdvancements = playerAdvancementsIn;
@@ -137,18 +137,18 @@ public class AppEngAdvancementTrigger
             return this.listeners.isEmpty();
         }
 
-        public void add(CriterionTrigger.Listener<Instance> listener) {
+        public void add(Listener<Instance> listener) {
             this.listeners.add(listener);
         }
 
-        public void remove(CriterionTrigger.Listener<Instance> listener) {
+        public void remove(Listener<Instance> listener) {
             this.listeners.remove(listener);
         }
 
         public void trigger(Player player) {
-            List<CriterionTrigger.Listener<Instance>> list = null;
+            List<Listener<Instance>> list = null;
 
-            for (CriterionTrigger.Listener<Instance> listener : this.listeners) {
+            for (Listener<Instance> listener : this.listeners) {
                 if (listener.getTriggerInstance().test()) {
                     if (list == null) {
                         list = new ArrayList<>();
@@ -159,7 +159,7 @@ public class AppEngAdvancementTrigger
             }
 
             if (list != null) {
-                for (CriterionTrigger.Listener<Instance> l : list) {
+                for (Listener<Instance> l : list) {
                     l.run(this.playerAdvancements);
                 }
             }

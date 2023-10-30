@@ -23,7 +23,7 @@ import net.minecraft.core.dispenser.DefaultDispenseItemBehavior;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.block.DispenserBlock;
 import net.minecraft.world.phys.Vec3;
-
+import var;
 import appeng.items.tools.powered.MatterCannonItem;
 import appeng.util.LookDirection;
 import appeng.util.Platform;

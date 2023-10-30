@@ -23,7 +23,7 @@ import com.google.gson.JsonObject;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.data.PackOutput;
 import net.minecraft.world.item.ItemStack;
-
+import var;
 import appeng.datagen.providers.IAE2DataProvider;
 
 public abstract class AE2RecipeProvider extends net.minecraft.data.recipes.RecipeProvider implements IAE2DataProvider {

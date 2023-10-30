@@ -20,7 +20,7 @@ public class BuddingCertusQuartzBlock extends AEBaseBlock {
     public static final int DECAY_CHANCE = 12;
     private static final Direction[] DIRECTIONS = Direction.values();
 
-    public BuddingCertusQuartzBlock(BlockBehaviour.Properties properties) {
+    public BuddingCertusQuartzBlock(Properties properties) {
         super(properties);
     }
 

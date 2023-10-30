@@ -1,13 +1,12 @@
 package appeng.parts.automation;
 
 import org.jetbrains.annotations.Nullable;
-
+import var;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.server.level.ServerLevel;
-import net.minecraftforge.common.capabilities.Capability;
-import net.minecraftforge.common.capabilities.ForgeCapabilities;
-
+import net.neoforged.neoforge.common.capabilities.Capabilities;
+import net.neoforged.neoforge.common.capabilities.Capability;
 import appeng.api.behaviors.ExternalStorageStrategy;
 import appeng.api.storage.MEStorage;
 import appeng.util.BlockApiCache;
@@ -43,7 +42,7 @@ public class ForgeExternalStorageStrategy<C, S> implements ExternalStorageStrate
 
     public static ExternalStorageStrategy createItem(ServerLevel level, BlockPos fromPos, Direction fromSide) {
         return new ForgeExternalStorageStrategy<>(
-                ForgeCapabilities.ITEM_HANDLER,
+                Capabilities.ITEM_HANDLER,
                 HandlerStrategy.ITEMS,
                 level,
                 fromPos,
@@ -52,7 +51,7 @@ public class ForgeExternalStorageStrategy<C, S> implements ExternalStorageStrate
 
     public static ExternalStorageStrategy createFluid(ServerLevel level, BlockPos fromPos, Direction fromSide) {
         return new ForgeExternalStorageStrategy<>(
-                ForgeCapabilities.FLUID_HANDLER,
+                Capabilities.FLUID_HANDLER,
                 HandlerStrategy.FLUIDS,
                 level,
                 fromPos,

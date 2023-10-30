@@ -6,14 +6,12 @@ import java.util.Comparator;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Set;
-
+import net.neoforged.api.distmarker.Dist;
+import net.neoforged.api.distmarker.OnlyIn;
 import com.google.common.collect.ImmutableSet;
 
 import org.jetbrains.annotations.Nullable;
-
-import net.minecraftforge.api.distmarker.Dist;
-import net.minecraftforge.api.distmarker.OnlyIn;
-
+import var;
 import appeng.api.stacks.AEKey;
 
 @OnlyIn(Dist.CLIENT)

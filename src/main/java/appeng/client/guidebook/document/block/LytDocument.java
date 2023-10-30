@@ -5,9 +5,11 @@ import java.util.List;
 import java.util.Objects;
 
 import org.jetbrains.annotations.Nullable;
-
+import record;
+import var;
 import net.minecraft.client.renderer.MultiBufferSource;
-
+import HitTestResult;
+import Layout;
 import appeng.client.guidebook.document.LytRect;
 import appeng.client.guidebook.document.flow.LytFlowContainer;
 import appeng.client.guidebook.document.flow.LytFlowContent;

@@ -26,7 +26,7 @@ package appeng.api.config;
 import java.util.EnumSet;
 import java.util.HashMap;
 import java.util.Map;
-
+import var;
 import com.google.common.base.Preconditions;
 
 public final class Settings {

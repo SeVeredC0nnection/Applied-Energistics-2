@@ -19,7 +19,7 @@
 package appeng.blockentity.misc;
 
 import net.minecraft.network.chat.Component;
-
+import var;
 import appeng.api.config.Actionable;
 import appeng.api.networking.security.IActionSource;
 import appeng.api.stacks.AEItemKey;

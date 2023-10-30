@@ -3,9 +3,9 @@ package appeng.parts.automation;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.server.level.ServerLevel;
-import net.minecraftforge.common.capabilities.Capability;
-import net.minecraftforge.common.capabilities.ForgeCapabilities;
-
+import net.neoforged.neoforge.common.capabilities.Capabilities;
+import net.neoforged.neoforge.common.capabilities.Capability;
+import var;
 import appeng.api.behaviors.StackImportStrategy;
 import appeng.api.behaviors.StackTransferContext;
 import appeng.api.config.Actionable;
@@ -93,7 +93,7 @@ public class StorageImportStrategy<C, S> implements StackImportStrategy {
 
     public static StackImportStrategy createItem(ServerLevel level, BlockPos fromPos, Direction fromSide) {
         return new StorageImportStrategy<>(
-                ForgeCapabilities.ITEM_HANDLER,
+                Capabilities.ITEM_HANDLER,
                 HandlerStrategy.ITEMS,
                 level,
                 fromPos,
@@ -102,7 +102,7 @@ public class StorageImportStrategy<C, S> implements StackImportStrategy {
 
     public static StackImportStrategy createFluid(ServerLevel level, BlockPos fromPos, Direction fromSide) {
         return new StorageImportStrategy<>(
-                ForgeCapabilities.FLUID_HANDLER,
+                Capabilities.FLUID_HANDLER,
                 HandlerStrategy.FLUIDS,
                 level,
                 fromPos,

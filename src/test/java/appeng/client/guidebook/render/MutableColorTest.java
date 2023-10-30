@@ -7,7 +7,7 @@ import com.mojang.blaze3d.platform.NativeImage;
 
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
-
+import var;
 import appeng.api.util.AEColor;
 import appeng.client.guidebook.color.MutableColor;
 

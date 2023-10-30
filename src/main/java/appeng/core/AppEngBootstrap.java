@@ -20,10 +20,9 @@ package appeng.core;
 
 import net.minecraft.core.MappedRegistry;
 import net.minecraft.core.registries.BuiltInRegistries;
-import net.minecraftforge.fml.DistExecutor;
-import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.fml.loading.FMLPaths;
-
+import net.neoforged.fml.DistExecutor;
+import net.neoforged.fml.common.Mod;
+import net.neoforged.fml.loading.FMLPaths;
 import appeng.core.definitions.AEBlocks;
 import appeng.core.definitions.AEItems;
 import appeng.core.definitions.AEParts;

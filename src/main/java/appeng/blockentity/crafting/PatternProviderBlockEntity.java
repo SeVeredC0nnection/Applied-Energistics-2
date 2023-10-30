@@ -24,7 +24,7 @@ import java.util.Locale;
 import java.util.Set;
 
 import org.jetbrains.annotations.Nullable;
-
+import var;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.nbt.CompoundTag;
@@ -34,9 +34,8 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.state.BlockState;
-import net.minecraftforge.common.capabilities.Capability;
-import net.minecraftforge.common.util.LazyOptional;
-
+import net.neoforged.neoforge.common.capabilities.Capability;
+import net.neoforged.neoforge.common.util.LazyOptional;
 import appeng.api.networking.IGridNodeListener;
 import appeng.api.orientation.BlockOrientation;
 import appeng.api.stacks.AEItemKey;
@@ -161,7 +160,7 @@ public class PatternProviderBlockEntity extends AENetworkBlockEntity implements 
 
     @Override
     public void exportSettings(SettingsFrom mode, CompoundTag output,
-            @org.jetbrains.annotations.Nullable Player player) {
+            @Nullable Player player) {
         super.exportSettings(mode, output, player);
 
         if (mode == SettingsFrom.MEMORY_CARD) {
@@ -174,7 +173,7 @@ public class PatternProviderBlockEntity extends AENetworkBlockEntity implements 
 
     @Override
     public void importSettings(SettingsFrom mode, CompoundTag input,
-            @org.jetbrains.annotations.Nullable Player player) {
+            @Nullable Player player) {
         super.importSettings(mode, input, player);
 
         if (mode == SettingsFrom.MEMORY_CARD) {

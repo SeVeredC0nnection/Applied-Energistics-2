@@ -4,7 +4,9 @@ import java.util.Locale;
 import java.util.Stack;
 
 import org.jetbrains.annotations.Nullable;
-
+import record;
+import var;
+import AnchorTarget;
 import appeng.client.guidebook.document.block.LytDocument;
 import appeng.client.guidebook.document.block.LytHeading;
 import appeng.client.guidebook.document.block.LytNode;

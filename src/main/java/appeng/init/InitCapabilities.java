@@ -23,13 +23,11 @@ import org.jetbrains.annotations.Nullable;
 
 import net.minecraft.core.Direction;
 import net.minecraft.world.level.block.entity.BlockEntity;
-import net.minecraftforge.common.capabilities.Capability;
-import net.minecraftforge.common.capabilities.ForgeCapabilities;
-import net.minecraftforge.common.capabilities.ICapabilityProvider;
-import net.minecraftforge.common.capabilities.RegisterCapabilitiesEvent;
-import net.minecraftforge.common.util.LazyOptional;
-import net.minecraftforge.event.AttachCapabilitiesEvent;
-
+import net.neoforged.neoforge.common.capabilities.Capability;
+import net.neoforged.neoforge.common.capabilities.ICapabilityProvider;
+import net.neoforged.neoforge.common.capabilities.RegisterCapabilitiesEvent;
+import net.neoforged.neoforge.common.util.LazyOptional;
+import net.neoforged.neoforge.event.AttachCapabilitiesEvent;
 import appeng.api.behaviors.GenericInternalInventory;
 import appeng.api.implementations.blockentities.ICraftingMachine;
 import appeng.api.storage.MEStorage;
@@ -58,10 +56,10 @@ public final class InitCapabilities {
             @NotNull
             @Override
             public <T> LazyOptional<T> getCapability(@NotNull Capability<T> cap, @Nullable Direction side) {
-                if (cap == ForgeCapabilities.ITEM_HANDLER) {
+                if (cap == net.neoforged.neoforge.common.capabilities.Capabilities.ITEM_HANDLER) {
                     return be.getCapability(Capabilities.GENERIC_INTERNAL_INV, side)
                             .lazyMap(GenericStackItemStorage::new).cast();
-                } else if (cap == ForgeCapabilities.FLUID_HANDLER) {
+                } else if (cap == net.neoforged.neoforge.common.capabilities.Capabilities.FLUID_HANDLER) {
                     return be.getCapability(Capabilities.GENERIC_INTERNAL_INV, side)
                             .lazyMap(GenericStackFluidStorage::new).cast();
                 }

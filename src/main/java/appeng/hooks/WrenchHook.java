@@ -5,9 +5,9 @@ import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.phys.BlockHitResult;
-import net.minecraftforge.event.entity.player.PlayerInteractEvent;
-import net.minecraftforge.eventbus.api.Event;
-
+import net.neoforged.bus.api.Event;
+import net.neoforged.neoforge.event.entity.player.PlayerInteractEvent;
+import var;
 import appeng.api.orientation.BlockOrientation;
 import appeng.api.orientation.IOrientationStrategy;
 import appeng.api.orientation.RelativeSide;

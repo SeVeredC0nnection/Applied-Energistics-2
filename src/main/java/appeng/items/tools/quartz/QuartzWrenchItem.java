@@ -23,7 +23,7 @@ import net.minecraft.world.item.Item;
 import appeng.items.AEBaseItem;
 
 public class QuartzWrenchItem extends AEBaseItem {
-    public QuartzWrenchItem(Item.Properties props) {
+    public QuartzWrenchItem(Properties props) {
         super(props);
     }
 }

@@ -5,7 +5,8 @@ import java.util.function.Consumer;
 import com.google.gson.JsonObject;
 
 import org.jetbrains.annotations.Nullable;
-
+import record;
+import var;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.data.recipes.FinishedRecipe;
 import net.minecraft.resources.ResourceLocation;

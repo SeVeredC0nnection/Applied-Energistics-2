@@ -5,11 +5,9 @@ import javax.annotation.Nullable;
 import com.google.common.primitives.Ints;
 
 import net.minecraft.world.item.ItemStack;
-import net.minecraftforge.fluids.FluidStack;
-import net.minecraftforge.fluids.capability.IFluidHandler;
-import net.minecraftforge.items.IItemHandler;
-import net.minecraftforge.items.ItemHandlerHelper;
-
+import net.neoforged.neoforge.fluids.FluidStack;
+import net.neoforged.neoforge.fluids.capability.IFluidHandler;
+import net.neoforged.neoforge.items.IItemHandler;
 import appeng.api.config.Actionable;
 import appeng.api.stacks.AEFluidKey;
 import appeng.api.stacks.AEItemKey;

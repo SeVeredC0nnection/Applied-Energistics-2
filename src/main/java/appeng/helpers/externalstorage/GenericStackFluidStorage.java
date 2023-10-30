@@ -1,13 +1,10 @@
 package appeng.helpers.externalstorage;
 
 import com.google.common.primitives.Ints;
-
+import net.neoforged.neoforge.fluids.FluidStack;
+import net.neoforged.neoforge.fluids.capability.IFluidHandler;
 import org.jetbrains.annotations.NotNull;
-
-import net.minecraftforge.fluids.FluidStack;
-import net.minecraftforge.fluids.capability.IFluidHandler;
-import net.minecraftforge.fluids.capability.IFluidHandler.FluidAction;
-
+import var;
 import appeng.api.behaviors.GenericInternalInventory;
 import appeng.api.config.Actionable;
 import appeng.api.stacks.AEFluidKey;

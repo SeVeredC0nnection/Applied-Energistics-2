@@ -1,7 +1,7 @@
 package appeng.client.guidebook.scene.annotation;
 
 import org.joml.Vector3f;
-
+import var;
 import net.minecraft.client.Minecraft;
 
 import appeng.client.guidebook.color.ColorValue;

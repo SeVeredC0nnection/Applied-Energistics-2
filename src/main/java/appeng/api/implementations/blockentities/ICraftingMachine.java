@@ -29,7 +29,7 @@ import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.entity.BlockEntity;
-
+import PatternContainerGroup;
 import appeng.api.crafting.IPatternDetails;
 import appeng.api.stacks.KeyCounter;
 import appeng.capabilities.Capabilities;
@@ -51,7 +51,7 @@ public interface ICraftingMachine {
 
     @Nullable
     static ICraftingMachine of(Level level, BlockPos pos, Direction side,
-            @org.jetbrains.annotations.Nullable BlockEntity blockEntity) {
+            @Nullable BlockEntity blockEntity) {
         if (blockEntity != null) {
             return blockEntity.getCapability(Capabilities.CRAFTING_MACHINE, side).orElse(null);
         } else {

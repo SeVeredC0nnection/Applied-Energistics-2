@@ -3,7 +3,7 @@ package appeng.client.guidebook.style;
 import org.jetbrains.annotations.Nullable;
 
 import net.minecraft.resources.ResourceLocation;
-
+import TextStyle;
 import appeng.client.guidebook.color.ColorValue;
 
 public record TextStyle(

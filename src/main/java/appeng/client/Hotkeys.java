@@ -7,7 +7,7 @@ import org.jetbrains.annotations.Nullable;
 import org.lwjgl.glfw.GLFW;
 
 import net.minecraft.client.KeyMapping;
-
+import Hotkey;
 import appeng.hotkeys.HotkeyActions;
 
 /**

@@ -20,7 +20,7 @@ import java.util.concurrent.CompletableFuture;
 import org.jetbrains.annotations.Nullable;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-
+import var;
 import net.minecraft.Util;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.screens.LoadingOverlay;
@@ -37,12 +37,12 @@ import net.minecraft.server.packs.resources.ResourceManager;
 import net.minecraft.server.packs.resources.SimplePreparableReloadListener;
 import net.minecraft.util.profiling.ProfilerFiller;
 import net.minecraft.world.flag.FeatureFlagSet;
-import net.minecraftforge.client.event.RegisterClientReloadListenersEvent;
-import net.minecraftforge.common.MinecraftForge;
-import net.minecraftforge.event.TickEvent;
-import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
-import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
-
+import net.neoforged.fml.event.lifecycle.FMLClientSetupEvent;
+import net.neoforged.fml.javafmlmod.FMLJavaModLoadingContext;
+import net.neoforged.neoforge.client.event.RegisterClientReloadListenersEvent;
+import net.neoforged.neoforge.common.NeoForge;
+import net.neoforged.neoforge.event.TickEvent;
+import GuidePage;
 import appeng.client.guidebook.compiler.PageCompiler;
 import appeng.client.guidebook.compiler.ParsedGuidePage;
 import appeng.client.guidebook.extensions.DefaultExtensions;
@@ -141,8 +141,8 @@ public final class Guide implements PageCollection {
             var layeredAccess = RegistryLayer.createRegistryAccess();
 
             PackRepository packRepository = new PackRepository(new ServerPacksSource());
-            net.minecraftforge.resource.ResourcePackLoader.loadResourcePacks(packRepository,
-                    net.minecraftforge.server.ServerLifecycleHooks::buildPackFinder);
+            net.neoforged.neoforge.resource.ResourcePackLoader.loadResourcePacks(packRepository,
+                    net.neoforged.neoforge.server.ServerLifecycleHooks::buildPackFinder);
             packRepository.reload();
             packRepository.setSelected(packRepository.getAvailableIds());
 
@@ -328,7 +328,7 @@ public final class Guide implements PageCollection {
     private void watchDevelopmentSources() {
         var watcher = new GuideSourceWatcher(developmentSourceNamespace, developmentSourceFolder);
 
-        MinecraftForge.EVENT_BUS.addListener((TickEvent.ClientTickEvent evt) -> {
+        NeoForge.EVENT_BUS.addListener((TickEvent.ClientTickEvent evt) -> {
             if (evt.phase == TickEvent.Phase.START) {
                 var changes = watcher.takeChanges();
                 if (!changes.isEmpty()) {

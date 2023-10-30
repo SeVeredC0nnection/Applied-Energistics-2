@@ -23,7 +23,7 @@ import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.blaze3d.vertex.VertexConsumer;
 
 import org.joml.Quaternionf;
-
+import var;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.MultiBufferSource;
 import net.minecraft.client.renderer.RenderType;
@@ -40,8 +40,7 @@ import net.minecraft.world.inventory.InventoryMenu;
 import net.minecraft.world.item.ItemDisplayContext;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
-import net.minecraftforge.client.model.data.ModelData;
-
+import net.neoforged.neoforge.client.model.data.ModelData;
 import appeng.api.orientation.BlockOrientation;
 import appeng.blockentity.misc.InscriberBlockEntity;
 import appeng.core.AppEng;

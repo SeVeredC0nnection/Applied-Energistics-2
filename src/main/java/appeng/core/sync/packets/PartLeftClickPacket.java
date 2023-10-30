@@ -23,9 +23,9 @@ import io.netty.buffer.Unpooled;
 import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.phys.BlockHitResult;
-import net.minecraftforge.common.MinecraftForge;
-import net.minecraftforge.event.entity.player.PlayerInteractEvent;
-
+import net.neoforged.neoforge.common.NeoForge;
+import net.neoforged.neoforge.event.entity.player.PlayerInteractEvent;
+import var;
 import appeng.api.parts.IPartHost;
 import appeng.core.sync.BasePacket;
 
@@ -54,8 +54,8 @@ public class PartLeftClickPacket extends BasePacket {
     public void serverPacketData(ServerPlayer player) {
         // Fire event on the server to give protection mods a chance to cancel the interaction
         var evt = new PlayerInteractEvent.LeftClickBlock(player, hitResult.getBlockPos(), hitResult.getDirection());
-        MinecraftForge.EVENT_BUS.post(evt);
-        if (evt.isCanceled() || evt.getResult() == net.minecraftforge.eventbus.api.Event.Result.DENY) {
+        NeoForge.EVENT_BUS.post(evt);
+        if (evt.isCanceled() || evt.getResult() == net.neoforged.bus.api.Event.Result.DENY) {
             return;
         }
 

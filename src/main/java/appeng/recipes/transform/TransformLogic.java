@@ -18,11 +18,11 @@ import net.minecraft.world.level.Level;
 import net.minecraft.world.level.material.Fluid;
 import net.minecraft.world.level.material.FluidState;
 import net.minecraft.world.phys.AABB;
-import net.minecraftforge.client.event.RecipesUpdatedEvent;
-import net.minecraftforge.event.AddReloadListenerEvent;
-import net.minecraftforge.event.server.ServerStartedEvent;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
-
+import net.neoforged.bus.api.SubscribeEvent;
+import net.neoforged.neoforge.client.event.RecipesUpdatedEvent;
+import net.neoforged.neoforge.event.AddReloadListenerEvent;
+import net.neoforged.neoforge.event.server.ServerStartedEvent;
+import var;
 import it.unimi.dsi.fastutil.objects.ReferenceOpenHashSet;
 
 public final class TransformLogic {

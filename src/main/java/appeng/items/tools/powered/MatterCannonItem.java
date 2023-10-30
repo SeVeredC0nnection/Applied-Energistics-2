@@ -22,7 +22,7 @@ import java.util.List;
 import java.util.Optional;
 
 import org.jetbrains.annotations.Nullable;
-
+import var;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.network.chat.Component;
@@ -51,9 +51,8 @@ import net.minecraft.world.phys.EntityHitResult;
 import net.minecraft.world.phys.HitResult;
 import net.minecraft.world.phys.HitResult.Type;
 import net.minecraft.world.phys.Vec3;
-import net.minecraftforge.api.distmarker.Dist;
-import net.minecraftforge.api.distmarker.OnlyIn;
-
+import net.neoforged.api.distmarker.Dist;
+import net.neoforged.api.distmarker.OnlyIn;
 import appeng.api.config.Actionable;
 import appeng.api.config.FuzzyMode;
 import appeng.api.stacks.AEItemKey;
@@ -92,7 +91,7 @@ public class MatterCannonItem extends AEBasePoweredItem implements IBasicCellIte
      */
     private static final int ENERGY_PER_SHOT = 1600;
 
-    public MatterCannonItem(Item.Properties props) {
+    public MatterCannonItem(Properties props) {
         super(AEConfig.instance().getMatterCannonBattery(), props);
     }
 

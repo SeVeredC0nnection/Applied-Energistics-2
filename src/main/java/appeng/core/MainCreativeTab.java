@@ -27,8 +27,8 @@ import com.google.common.collect.Multimap;
 import net.minecraft.core.Registry;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.world.item.CreativeModeTab;
-import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
-
+import net.neoforged.neoforge.event.BuildCreativeModeTabContentsEvent;
+import var;
 import appeng.api.ids.AECreativeTabIds;
 import appeng.block.AEBaseBlock;
 import appeng.block.AEBaseBlockItem;

@@ -33,15 +33,14 @@ import com.google.common.base.Preconditions;
 import com.mojang.blaze3d.vertex.PoseStack;
 
 import org.jetbrains.annotations.Nullable;
-
+import var;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.GuiGraphics;
 import net.minecraft.client.renderer.MultiBufferSource;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.level.Level;
-import net.minecraftforge.api.distmarker.Dist;
-import net.minecraftforge.api.distmarker.OnlyIn;
-
+import net.neoforged.api.distmarker.Dist;
+import net.neoforged.api.distmarker.OnlyIn;
 import appeng.api.stacks.AEKey;
 import appeng.api.stacks.AEKeyType;
 

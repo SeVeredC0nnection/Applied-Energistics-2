@@ -41,7 +41,7 @@ public class MolecularAssemblerBlock extends AEBaseEntityBlock<MolecularAssemble
 
     public static final BooleanProperty POWERED = BooleanProperty.create("powered");
 
-    public MolecularAssemblerBlock(BlockBehaviour.Properties props) {
+    public MolecularAssemblerBlock(Properties props) {
         super(props);
         registerDefaultState(defaultBlockState().setValue(POWERED, false));
     }

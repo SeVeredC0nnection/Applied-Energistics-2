@@ -25,14 +25,13 @@ import java.util.Set;
 import java.util.function.Consumer;
 
 import org.jetbrains.annotations.Nullable;
-
+import var;
 import io.netty.buffer.Unpooled;
 
 import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.world.entity.player.Player;
-import net.minecraftforge.api.distmarker.Dist;
-import net.minecraftforge.api.distmarker.OnlyIn;
-
+import net.neoforged.api.distmarker.Dist;
+import net.neoforged.api.distmarker.OnlyIn;
 import appeng.api.stacks.AEKey;
 import appeng.api.stacks.KeyCounter;
 import appeng.api.storage.AEKeyFilter;

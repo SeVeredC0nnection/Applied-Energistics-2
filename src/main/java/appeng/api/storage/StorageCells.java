@@ -30,7 +30,7 @@ import java.util.Objects;
 import com.google.common.base.Preconditions;
 
 import org.jetbrains.annotations.Nullable;
-
+import var;
 import net.minecraft.world.item.ItemStack;
 
 import appeng.api.storage.cells.IBasicCellItem;
@@ -54,7 +54,7 @@ public final class StorageCells {
     /**
      * Register a new handler.
      * <p>
-     * Never be call before {@link net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent} was handled by AE2. Will
+     * Never be call before {@link net.neoforged.fml.event.lifecycle.FMLCommonSetupEvent} was handled by AE2. Will
      * throw an exception otherwise.
      *
      * @param handler cell handler

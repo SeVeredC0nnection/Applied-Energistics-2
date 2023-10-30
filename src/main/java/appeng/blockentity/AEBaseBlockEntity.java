@@ -27,7 +27,7 @@ import java.util.Objects;
 import org.jetbrains.annotations.ApiStatus;
 import org.jetbrains.annotations.MustBeInvokedByOverriders;
 import org.jetbrains.annotations.Nullable;
-
+import var;
 import io.netty.buffer.Unpooled;
 
 import net.minecraft.core.BlockPos;
@@ -56,10 +56,9 @@ import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.phys.AABB;
 import net.minecraft.world.phys.BlockHitResult;
-import net.minecraftforge.api.distmarker.Dist;
-import net.minecraftforge.api.distmarker.OnlyIn;
-import net.minecraftforge.client.model.data.ModelData;
-
+import net.neoforged.api.distmarker.Dist;
+import net.neoforged.api.distmarker.OnlyIn;
+import net.neoforged.neoforge.client.model.data.ModelData;
 import appeng.api.inventories.ISegmentedInventory;
 import appeng.api.inventories.InternalInventory;
 import appeng.api.networking.GridHelper;
@@ -85,7 +84,7 @@ public class AEBaseBlockEntity extends BlockEntity
     private boolean setChangedQueued = false;
     /**
      * For diagnosing issues with the delayed block entity initialization, this tracks how often this BE has been queued
-     * for defered initializiation using {@link appeng.api.networking.GridHelper#onFirstTick}.
+     * for defered initializiation using {@link GridHelper#onFirstTick}.
      */
     private byte queuedForReady = 0;
     /**
@@ -95,7 +94,7 @@ public class AEBaseBlockEntity extends BlockEntity
     private byte readyInvoked = 0;
 
     // Remove in 1.20.1+: Convert legacy NBT orientation to blockstate
-    @org.jetbrains.annotations.Nullable
+    @Nullable
     private BlockOrientation pendingOrientationChange;
 
     public AEBaseBlockEntity(BlockEntityType<?> blockEntityType, BlockPos pos, BlockState blockState) {

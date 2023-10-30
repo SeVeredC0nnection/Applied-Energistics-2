@@ -1,10 +1,9 @@
 package appeng.datagen.providers.models;
 
 import net.minecraft.data.PackOutput;
-import net.minecraftforge.client.model.generators.BlockModelBuilder;
-import net.minecraftforge.client.model.generators.ModelProvider;
-import net.minecraftforge.common.data.ExistingFileHelper;
-
+import net.neoforged.neoforge.client.model.generators.BlockModelBuilder;
+import net.neoforged.neoforge.client.model.generators.ModelProvider;
+import net.neoforged.neoforge.common.data.ExistingFileHelper;
 import appeng.core.AppEng;
 
 public class PartModelProvider extends ModelProvider<BlockModelBuilder> {

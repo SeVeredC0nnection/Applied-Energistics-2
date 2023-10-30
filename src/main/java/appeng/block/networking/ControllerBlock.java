@@ -19,7 +19,7 @@
 package appeng.block.networking;
 
 import org.jetbrains.annotations.Nullable;
-
+import var;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.util.StringRepresentable;
@@ -150,7 +150,7 @@ public class ControllerBlock extends AEBaseEntityBlock<ControllerBlockEntity> {
 
     @Override
     public InteractionResult onActivated(Level level, BlockPos pos, Player player, InteractionHand hand,
-            @org.jetbrains.annotations.Nullable ItemStack heldItem, BlockHitResult hit) {
+                                         @Nullable ItemStack heldItem, BlockHitResult hit) {
         var controller = getBlockEntity(level, pos);
         if (controller != null) {
             if (!level.isClientSide) {

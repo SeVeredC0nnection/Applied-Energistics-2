@@ -10,7 +10,7 @@ import org.spongepowered.asm.mixin.Shadow;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
-
+import var;
 import net.minecraft.core.LayeredRegistryAccess;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.ResourceKey;
@@ -24,9 +24,8 @@ import net.minecraft.world.level.dimension.LevelStem;
 import net.minecraft.world.level.storage.DerivedLevelData;
 import net.minecraft.world.level.storage.LevelStorageSource;
 import net.minecraft.world.level.storage.WorldData;
-import net.minecraftforge.common.MinecraftForge;
-import net.minecraftforge.event.level.LevelEvent;
-
+import net.neoforged.neoforge.common.NeoForge;
+import net.neoforged.neoforge.event.level.LevelEvent;
 import appeng.spatial.SpatialStorageChunkGenerator;
 import appeng.spatial.SpatialStorageDimensionIds;
 
@@ -87,6 +86,6 @@ public abstract class MinecraftServerMixin {
         // dimension anyway.
         this.levels.put(SpatialStorageDimensionIds.WORLD_ID, level);
         // Emulate the Forge world load event
-        MinecraftForge.EVENT_BUS.post(new LevelEvent.Load(level));
+        NeoForge.EVENT_BUS.post(new LevelEvent.Load(level));
     }
 }

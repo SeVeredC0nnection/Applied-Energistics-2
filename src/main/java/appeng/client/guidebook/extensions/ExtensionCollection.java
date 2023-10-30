@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.IdentityHashMap;
 import java.util.List;
 import java.util.Map;
+import var;
 
 /**
  * A collection of extensions registered to modify the guidebook.
@@ -92,7 +93,7 @@ public class ExtensionCollection {
         /**
          * Adds all extensions from the given collection to this builder.
          */
-        public Builder addAll(ExtensionCollection.Builder builder) {
+        public Builder addAll(Builder builder) {
             for (var entry : builder.extensions.entrySet()) {
                 for (Object o : entry.getValue()) {
                     addUntyped(entry.getKey(), o);

@@ -7,6 +7,7 @@ import appeng.api.networking.IGrid;
 import appeng.api.networking.energy.IAEPowerStorage;
 import appeng.api.networking.events.GridPowerStorageStateChanged;
 import appeng.core.AEConfig;
+import var;
 
 /**
  * The inherent energy storage provided by a grid.

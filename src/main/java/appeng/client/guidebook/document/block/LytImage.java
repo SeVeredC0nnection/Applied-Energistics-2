@@ -3,7 +3,7 @@ package appeng.client.guidebook.document.block;
 import java.util.Optional;
 
 import org.jetbrains.annotations.Nullable;
-
+import var;
 import net.minecraft.client.renderer.MultiBufferSource;
 import net.minecraft.client.renderer.texture.MissingTextureAtlasSprite;
 import net.minecraft.network.chat.Component;

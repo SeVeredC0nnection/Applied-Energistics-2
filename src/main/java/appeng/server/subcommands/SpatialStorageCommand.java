@@ -46,7 +46,7 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.MinecraftServer;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.item.ItemStack;
-
+import var;
 import appeng.api.features.IPlayerRegistry;
 import appeng.core.definitions.AEItems;
 import appeng.core.localization.PlayerMessages;

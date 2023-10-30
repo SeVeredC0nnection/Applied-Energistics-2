@@ -27,14 +27,14 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
-import net.minecraftforge.api.distmarker.Dist;
-import net.minecraftforge.api.distmarker.OnlyIn;
+import net.neoforged.api.distmarker.Dist;
+import net.neoforged.api.distmarker.OnlyIn;
 
 public class AEBaseBlockItem extends BlockItem {
 
     private final AEBaseBlock blockType;
 
-    public AEBaseBlockItem(Block id, Item.Properties props) {
+    public AEBaseBlockItem(Block id, Properties props) {
         super(id, props);
         this.blockType = (AEBaseBlock) id;
     }

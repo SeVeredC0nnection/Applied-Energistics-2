@@ -18,6 +18,7 @@
 
 package appeng.api.features;
 
+import AttunementInfo;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
@@ -29,7 +30,9 @@ import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.ItemLike;
-import net.minecraftforge.common.capabilities.Capability;
+import net.neoforged.neoforge.common.capabilities.Capability;
+import record;
+import var;
 
 /**
  * Internal methods that complement {@link P2PTunnelAttunement} and which are not part of the public API.

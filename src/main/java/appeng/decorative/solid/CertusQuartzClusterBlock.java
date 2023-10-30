@@ -3,7 +3,7 @@ package appeng.decorative.solid;
 import java.util.List;
 
 import org.jetbrains.annotations.Nullable;
-
+import var;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.world.item.ItemStack;
@@ -42,7 +42,7 @@ public class CertusQuartzClusterBlock extends AEBaseBlock implements SimpleWater
     protected final VoxelShape upAabb;
     protected final VoxelShape downAabb;
 
-    public CertusQuartzClusterBlock(int i, int j, BlockBehaviour.Properties properties) {
+    public CertusQuartzClusterBlock(int i, int j, Properties properties) {
         super(properties);
         this.registerDefaultState(this.defaultBlockState().setValue(WATERLOGGED, false).setValue(FACING, Direction.UP));
         this.upAabb = Block.box(j, 0.0, j, (16 - j), i, (16 - j));

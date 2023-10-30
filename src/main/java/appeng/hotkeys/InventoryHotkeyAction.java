@@ -5,7 +5,7 @@ import java.util.function.Predicate;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
-
+import var;
 import appeng.api.features.HotkeyAction;
 
 public class InventoryHotkeyAction implements HotkeyAction {

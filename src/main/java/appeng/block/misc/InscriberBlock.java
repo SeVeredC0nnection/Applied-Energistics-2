@@ -19,7 +19,7 @@
 package appeng.block.misc;
 
 import org.jetbrains.annotations.Nullable;
-
+import var;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.world.InteractionHand;
@@ -54,7 +54,7 @@ public class InscriberBlock extends AEBaseEntityBlock<InscriberBlockEntity> impl
 
     private static final BooleanProperty WATERLOGGED = BlockStateProperties.WATERLOGGED;
 
-    public InscriberBlock(BlockBehaviour.Properties props) {
+    public InscriberBlock(Properties props) {
         super(props);
         this.registerDefaultState(this.defaultBlockState().setValue(WATERLOGGED, false));
     }

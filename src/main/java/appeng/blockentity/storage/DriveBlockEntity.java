@@ -24,7 +24,7 @@ import java.util.Locale;
 import java.util.Set;
 
 import org.jetbrains.annotations.Nullable;
-
+import var;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.core.registries.BuiltInRegistries;
@@ -38,8 +38,7 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.state.BlockState;
-import net.minecraftforge.client.model.data.ModelData;
-
+import net.neoforged.neoforge.client.model.data.ModelData;
 import appeng.api.implementations.blockentities.IChestOrDrive;
 import appeng.api.inventories.InternalInventory;
 import appeng.api.networking.GridFlags;

@@ -20,7 +20,7 @@ package appeng.menu.me.networktool;
 
 import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.inventory.MenuType;
-
+import var;
 import appeng.items.contents.NetworkToolMenuHost;
 import appeng.menu.AEBaseMenu;
 import appeng.menu.SlotSemantics;

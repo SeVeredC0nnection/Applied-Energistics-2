@@ -18,13 +18,12 @@
 
 package appeng.init.client;
 
-import net.minecraftforge.api.distmarker.Dist;
-import net.minecraftforge.api.distmarker.OnlyIn;
-import net.minecraftforge.client.event.ModelEvent;
-
 import appeng.api.parts.PartModelsInternal;
 import appeng.client.render.crafting.MolecularAssemblerRenderer;
 import appeng.client.render.tesr.CrankRenderer;
+import net.neoforged.api.distmarker.Dist;
+import net.neoforged.api.distmarker.OnlyIn;
+import net.neoforged.neoforge.client.event.ModelEvent;
 
 /**
  * Registers any JSON model files with Minecraft that are not referenced via blockstates or item IDs

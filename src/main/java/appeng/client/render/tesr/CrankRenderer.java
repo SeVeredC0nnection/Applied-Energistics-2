@@ -21,7 +21,7 @@ package appeng.client.render.tesr;
 import com.mojang.blaze3d.vertex.PoseStack;
 
 import org.joml.Quaternionf;
-
+import var;
 import net.minecraft.client.renderer.MultiBufferSource;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.block.BlockRenderDispatcher;
@@ -31,9 +31,8 @@ import net.minecraft.client.resources.model.ModelManager;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.util.Mth;
 import net.minecraft.util.RandomSource;
-import net.minecraftforge.api.distmarker.Dist;
-import net.minecraftforge.api.distmarker.OnlyIn;
-
+import net.neoforged.api.distmarker.Dist;
+import net.neoforged.api.distmarker.OnlyIn;
 import appeng.api.orientation.BlockOrientation;
 import appeng.blockentity.misc.CrankBlockEntity;
 import appeng.core.AppEng;

@@ -19,7 +19,7 @@
 package appeng.core.sync.packets;
 
 import org.jetbrains.annotations.Nullable;
-
+import var;
 import io.netty.buffer.Unpooled;
 
 import net.minecraft.network.FriendlyByteBuf;

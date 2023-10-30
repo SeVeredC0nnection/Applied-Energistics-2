@@ -26,7 +26,7 @@ import com.mojang.datafixers.util.Pair;
 import org.jetbrains.annotations.Nullable;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-
+import var;
 import net.minecraft.Util;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.GlobalPos;
@@ -44,9 +44,8 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.level.Level;
-import net.minecraftforge.api.distmarker.Dist;
-import net.minecraftforge.api.distmarker.OnlyIn;
-
+import net.neoforged.api.distmarker.Dist;
+import net.neoforged.api.distmarker.OnlyIn;
 import appeng.api.config.Actionable;
 import appeng.api.config.Settings;
 import appeng.api.config.SortDir;
@@ -82,7 +81,7 @@ public class WirelessTerminalItem extends AEBasePoweredItem implements IMenuItem
 
     private static final String TAG_ACCESS_POINT_POS = "accessPoint";
 
-    public WirelessTerminalItem(DoubleSupplier powerCapacity, Item.Properties props) {
+    public WirelessTerminalItem(DoubleSupplier powerCapacity, Properties props) {
         super(powerCapacity, props);
     }
 

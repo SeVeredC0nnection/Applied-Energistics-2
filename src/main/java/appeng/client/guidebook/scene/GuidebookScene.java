@@ -14,7 +14,8 @@ import org.joml.Vector2f;
 import org.joml.Vector3f;
 import org.joml.Vector3fc;
 import org.joml.Vector4f;
-
+import record;
+import var;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.world.level.BlockGetter;
@@ -25,7 +26,7 @@ import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.phys.Vec3;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.Shapes;
-
+import Bounds;
 import appeng.client.guidebook.document.LytPoint;
 import appeng.client.guidebook.document.LytRect;
 import appeng.client.guidebook.scene.annotation.InWorldAnnotation;

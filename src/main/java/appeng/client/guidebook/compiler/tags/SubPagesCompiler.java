@@ -6,7 +6,7 @@ import java.util.List;
 import java.util.Set;
 
 import net.minecraft.resources.ResourceLocation;
-
+import var;
 import appeng.client.guidebook.PageAnchor;
 import appeng.client.guidebook.compiler.PageCompiler;
 import appeng.client.guidebook.document.block.AlignItems;

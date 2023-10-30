@@ -4,9 +4,9 @@ import static appeng.core.AppEng.makeId;
 
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
-import net.minecraftforge.client.model.generators.ItemModelBuilder;
-import net.minecraftforge.common.data.ExistingFileHelper;
-
+import net.neoforged.neoforge.client.model.generators.ItemModelBuilder;
+import net.neoforged.neoforge.common.data.ExistingFileHelper;
+import var;
 import appeng.api.ids.AEItemIds;
 import appeng.api.util.AEColor;
 import appeng.client.render.model.MemoryCardModel;
@@ -17,7 +17,7 @@ import appeng.core.definitions.ItemDefinition;
 import appeng.datagen.providers.IAE2DataProvider;
 import appeng.init.client.InitItemModelsProperties;
 
-public class ItemModelProvider extends net.minecraftforge.client.model.generators.ItemModelProvider
+public class ItemModelProvider extends net.neoforged.neoforge.client.model.generators.ItemModelProvider
         implements IAE2DataProvider {
     public ItemModelProvider(PackOutput packOutput, ExistingFileHelper existingFileHelper) {
         super(packOutput, AppEng.MOD_ID, existingFileHelper);

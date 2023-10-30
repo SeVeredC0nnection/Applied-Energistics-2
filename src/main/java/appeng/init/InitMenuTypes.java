@@ -23,8 +23,7 @@ import java.util.Map;
 
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.inventory.MenuType;
-import net.minecraftforge.registries.IForgeRegistry;
-
+import net.neoforged.neoforge.registries.IForgeRegistry;
 import appeng.menu.implementations.CellWorkbenchMenu;
 import appeng.menu.implementations.ChestMenu;
 import appeng.menu.implementations.CondenserMenu;

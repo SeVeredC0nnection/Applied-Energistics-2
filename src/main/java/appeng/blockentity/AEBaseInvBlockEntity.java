@@ -27,10 +27,10 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.state.BlockState;
-import net.minecraftforge.common.capabilities.Capability;
-import net.minecraftforge.common.capabilities.ForgeCapabilities;
-import net.minecraftforge.common.util.LazyOptional;
-
+import net.neoforged.neoforge.common.capabilities.Capabilities;
+import net.neoforged.neoforge.common.capabilities.Capability;
+import net.neoforged.neoforge.common.util.LazyOptional;
+import var;
 import appeng.api.inventories.InternalInventory;
 import appeng.api.stacks.GenericStack;
 import appeng.util.inv.InternalInventoryHost;
@@ -107,7 +107,7 @@ public abstract class AEBaseInvBlockEntity extends AEBaseBlockEntity implements 
     @SuppressWarnings("unchecked")
     @Override
     public <T> LazyOptional<T> getCapability(Capability<T> capability, Direction facing) {
-        if (capability == ForgeCapabilities.ITEM_HANDLER) {
+        if (capability == Capabilities.ITEM_HANDLER) {
             if (facing == null) {
                 return (LazyOptional<T>) LazyOptional.of(getInternalInventory()::toItemHandler);
             } else {

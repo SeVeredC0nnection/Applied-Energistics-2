@@ -24,7 +24,7 @@ import java.util.List;
 import java.util.Optional;
 
 import org.jetbrains.annotations.Nullable;
-
+import var;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.core.particles.ParticleTypes;
@@ -72,7 +72,7 @@ public class EntropyManipulatorItem extends AEBasePoweredItem implements IBlockT
      */
     public static final int ENERGY_PER_USE = 1600;
 
-    public EntropyManipulatorItem(Item.Properties props) {
+    public EntropyManipulatorItem(Properties props) {
         super(AEConfig.instance().getEntropyManipulatorBattery(), props);
     }
 
