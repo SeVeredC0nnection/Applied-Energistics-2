@@ -83,7 +83,7 @@ dependencies {
     // Used for the guide export
     implementation("org.bytedeco:ffmpeg-platform:6.0-1.5.9")
 
-    implementation "net.neoforged:forge:${minecraft_version}-${neoforge_version}"
+    implementation "net.neoforged:neoforge:${neoforge_version}"
 
     // compile against provided APIs
     compileOnly "mezz.jei:jei-${jei_minecraft_version}-common-api:${jei_version}"
@@ -121,7 +121,7 @@ dependencies {
         runtimeOnly ("mcp.mobius.waila:wthit:forge-${project.wthit_version}")
         runtimeOnly ("lol.bai:badpackets:forge-0.1.2")
     } else {
-        compileOnly fg.deobf("mcp.mobius.waila:wthit-api:forge-${project.wthit_version}")
+        compileOnly "mcp.mobius.waila:wthit-api:forge-${project.wthit_version}"
     }
 
     if (project.runtime_tooltip_mod == "jade") {
@@ -325,13 +325,15 @@ runs {
         ]
     }
     gametestWorld {
-            parent runs.client
-            args "--username", "AE2Dev", "--quickPlaySingleplayer", "GametestWorld"
-            property "appeng.tests", "true"
-            property "guideDev.ae2guide.sources", file("guidebook").absolutePath
-        }
-        guide {
-            configure("client")
+        configure("client")
+        programArguments = ["--username", "AE2Dev", "--quickPlaySingleplayer", "GametestWorld"]
+        systemProperties = [
+          "appeng.tests": "true",
+          "guideDev.ae2guide.sources": file("guidebook").absolutePath,
+        ]
+    }
+    guide {
+        configure("client")
         with commonRunProperties
         systemProperties = [
           "guideDev.ae2guide.sources": file("guidebook").absolutePath,
@@ -649,9 +651,4 @@ tasks.register('updateFlatbufferTypescriptSources', Exec) {
     doFirst {
         file("${project.buildDir}/scene-ts").deleteDir()
     }
-}
-
-
-afterEvaluate {
-
 }
