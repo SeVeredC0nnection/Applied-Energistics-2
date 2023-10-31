@@ -23,6 +23,7 @@ import java.util.Collections;
 import java.util.List;
 import java.util.Optional;
 
+import net.minecraft.world.item.crafting.RecipeHolder;
 import org.jetbrains.annotations.Nullable;
 
 import net.minecraft.core.BlockPos;
@@ -234,7 +235,7 @@ public class EntropyManipulatorItem extends AEBasePoweredItem implements IBlockT
         for (ItemStack i : drops) {
             tempInv.setItem(0, i);
             Optional<SmeltingRecipe> recipe = level.getRecipeManager().getRecipeFor(RecipeType.SMELTING, tempInv,
-                    level);
+                    level).map(RecipeHolder::value);
 
             if (!recipe.isPresent()) {
                 return false;
@@ -283,7 +284,8 @@ public class EntropyManipulatorItem extends AEBasePoweredItem implements IBlockT
     @Nullable
     private static EntropyRecipe findRecipe(Level level, EntropyMode mode, BlockState blockState,
             FluidState fluidState) {
-        for (var recipe : level.getRecipeManager().byType(EntropyRecipe.TYPE).values()) {
+        for (var holder : level.getRecipeManager().byType(EntropyRecipe.TYPE).values()) {
+            var recipe = holder.value();
             if (recipe.matches(mode, blockState, fluidState)) {
                 return recipe;
             }

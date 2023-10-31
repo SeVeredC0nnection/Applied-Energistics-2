@@ -22,6 +22,7 @@ import java.util.IdentityHashMap;
 import java.util.Map;
 import java.util.Objects;
 
+import net.minecraft.world.item.crafting.RecipeHolder;
 import org.jetbrains.annotations.Nullable;
 
 import net.minecraft.core.NonNullList;
@@ -41,7 +42,6 @@ import net.minecraft.world.level.Level;
 
 import appeng.api.behaviors.ContainerItemStrategies;
 import appeng.api.crafting.IPatternDetails;
-import appeng.api.crafting.IPatternDetails.IInput;
 import appeng.api.stacks.AEFluidKey;
 import appeng.api.stacks.AEItemKey;
 import appeng.api.stacks.AEKey;
@@ -82,7 +82,7 @@ public class AECraftingPattern implements IPatternDetails, IMolecularAssemblerSu
 
         // Find recipe
         var recipeId = CraftingPatternEncoding.getRecipeId(tag);
-        this.recipe = level.getRecipeManager().byType(RecipeType.CRAFTING).get(recipeId);
+        this.recipe = level.getRecipeManager().byType(RecipeType.CRAFTING).get(recipeId).value();
 
         // Build frame and find output
         this.testFrame = new TransientCraftingContainer(new AutoCraftingMenu(), 3, 3);

@@ -18,6 +18,7 @@ import com.google.common.io.MoreFiles;
 import com.google.common.io.RecursiveDeleteOption;
 import com.mojang.blaze3d.platform.NativeImage;
 
+import net.minecraft.world.item.crafting.RecipeHolder;
 import org.apache.commons.io.FilenameUtils;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -103,7 +104,7 @@ public final class SiteExporter implements ResourceExporter {
 
     private ParsedGuidePage currentPage;
 
-    private final Set<Recipe<?>> recipes = new HashSet<>();
+    private final Set<RecipeHolder<?>> recipes = new HashSet<>();
 
     private final Set<Item> items = new HashSet<>();
 
@@ -194,10 +195,12 @@ public final class SiteExporter implements ResourceExporter {
     }
 
     @Override
-    public void referenceRecipe(Recipe<?> recipe) {
-        if (!recipes.add(recipe)) {
+    public void referenceRecipe(RecipeHolder<?> holder) {
+        if (!recipes.add(holder)) {
             return; // Already added
         }
+
+        var recipe = holder.value();
 
         var registryAccess = Platform.getClientRegistryAccess();
         var resultItem = recipe.getResultItem(registryAccess);
@@ -210,7 +213,9 @@ public final class SiteExporter implements ResourceExporter {
     }
 
     private void dumpRecipes(SiteExportWriter writer) {
-        for (var recipe : recipes) {
+        for (var holder : recipes) {
+            var recipe = holder.value();
+
             if (recipe instanceof CraftingRecipe craftingRecipe) {
                 if (craftingRecipe.isSpecial()) {
                     continue;
@@ -235,7 +240,7 @@ public final class SiteExporter implements ResourceExporter {
             } else if (recipe instanceof ChargerRecipe chargerRecipe) {
                 writer.addRecipe(chargerRecipe);
             } else {
-                LOGGER.warn("Unable to handle recipe {} of type {}", recipe.getId(), recipe.getType());
+                LOGGER.warn("Unable to handle recipe {} of type {}", holder.id(), recipe.getType());
             }
         }
     }

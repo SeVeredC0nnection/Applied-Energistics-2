@@ -21,7 +21,7 @@ public class ChargerRecipeSerializer implements RecipeSerializer<ChargerRecipe> 
         Ingredient ingredient = Ingredient.fromJson(serializedRecipe.get("ingredient"));
         Item result = ShapedRecipe.itemFromJson(GsonHelper.getAsJsonObject(serializedRecipe, "result"));
 
-        return new ChargerRecipe(recipeId, ingredient, result);
+        return new ChargerRecipe(ingredient, result);
     }
 
     @Override
@@ -29,7 +29,7 @@ public class ChargerRecipeSerializer implements RecipeSerializer<ChargerRecipe> 
         Ingredient ingredient = Ingredient.fromNetwork(buffer);
         ItemStack result = buffer.readItem();
 
-        return new ChargerRecipe(recipeId, ingredient, result.getItem());
+        return new ChargerRecipe(ingredient, result.getItem());
     }
 
     @Override

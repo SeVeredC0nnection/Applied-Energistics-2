@@ -2,6 +2,7 @@ package appeng.client.guidebook.document.block.recipes;
 
 import java.util.List;
 
+import net.minecraft.world.item.crafting.RecipeHolder;
 import org.jetbrains.annotations.NotNull;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -36,9 +37,9 @@ public class LytSmithingRecipe extends LytRecipeBox implements ExportableResourc
 
     private final LytSlot resultSlot;
 
-    public LytSmithingRecipe(SmithingRecipe recipe) {
-        super(recipe);
-        this.recipe = recipe;
+    public LytSmithingRecipe(RecipeHolder<SmithingRecipe> holder) {
+        super(holder);
+        this.recipe = holder.value();
         setPadding(5);
         paddingTop = 15;
 

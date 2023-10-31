@@ -139,7 +139,7 @@ public class AppEngCraftingSlot extends AppEngSlot {
     // refactoring.
     protected NonNullList<ItemStack> getRemainingItems(CraftingContainer ic, Level level) {
         return level.getRecipeManager().getRecipeFor(RecipeType.CRAFTING, ic, level)
-                .map(iCraftingRecipe -> iCraftingRecipe.getRemainingItems(ic))
+                .map(recipe -> recipe.value().getRemainingItems(ic))
                 .orElse(NonNullList.withSize(9, ItemStack.EMPTY));
     }
 }

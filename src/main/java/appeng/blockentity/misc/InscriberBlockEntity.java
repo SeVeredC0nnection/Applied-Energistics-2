@@ -563,7 +563,8 @@ public class InscriberBlockEntity extends AENetworkPowerBlockEntity
             if (inv == topItemHandler)
                 top = stack;
 
-            for (var recipe : InscriberRecipes.getRecipes(getLevel())) {
+            for (var holder : InscriberRecipes.getRecipes(level)) {
+                var recipe = holder.value();
                 if (!middle.isEmpty() && !recipe.getMiddleInput().test(middle)) {
                     continue;
                 }

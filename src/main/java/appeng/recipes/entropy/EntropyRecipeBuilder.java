@@ -23,7 +23,6 @@ import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 import java.util.Objects;
-import java.util.function.Consumer;
 
 import com.google.common.base.Preconditions;
 import com.google.gson.JsonObject;
@@ -175,7 +174,7 @@ public class EntropyRecipeBuilder {
         Preconditions.checkState(inputBlock != null || inputFluid != null,
                 "Either inputBlock or inputFluid needs to be not null");
 
-        return new EntropyRecipe(id, mode, inputBlock, inputBlockMatchers, inputFluid, inputFluidMatchers, outputBlock,
+        return new EntropyRecipe(mode, inputBlock, inputBlockMatchers, inputFluid, inputFluidMatchers, outputBlock,
                 outputBlockStateAppliers, outputBlockKeep, outputFluid, outputFluidStateAppliers, outputFluidKeep,
                 drops);
     }

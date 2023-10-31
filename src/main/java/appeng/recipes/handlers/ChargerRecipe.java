@@ -20,13 +20,11 @@ public class ChargerRecipe implements Recipe<Container> {
 
     public static final RecipeType<ChargerRecipe> TYPE = InitRecipeTypes.register(TYPE_ID.toString());
 
-    private final ResourceLocation id;
     public final Ingredient ingredient;
     public final NonNullList<Ingredient> ingredients;
     public final Item result;
 
-    public ChargerRecipe(ResourceLocation id, Ingredient ingredient, Item result) {
-        this.id = id;
+    public ChargerRecipe(Ingredient ingredient, Item result) {
         this.ingredient = ingredient;
         this.result = result;
         this.ingredients = NonNullList.of(Ingredient.EMPTY, ingredient);
@@ -54,11 +52,6 @@ public class ChargerRecipe implements Recipe<Container> {
 
     public ItemStack getResultItem() {
         return new ItemStack(result);
-    }
-
-    @Override
-    public ResourceLocation getId() {
-        return id;
     }
 
     @Override

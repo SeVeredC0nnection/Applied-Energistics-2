@@ -671,7 +671,7 @@ public final class TestPlots {
                                 }
                             }).toArray(ItemStack[]::new);
                     craftingPattern = PatternDetailsHelper.encodeCraftingPattern(
-                            recipe,
+                            holder,
                             ingredients,
                             recipe.getResultItem(node.getLevel().registryAccess()),
                             false,

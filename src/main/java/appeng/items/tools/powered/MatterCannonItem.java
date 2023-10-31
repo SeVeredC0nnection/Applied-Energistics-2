@@ -455,7 +455,8 @@ public class MatterCannonItem extends AEBasePoweredItem implements IBasicCellIte
         }
 
         var recipes = server.getRecipeManager().byType(MatterCannonAmmo.TYPE);
-        for (var ammoRecipe : recipes.values()) {
+        for (var holder : recipes.values()) {
+            var ammoRecipe = holder.value();
             if (ammoRecipe.getAmmo().test(itemStack)) {
                 return ammoRecipe.getWeight();
             }

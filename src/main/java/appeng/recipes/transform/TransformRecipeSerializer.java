@@ -49,7 +49,7 @@ public class TransformRecipeSerializer implements RecipeSerializer<TransformReci
         TransformCircumstance circumstance = json.has("circumstance")
                 ? TransformCircumstance.fromJson(GsonHelper.getAsJsonObject(json, "circumstance"))
                 : TransformCircumstance.fluid(FluidTags.WATER);
-        return new TransformRecipe(recipeId, ingredients, result, circumstance);
+        return new TransformRecipe(ingredients, result, circumstance);
     }
 
     @Nullable
@@ -64,7 +64,7 @@ public class TransformRecipeSerializer implements RecipeSerializer<TransformReci
         }
         TransformCircumstance circumstance = TransformCircumstance.fromNetwork(buffer);
 
-        return new TransformRecipe(recipeId, ingredients, output, circumstance);
+        return new TransformRecipe(ingredients, output, circumstance);
     }
 
     @Override

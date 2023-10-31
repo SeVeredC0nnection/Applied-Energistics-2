@@ -29,6 +29,7 @@ import java.util.concurrent.CopyOnWriteArrayList;
 
 import com.google.common.base.Preconditions;
 
+import net.minecraft.world.item.crafting.RecipeHolder;
 import org.jetbrains.annotations.Nullable;
 
 import net.minecraft.world.item.ItemStack;
@@ -115,8 +116,8 @@ public final class PatternDetailsHelper {
      * @param allowFluidSubstitutes Controls whether the ME system will allow the use of equivalent fluids.
      * @throws IllegalArgumentException If either in or out contain only empty ItemStacks.
      */
-    public static ItemStack encodeCraftingPattern(CraftingRecipe recipe, ItemStack[] in,
-            ItemStack out, boolean allowSubstitutes, boolean allowFluidSubstitutes) {
+    public static ItemStack encodeCraftingPattern(RecipeHolder<CraftingRecipe> recipe, ItemStack[] in,
+                                                  ItemStack out, boolean allowSubstitutes, boolean allowFluidSubstitutes) {
         return AEItems.CRAFTING_PATTERN.asItem().encode(recipe, in, out, allowSubstitutes, allowFluidSubstitutes);
     }
 
@@ -131,7 +132,7 @@ public final class PatternDetailsHelper {
      * @param allowSubstitutes Controls whether the ME system will allow the use of equivalent items to craft this
      *                         recipe.
      */
-    public static ItemStack encodeStonecuttingPattern(StonecutterRecipe recipe, AEItemKey in, AEItemKey out,
+    public static ItemStack encodeStonecuttingPattern(RecipeHolder<StonecutterRecipe> recipe, AEItemKey in, AEItemKey out,
             boolean allowSubstitutes) {
         Preconditions.checkNotNull(recipe, "recipe");
         Preconditions.checkNotNull(in, "in");
@@ -153,7 +154,7 @@ public final class PatternDetailsHelper {
      * @param allowSubstitutes Controls whether the ME system will allow the use of equivalent items to craft this
      *                         recipe.
      */
-    public static ItemStack encodeSmithingTablePattern(SmithingRecipe recipe,
+    public static ItemStack encodeSmithingTablePattern(RecipeHolder<SmithingRecipe> recipe,
             AEItemKey template,
             AEItemKey base,
             AEItemKey addition,

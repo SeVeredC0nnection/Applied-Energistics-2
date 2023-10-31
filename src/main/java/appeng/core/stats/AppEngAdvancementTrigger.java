@@ -27,34 +27,28 @@ import java.util.Set;
 
 import com.google.gson.JsonObject;
 
+import net.minecraft.advancements.Criterion;
 import net.minecraft.advancements.CriterionTrigger;
 import net.minecraft.advancements.CriterionTriggerInstance;
 import net.minecraft.advancements.critereon.DeserializationContext;
-import net.minecraft.advancements.critereon.SerializationContext;
-import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.PlayerAdvancements;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.entity.player.Player;
 
-import appeng.core.AppEng;
-
 public class AppEngAdvancementTrigger
         implements CriterionTrigger<AppEngAdvancementTrigger.Instance>, IAdvancementTrigger {
-    private final ResourceLocation id;
     private final Map<PlayerAdvancements, Listeners> listeners = new HashMap<>();
 
-    public AppEngAdvancementTrigger(String id) {
+    public AppEngAdvancementTrigger() {
         super();
-        this.id = AppEng.makeId(id);
+    }
+
+    public Criterion<Instance> criterion() {
+        return new Criterion<>(this, instance());
     }
 
     public Instance instance() {
-        return new Instance(id);
-    }
-
-    @Override
-    public ResourceLocation getId() {
-        return this.id;
+        return new Instance();
     }
 
     @Override
@@ -91,7 +85,7 @@ public class AppEngAdvancementTrigger
 
     @Override
     public Instance createInstance(JsonObject object, DeserializationContext conditions) {
-        return new Instance(this.getId());
+        return new Instance();
     }
 
     @Override
@@ -104,23 +98,12 @@ public class AppEngAdvancementTrigger
     }
 
     public static class Instance implements CriterionTriggerInstance {
-        private final ResourceLocation id;
-
-        public Instance(ResourceLocation id) {
-            this.id = id;
-        }
-
         public boolean test() {
             return true;
         }
 
         @Override
-        public ResourceLocation getCriterion() {
-            return id;
-        }
-
-        @Override
-        public JsonObject serializeToJson(SerializationContext conditions) {
+        public JsonObject serializeToJson() {
             return new JsonObject();
         }
     }
@@ -149,7 +132,7 @@ public class AppEngAdvancementTrigger
             List<Listener<Instance>> list = null;
 
             for (Listener<Instance> listener : this.listeners) {
-                if (listener.getTriggerInstance().test()) {
+                if (listener.trigger().test()) {
                     if (list == null) {
                         list = new ArrayList<>();
                     }

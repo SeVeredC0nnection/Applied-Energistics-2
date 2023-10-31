@@ -37,17 +37,14 @@ public class InscriberRecipe implements Recipe<Container> {
 
     public static final RecipeType<InscriberRecipe> TYPE = InitRecipeTypes.register(TYPE_ID.toString());
 
-    private final ResourceLocation id;
-
     private final Ingredient middleInput;
     private final Ingredient topOptional;
     private final Ingredient bottomOptional;
     private final ItemStack output;
     private final InscriberProcessType processType;
 
-    public InscriberRecipe(ResourceLocation id, Ingredient middleInput, ItemStack output,
+    public InscriberRecipe(Ingredient middleInput, ItemStack output,
             Ingredient topOptional, Ingredient bottomOptional, InscriberProcessType processType) {
-        this.id = id;
         this.middleInput = middleInput;
         this.output = output;
         this.topOptional = topOptional;
@@ -77,11 +74,6 @@ public class InscriberRecipe implements Recipe<Container> {
 
     public ItemStack getResultItem() {
         return this.output;
-    }
-
-    @Override
-    public ResourceLocation getId() {
-        return id;
     }
 
     @Override

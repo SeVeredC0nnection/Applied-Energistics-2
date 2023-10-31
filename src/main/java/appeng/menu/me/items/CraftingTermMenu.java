@@ -33,8 +33,10 @@ import net.minecraft.world.inventory.CraftingContainer;
 import net.minecraft.world.inventory.MenuType;
 import net.minecraft.world.inventory.TransientCraftingContainer;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.crafting.CraftingRecipe;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.item.crafting.Recipe;
+import net.minecraft.world.item.crafting.RecipeHolder;
 import net.minecraft.world.item.crafting.RecipeType;
 import net.minecraft.world.level.Level;
 
@@ -78,7 +80,7 @@ public class CraftingTermMenu extends MEStorageMenu implements IMenuCraftingPack
     private final CraftingContainer recipeTestContainer = new TransientCraftingContainer(this, 3, 3);
 
     private final CraftingTermSlot outputSlot;
-    private Recipe<CraftingContainer> currentRecipe;
+    private RecipeHolder<CraftingRecipe> currentRecipe;
 
     public CraftingTermMenu(int id, Inventory ip, ITerminalHost host) {
         this(TYPE, id, ip, host, true);
@@ -136,7 +138,7 @@ public class CraftingTermMenu extends MEStorageMenu implements IMenuCraftingPack
         if (this.currentRecipe == null) {
             this.outputSlot.set(ItemStack.EMPTY);
         } else {
-            this.outputSlot.set(this.currentRecipe.assemble(recipeTestContainer, level.registryAccess()));
+            this.outputSlot.set(this.currentRecipe.value().assemble(recipeTestContainer, level.registryAccess()));
         }
     }
 
@@ -155,7 +157,7 @@ public class CraftingTermMenu extends MEStorageMenu implements IMenuCraftingPack
         CraftConfirmMenu.openWithCraftingList(getActionHost(), (ServerPlayer) getPlayer(), getLocator(), toCraft);
     }
 
-    public Recipe<CraftingContainer> getCurrentRecipe() {
+    public RecipeHolder<CraftingRecipe> getCurrentRecipe() {
         return this.currentRecipe;
     }
 

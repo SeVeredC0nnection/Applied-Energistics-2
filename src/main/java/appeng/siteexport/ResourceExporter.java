@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.nio.file.Path;
 import java.util.Collection;
 
+import net.minecraft.world.item.crafting.RecipeHolder;
 import org.jetbrains.annotations.Nullable;
 
 import net.minecraft.client.renderer.texture.TextureAtlasSprite;
@@ -56,5 +57,5 @@ public interface ResourceExporter {
      */
     ResourceLocation getPageSpecificResourceLocation(String suffix);
 
-    void referenceRecipe(Recipe<?> recipe);
+    void referenceRecipe(RecipeHolder<?> recipe);
 }

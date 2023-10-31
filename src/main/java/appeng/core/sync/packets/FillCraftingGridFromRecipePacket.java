@@ -261,7 +261,7 @@ public class FillCraftingGridFromRecipePacket extends BasePacket {
         if (this.recipeId != null) {
             var recipe = player.level().getRecipeManager().byKey(this.recipeId).orElse(null);
             if (recipe != null) {
-                return CraftingRecipeUtil.ensure3by3CraftingMatrix(recipe);
+                return CraftingRecipeUtil.ensure3by3CraftingMatrix(recipe.value());
             }
         }
 

@@ -4,6 +4,7 @@ import java.util.List;
 import java.util.Set;
 import java.util.function.Function;
 
+import net.minecraft.world.item.crafting.RecipeHolder;
 import org.jetbrains.annotations.Nullable;
 
 
@@ -105,12 +106,12 @@ public class RecipeCompiler extends BlockTagCompiler {
      */
     private record RecipeTypeMapping<T extends Recipe<C>, C extends Container> (
             RecipeType<T> recipeType,
-            Function<T, LytBlock> factory) {
+            Function<RecipeHolder<T>, LytBlock> factory) {
         @Nullable
         LytBlock tryCreate(RecipeManager recipeManager, Item resultItem) {
             for (var recipe : recipeManager.byType(recipeType).values()) {
                 try {
-                    if (recipe.getResultItem(null).getItem() == resultItem) {
+                    if (recipe.value().getResultItem(null).getItem() == resultItem) {
                         return factory.apply(recipe);
                     }
                 } catch (Exception ignored) {
@@ -124,9 +125,9 @@ public class RecipeCompiler extends BlockTagCompiler {
 
         @SuppressWarnings("unchecked")
         @Nullable
-        LytBlock tryCreate(Recipe<?> recipe) {
-            if (recipeType == recipe.getType()) {
-                return factory.apply((T) recipe);
+        LytBlock tryCreate(RecipeHolder<?> recipe) {
+            if (recipeType == recipe.value().getType()) {
+                return factory.apply((RecipeHolder<T>) recipe);
             }
 
             return null;
