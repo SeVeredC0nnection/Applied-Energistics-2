@@ -239,7 +239,7 @@ public abstract class AEBaseScreen<T extends AEBaseMenu> extends AbstractContain
         this.updateBeforeRender();
         this.widgets.updateBeforeRender();
 
-        super.renderBackground(guiGraphics);
+        super.renderBackground(guiGraphics, mouseX, mouseY, partialTicks);
         super.render(guiGraphics, mouseX, mouseY, partialTicks);
 
         renderTooltips(guiGraphics, mouseX, mouseY);
@@ -515,8 +515,8 @@ public abstract class AEBaseScreen<T extends AEBaseMenu> extends AbstractContain
     }
 
     @Override
-    public boolean mouseScrolled(double x, double y, double wheelDelta) {
-        if (wheelDelta != 0 && widgets.onMouseWheel(getMousePoint(x, y), wheelDelta)) {
+    public boolean mouseScrolled(double x, double y, double deltaX, double deltaY) {
+        if (deltaY != 0 && widgets.onMouseWheel(getMousePoint(x, y), deltaY)) {
             return true;
         }
         return false;

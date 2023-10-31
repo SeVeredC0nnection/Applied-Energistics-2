@@ -219,7 +219,7 @@ public final class InscriberTESR implements BlockEntityRenderer<InscriberBlockEn
     }
 
     private static void addVertex(VertexConsumer vb, PoseStack ms, TextureAtlasSprite sprite, float x, float y,
-            float z, double texU, double texV, int overlayUV, int lightmapUV, Direction front) {
+            float z, float texU, float texV, int overlayUV, int lightmapUV, Direction front) {
         vb.vertex(ms.last().pose(), x, y, z);
         vb.color(1.0f, 1.0f, 1.0f, 1.0f);
         vb.uv(sprite.getU(texU), sprite.getV(texV));

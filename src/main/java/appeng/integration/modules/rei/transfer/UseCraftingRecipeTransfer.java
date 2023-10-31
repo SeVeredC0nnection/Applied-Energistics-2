@@ -109,7 +109,7 @@ public class UseCraftingRecipeTransfer<T extends CraftingTermMenu> extends Abstr
             ingredients.set(i, ingredient);
         }
 
-        return new ShapedRecipe(AppEng.makeId("__fake_recipe"), "", CraftingBookCategory.MISC, CRAFTING_GRID_WIDTH,
+        return new ShapedRecipe("", CraftingBookCategory.MISC, CRAFTING_GRID_WIDTH,
                 CRAFTING_GRID_HEIGHT,
                 ingredients, ItemStack.EMPTY);
     }

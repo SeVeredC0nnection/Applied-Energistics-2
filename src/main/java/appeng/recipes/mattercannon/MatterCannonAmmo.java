@@ -58,15 +58,12 @@ public class MatterCannonAmmo implements Recipe<Container> {
 
     public static final RecipeType<MatterCannonAmmo> TYPE = InitRecipeTypes.register(TYPE_ID.toString());
 
-    private final ResourceLocation id;
-
     private final Ingredient ammo;
 
     private final float weight;
 
-    public MatterCannonAmmo(ResourceLocation id, Ingredient ammo, float weight) {
+    public MatterCannonAmmo(Ingredient ammo, float weight) {
         Preconditions.checkArgument(weight >= 0, "Weight must not be negative");
-        this.id = Objects.requireNonNull(id, "id must not be null");
         this.ammo = Objects.requireNonNull(ammo, "ammo must not be null");
         this.weight = weight;
     }
@@ -101,11 +98,6 @@ public class MatterCannonAmmo implements Recipe<Container> {
     @Override
     public ItemStack getResultItem(RegistryAccess registryAccess) {
         return ItemStack.EMPTY;
-    }
-
-    @Override
-    public ResourceLocation getId() {
-        return id;
     }
 
     @Override

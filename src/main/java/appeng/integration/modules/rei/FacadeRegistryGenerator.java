@@ -90,9 +90,6 @@ class FacadeRegistryGenerator implements DynamicDisplayGenerator<DefaultShapedDi
     }
 
     private DefaultShapedDisplay make(ItemStack textureItem, ItemStack cableAnchor, ItemStack result) {
-        // This id should only be used within JEI and not really matter
-        ResourceLocation id = AppEng.makeId("facade/" + Item.getId(textureItem.getItem()));
-
         var ingredients = NonNullList.withSize(9, Ingredient.EMPTY);
         ingredients.set(1, Ingredient.of(cableAnchor));
         ingredients.set(3, Ingredient.of(cableAnchor));
@@ -102,7 +99,7 @@ class FacadeRegistryGenerator implements DynamicDisplayGenerator<DefaultShapedDi
 
         result.setCount(4);
 
-        return new DefaultShapedDisplay(new ShapedRecipe(id, "", CraftingBookCategory.MISC, 3, 3, ingredients, result));
+        return new DefaultShapedDisplay(new ShapedRecipe("", CraftingBookCategory.MISC, 3, 3, ingredients, result));
     }
 
 }

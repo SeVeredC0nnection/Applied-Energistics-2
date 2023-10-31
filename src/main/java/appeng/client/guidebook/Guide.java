@@ -17,6 +17,7 @@ import java.util.Objects;
 import java.util.Set;
 import java.util.concurrent.CompletableFuture;
 
+import net.minecraft.world.level.validation.DirectoryValidator;
 import org.jetbrains.annotations.Nullable;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -140,7 +141,7 @@ public final class Guide implements PageCollection {
         try {
             var layeredAccess = RegistryLayer.createRegistryAccess();
 
-            PackRepository packRepository = new PackRepository(new ServerPacksSource());
+            PackRepository packRepository = new PackRepository(new ServerPacksSource(new DirectoryValidator(path -> false)));
             net.neoforged.neoforge.resource.ResourcePackLoader.loadResourcePacks(packRepository,
                     net.neoforged.neoforge.server.ServerLifecycleHooks::buildPackFinder);
             packRepository.reload();

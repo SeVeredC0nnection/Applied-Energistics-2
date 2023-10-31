@@ -14,6 +14,7 @@ import appeng.api.stacks.AEItemKey;
 import appeng.api.stacks.AEKey;
 import appeng.api.stacks.AEKeyType;
 import appeng.me.storage.ExternalStorageFacade;
+import net.neoforged.neoforge.items.ItemHandlerHelper;
 
 public abstract class HandlerStrategy<C, S> {
     private final AEKeyType keyType;

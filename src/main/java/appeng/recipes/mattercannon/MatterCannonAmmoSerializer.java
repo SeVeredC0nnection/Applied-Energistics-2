@@ -38,7 +38,7 @@ public class MatterCannonAmmoSerializer implements RecipeSerializer<MatterCannon
     public MatterCannonAmmo fromJson(ResourceLocation recipeId, JsonObject json) {
         var ammo = Ingredient.fromJson(json.get("ammo"));
         var weight = json.get("weight").getAsFloat();
-        return new MatterCannonAmmo(recipeId, ammo, weight);
+        return new MatterCannonAmmo(ammo, weight);
     }
 
     @Nullable
@@ -46,7 +46,7 @@ public class MatterCannonAmmoSerializer implements RecipeSerializer<MatterCannon
     public MatterCannonAmmo fromNetwork(ResourceLocation recipeId, FriendlyByteBuf buffer) {
         var ammo = Ingredient.fromNetwork(buffer);
         var weight = buffer.readFloat();
-        return new MatterCannonAmmo(recipeId, ammo, weight);
+        return new MatterCannonAmmo(ammo, weight);
     }
 
     @Override

@@ -214,31 +214,32 @@ public final class SiteExporter implements ResourceExporter {
 
     private void dumpRecipes(SiteExportWriter writer) {
         for (var holder : recipes) {
+            var id = holder.id();
             var recipe = holder.value();
 
             if (recipe instanceof CraftingRecipe craftingRecipe) {
                 if (craftingRecipe.isSpecial()) {
                     continue;
                 }
-                writer.addRecipe(craftingRecipe);
+                writer.addRecipe(id, craftingRecipe);
             } else if (recipe instanceof AbstractCookingRecipe cookingRecipe) {
-                writer.addRecipe(cookingRecipe);
+                writer.addRecipe(id, cookingRecipe);
             } else if (recipe instanceof InscriberRecipe inscriberRecipe) {
-                writer.addRecipe(inscriberRecipe);
+                writer.addRecipe(id, inscriberRecipe);
             } else if (recipe instanceof TransformRecipe transformRecipe) {
-                writer.addRecipe(transformRecipe);
+                writer.addRecipe(id, transformRecipe);
             } else if (recipe instanceof SmithingTransformRecipe smithingTransformRecipe) {
-                writer.addRecipe(smithingTransformRecipe);
+                writer.addRecipe(id, smithingTransformRecipe);
             } else if (recipe instanceof SmithingTrimRecipe smithingTrimRecipe) {
-                writer.addRecipe(smithingTrimRecipe);
+                writer.addRecipe(id, smithingTrimRecipe);
             } else if (recipe instanceof StonecutterRecipe stonecutterRecipe) {
-                writer.addRecipe(stonecutterRecipe);
+                writer.addRecipe(id, stonecutterRecipe);
             } else if (recipe instanceof EntropyRecipe entropyRecipe) {
-                writer.addRecipe(entropyRecipe);
+                writer.addRecipe(id, entropyRecipe);
             } else if (recipe instanceof MatterCannonAmmo ammoRecipe) {
-                writer.addRecipe(ammoRecipe);
+                writer.addRecipe(id, ammoRecipe);
             } else if (recipe instanceof ChargerRecipe chargerRecipe) {
-                writer.addRecipe(chargerRecipe);
+                writer.addRecipe(id, chargerRecipe);
             } else {
                 LOGGER.warn("Unable to handle recipe {} of type {}", holder.id(), recipe.getType());
             }

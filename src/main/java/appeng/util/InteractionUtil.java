@@ -116,7 +116,7 @@ public final class InteractionUtil {
         float f1 = p.xRotO + (p.getXRot() - p.xRotO) * f;
         final float f2 = p.yRotO + (p.getYRot() - p.yRotO) * f;
         final double d0 = p.xo + (p.getX() - p.xo) * f;
-        final double d1 = p.yo + (p.getY() - p.yo) * f + 1.62D - p.getMyRidingOffset();
+        final double d1 = p.yo + (p.getY() - p.yo) * f + 1.62D - p.getMyRidingOffset(p);
         final double d2 = p.zo + (p.getZ() - p.zo) * f;
         final Vec3 vec3 = new Vec3(d0, d1, d2);
         final float f3 = Mth.cos(-f2 * 0.017453292F - (float) Math.PI);

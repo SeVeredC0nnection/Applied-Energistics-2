@@ -29,6 +29,8 @@ sourceSets {
     main {
         java {
             srcDir 'src/main/flatbuffers/generated'
+            exclude "**/integration/modules/rei/**"
+            exclude "**/integration/modules/jei/**"
         }
         resources {
             srcDir 'src/generated/resources'
