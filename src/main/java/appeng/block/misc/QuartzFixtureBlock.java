@@ -22,7 +22,7 @@ import java.util.EnumMap;
 import java.util.Map;
 
 import org.jetbrains.annotations.Nullable;
-import var;
+
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.util.RandomSource;

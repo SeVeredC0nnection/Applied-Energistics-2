@@ -17,13 +17,12 @@
  */
 package appeng.server.testworld;
 
-import Positioned;
-import PositionedArea;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.function.Function;
-import record;
-import var;
+
+
 
 /**
  * See https://observablehq.com/@mourner/simple-rectangle-packing

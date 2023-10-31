@@ -2,7 +2,7 @@ package appeng.client.guidebook.document.block.table;
 
 import java.util.ArrayList;
 import java.util.List;
-import var;
+
 import appeng.client.guidebook.document.LytRect;
 import appeng.client.guidebook.document.block.LytNode;
 

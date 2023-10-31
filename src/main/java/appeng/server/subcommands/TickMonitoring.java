@@ -25,7 +25,7 @@ import com.mojang.brigadier.context.CommandContext;
 import net.minecraft.commands.CommandSourceStack;
 import net.minecraft.commands.Commands;
 import net.minecraft.server.MinecraftServer;
-import var;
+
 import appeng.me.service.TickManagerService;
 import appeng.server.ISubCommand;
 

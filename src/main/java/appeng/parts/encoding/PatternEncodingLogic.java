@@ -19,7 +19,7 @@
 package appeng.parts.encoding;
 
 import org.jetbrains.annotations.Nullable;
-import var;
+
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.nbt.Tag;
 import net.minecraft.resources.ResourceLocation;

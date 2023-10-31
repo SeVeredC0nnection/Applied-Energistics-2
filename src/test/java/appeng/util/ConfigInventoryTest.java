@@ -3,11 +3,11 @@ package appeng.util;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNull;
 
-import ConfigInventory;
+
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Nested;
 import org.junit.jupiter.api.Test;
-import var;
+
 import net.minecraft.world.item.Items;
 import net.minecraft.world.level.material.Fluids;
 

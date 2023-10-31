@@ -26,7 +26,6 @@ package appeng.api.networking.crafting;
 import org.jetbrains.annotations.Nullable;
 
 import net.minecraft.network.chat.Component;
-import CraftingJobStatus;
 import appeng.api.config.CpuSelectionMode;
 
 public interface ICraftingCPU {

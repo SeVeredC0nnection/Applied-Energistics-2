@@ -23,7 +23,7 @@ import java.util.Map;
 
 import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.world.inventory.AbstractContainerMenu;
-import var;
+
 import appeng.core.AELog;
 
 /**

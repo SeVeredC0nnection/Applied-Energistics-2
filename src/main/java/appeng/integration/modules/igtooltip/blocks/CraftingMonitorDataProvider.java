@@ -5,7 +5,7 @@ import appeng.api.integrations.igtooltip.TooltipContext;
 import appeng.api.integrations.igtooltip.providers.BodyProvider;
 import appeng.blockentity.crafting.CraftingMonitorBlockEntity;
 import appeng.core.localization.InGameTooltip;
-import var;
+
 
 /**
  * Shows the name of the item being crafted.

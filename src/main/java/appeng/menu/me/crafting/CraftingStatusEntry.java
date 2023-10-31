@@ -21,7 +21,7 @@ package appeng.menu.me.crafting;
 import java.util.Comparator;
 
 import org.jetbrains.annotations.Nullable;
-import var;
+
 import net.minecraft.network.FriendlyByteBuf;
 
 import appeng.api.stacks.AEKey;

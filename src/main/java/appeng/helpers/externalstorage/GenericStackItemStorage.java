@@ -3,7 +3,7 @@ package appeng.helpers.externalstorage;
 import com.google.common.primitives.Ints;
 
 import org.jetbrains.annotations.NotNull;
-import var;
+
 import net.minecraft.world.item.ItemStack;
 import net.neoforged.neoforge.items.IItemHandler;
 import appeng.api.behaviors.GenericInternalInventory;

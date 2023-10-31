@@ -30,7 +30,7 @@ import java.util.Objects;
 import com.google.common.base.Preconditions;
 
 import org.jetbrains.annotations.Nullable;
-import var;
+
 import net.minecraft.world.item.ItemStack;
 
 import appeng.api.storage.cells.IBasicCellItem;

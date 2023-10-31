@@ -1,7 +1,7 @@
 package appeng.client.guidebook.layout.flow;
 
 import net.minecraft.client.renderer.MultiBufferSource;
-import var;
+
 import appeng.client.guidebook.render.RenderContext;
 import appeng.client.guidebook.style.ResolvedTextStyle;
 

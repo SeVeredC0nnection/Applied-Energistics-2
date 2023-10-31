@@ -22,7 +22,7 @@ import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.neoforge.client.event.RecipesUpdatedEvent;
 import net.neoforged.neoforge.event.AddReloadListenerEvent;
 import net.neoforged.neoforge.event.server.ServerStartedEvent;
-import var;
+
 import it.unimi.dsi.fastutil.objects.ReferenceOpenHashSet;
 
 public final class TransformLogic {
@@ -46,11 +46,12 @@ public final class TransformLogic {
         List<ItemEntity> itemEntities = level.getEntities(null, region).stream()
                 .filter(e -> e instanceof ItemEntity && !e.isRemoved()).map(e -> (ItemEntity) e).toList();
 
-        for (var recipe : level.getRecipeManager().byType(TransformRecipe.TYPE).values()) {
+        for (var holder : level.getRecipeManager().byType(TransformRecipe.TYPE).values()) {
+            var recipe = holder.value();
             if (!circumstancePredicate.test(recipe.circumstance))
                 continue;
 
-            if (recipe.ingredients.size() == 0)
+            if (recipe.ingredients.isEmpty())
                 continue;
 
             List<Ingredient> missingIngredients = Lists.newArrayList(recipe.ingredients);
@@ -124,7 +125,8 @@ public final class TransformLogic {
     private static Set<Item> getTransformableItems(Level level, Fluid fluid) {
         return fluidCache.computeIfAbsent(fluid, f -> {
             Set<Item> ret = Collections.newSetFromMap(new IdentityHashMap<>());
-            for (var recipe : level.getRecipeManager().getAllRecipesFor(TransformRecipe.TYPE)) {
+            for (var holder : level.getRecipeManager().getAllRecipesFor(TransformRecipe.TYPE)) {
+                var recipe = holder.value();
                 if (!(recipe.circumstance.isFluid(fluid)))
                     continue;
                 for (var ingredient : recipe.ingredients) {
@@ -142,7 +144,8 @@ public final class TransformLogic {
         Set<Item> ret = anyFluidCache;
         if (ret == null) {
             ret = Collections.newSetFromMap(new IdentityHashMap<>());
-            for (var recipe : level.getRecipeManager().getAllRecipesFor(TransformRecipe.TYPE)) {
+            for (var holder : level.getRecipeManager().getAllRecipesFor(TransformRecipe.TYPE)) {
+                var recipe = holder.value();
                 if (!recipe.circumstance.isFluid())
                     continue;
                 for (var ingredient : recipe.ingredients) {
@@ -161,7 +164,8 @@ public final class TransformLogic {
         Set<Item> ret = explosionCache;
         if (ret == null) {
             ret = Collections.newSetFromMap(new IdentityHashMap<>());
-            for (var recipe : level.getRecipeManager().getAllRecipesFor(TransformRecipe.TYPE)) {
+            for (var holder : level.getRecipeManager().getAllRecipesFor(TransformRecipe.TYPE)) {
+                var recipe = holder.value();
                 if (!recipe.circumstance.isExplosion())
                     continue;
                 for (var ingredient : recipe.ingredients) {

@@ -25,7 +25,7 @@ import net.minecraft.client.renderer.blockentity.BlockEntityRenderer;
 import net.minecraft.client.renderer.blockentity.BlockEntityRendererProvider;
 import net.neoforged.api.distmarker.Dist;
 import net.neoforged.api.distmarker.OnlyIn;
-import var;
+
 import appeng.blockentity.crafting.CraftingMonitorBlockEntity;
 import appeng.client.render.BlockEntityRenderHelper;
 

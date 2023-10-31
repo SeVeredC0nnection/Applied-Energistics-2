@@ -9,7 +9,7 @@ import com.mojang.brigadier.context.CommandContext;
 
 import net.minecraft.commands.CommandSourceStack;
 import net.minecraft.server.MinecraftServer;
-import var;
+
 import appeng.api.networking.pathing.ChannelMode;
 import appeng.core.AEConfig;
 import appeng.core.AELog;

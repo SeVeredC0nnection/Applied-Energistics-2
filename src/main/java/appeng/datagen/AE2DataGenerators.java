@@ -35,7 +35,7 @@ import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.Mod;
 import net.neoforged.neoforge.common.data.ExistingFileHelper;
 import net.neoforged.neoforge.data.event.GatherDataEvent;
-import var;
+
 import appeng.core.AppEng;
 import appeng.core.definitions.AEDamageTypes;
 import appeng.datagen.providers.WorldGenProvider;
@@ -113,16 +113,16 @@ public class AE2DataGenerators {
         pack.addProvider(packOutput -> new AdvancementGenerator(packOutput, localization));
 
         // Recipes
-        pack.addProvider(DecorationRecipes::new);
-        pack.addProvider(DecorationBlockRecipes::new);
-        pack.addProvider(MatterCannonAmmoProvider::new);
-        pack.addProvider(EntropyRecipes::new);
-        pack.addProvider(InscriberRecipes::new);
-        pack.addProvider(SmeltingRecipes::new);
-        pack.addProvider(CraftingRecipes::new);
-        pack.addProvider(SmithingRecipes::new);
-        pack.addProvider(TransformRecipes::new);
-        pack.addProvider(ChargerRecipes::new);
+        pack.addProvider(bindRegistries(DecorationRecipes::new, registries));
+        pack.addProvider(bindRegistries(DecorationBlockRecipes::new, registries));
+        pack.addProvider(bindRegistries(MatterCannonAmmoProvider::new, registries));
+        pack.addProvider(bindRegistries(EntropyRecipes::new, registries));
+        pack.addProvider(bindRegistries(InscriberRecipes::new, registries));
+        pack.addProvider(bindRegistries(SmeltingRecipes::new, registries));
+        pack.addProvider(bindRegistries(CraftingRecipes::new, registries));
+        pack.addProvider(bindRegistries(SmithingRecipes::new, registries));
+        pack.addProvider(bindRegistries(TransformRecipes::new, registries));
+        pack.addProvider(bindRegistries(ChargerRecipes::new, registries));
 
         // Must run last
         pack.addProvider(packOutput -> localization);

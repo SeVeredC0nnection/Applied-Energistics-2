@@ -24,7 +24,7 @@ import net.minecraft.world.level.biome.Biome;
 import net.minecraft.world.level.biome.BiomeGenerationSettings;
 import net.minecraft.world.level.biome.BiomeSpecialEffects;
 import net.minecraft.world.level.biome.MobSpawnSettings;
-import var;
+
 import appeng.spatial.SpatialStorageDimensionIds;
 
 public final class InitBiomes {

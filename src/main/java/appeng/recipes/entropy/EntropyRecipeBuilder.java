@@ -28,6 +28,8 @@ import java.util.function.Consumer;
 import com.google.common.base.Preconditions;
 import com.google.gson.JsonObject;
 
+import net.minecraft.advancements.AdvancementHolder;
+import net.minecraft.data.recipes.RecipeOutput;
 import org.jetbrains.annotations.Nullable;
 
 import net.minecraft.data.recipes.FinishedRecipe;
@@ -178,7 +180,7 @@ public class EntropyRecipeBuilder {
                 drops);
     }
 
-    public void save(Consumer<FinishedRecipe> consumer) {
+    public void save(RecipeOutput consumer) {
         consumer.accept(new Result());
     }
 
@@ -189,24 +191,18 @@ public class EntropyRecipeBuilder {
         }
 
         @Override
-        public ResourceLocation getId() {
+        public ResourceLocation id() {
             return id;
         }
 
         @Override
-        public RecipeSerializer<?> getType() {
+        public RecipeSerializer<?> type() {
             return EntropyRecipeSerializer.INSTANCE;
         }
 
         @Nullable
         @Override
-        public JsonObject serializeAdvancement() {
-            return null;
-        }
-
-        @Nullable
-        @Override
-        public ResourceLocation getAdvancementId() {
+        public AdvancementHolder advancement() {
             return null;
         }
     }

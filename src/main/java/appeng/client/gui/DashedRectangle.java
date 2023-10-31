@@ -9,7 +9,7 @@ import com.mojang.blaze3d.vertex.VertexFormat;
 
 import net.minecraft.client.renderer.GameRenderer;
 import net.minecraft.util.Mth;
-import var;
+
 import appeng.client.guidebook.document.LytRect;
 
 /**

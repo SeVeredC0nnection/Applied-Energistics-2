@@ -1,7 +1,7 @@
 package appeng.integration.modules.rei;
 
 import org.jetbrains.annotations.Nullable;
-import var;
+
 import net.minecraft.client.gui.GuiGraphics;
 
 import dev.architectury.fluid.FluidStack;

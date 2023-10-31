@@ -6,7 +6,7 @@ import java.util.Set;
 import com.google.common.base.Preconditions;
 
 import org.jetbrains.annotations.Nullable;
-import var;
+
 import net.minecraft.world.level.ItemLike;
 import net.minecraft.world.level.material.Fluid;
 

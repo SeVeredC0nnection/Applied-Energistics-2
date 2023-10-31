@@ -21,7 +21,7 @@ package appeng.util.helpers;
 import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-import P2PHelper;
+
 import org.junit.jupiter.api.Test;
 
 import appeng.api.util.AEColor;

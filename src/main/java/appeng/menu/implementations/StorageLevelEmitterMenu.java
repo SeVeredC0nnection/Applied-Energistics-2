@@ -19,7 +19,7 @@
 package appeng.menu.implementations;
 
 import org.jetbrains.annotations.Nullable;
-import var;
+
 import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.inventory.MenuType;
 import net.minecraft.world.inventory.Slot;

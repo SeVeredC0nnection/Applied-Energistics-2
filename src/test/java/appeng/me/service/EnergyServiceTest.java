@@ -6,7 +6,7 @@ import org.assertj.core.data.Offset;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 import org.junit.jupiter.api.Test;
-import var;
+
 import net.minecraft.nbt.CompoundTag;
 
 import appeng.api.config.Actionable;

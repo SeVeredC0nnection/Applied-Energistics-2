@@ -11,7 +11,7 @@ import snownee.jade.api.ITooltip;
 import snownee.jade.api.config.IPluginConfig;
 import snownee.jade.api.ui.IElement;
 import snownee.jade.api.ui.IElementHelper;
-import var;
+
 import appeng.api.integrations.igtooltip.providers.IconProvider;
 
 class IconProviderAdapter<T extends BlockEntity> extends BaseProvider implements IBlockComponentProvider {

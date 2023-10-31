@@ -3,7 +3,7 @@ package appeng.client.gui.me.items;
 import java.util.Objects;
 
 import org.jetbrains.annotations.Nullable;
-import var;
+
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.GuiGraphics;
 import net.minecraft.client.renderer.Rect2i;

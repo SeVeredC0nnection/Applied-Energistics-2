@@ -6,11 +6,10 @@ import java.util.Set;
 import com.google.common.base.Preconditions;
 
 import org.jetbrains.annotations.Nullable;
-import var;
+
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.inventory.AbstractContainerMenu;
 import net.minecraft.world.item.ItemStack;
-import EmptyingAction;
 import appeng.api.stacks.AEFluidKey;
 import appeng.api.stacks.AEKey;
 import appeng.api.stacks.AEKeyType;

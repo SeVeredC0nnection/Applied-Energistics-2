@@ -9,7 +9,7 @@ import snownee.jade.api.IWailaCommonRegistration;
 import snownee.jade.api.IWailaPlugin;
 import snownee.jade.api.WailaPlugin;
 import snownee.jade.api.ui.IElementHelper;
-import var;
+
 import appeng.api.integrations.igtooltip.ClientRegistration;
 import appeng.api.integrations.igtooltip.CommonRegistration;
 import appeng.api.integrations.igtooltip.providers.BodyProvider;

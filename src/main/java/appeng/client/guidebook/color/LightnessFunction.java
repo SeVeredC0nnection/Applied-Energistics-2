@@ -1,6 +1,6 @@
 package appeng.client.guidebook.color;
 
-import var;
+
 
 /**
  * Applies a function to an existing color that makes it lighter or darker by a given percentage.

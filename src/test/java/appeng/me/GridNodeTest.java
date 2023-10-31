@@ -8,7 +8,7 @@ import static org.mockito.Mockito.reset;
 import java.util.ArrayList;
 
 import org.junit.jupiter.api.Test;
-import var;
+
 import appeng.api.networking.IGridNodeListener;
 import appeng.me.service.PathingService;
 

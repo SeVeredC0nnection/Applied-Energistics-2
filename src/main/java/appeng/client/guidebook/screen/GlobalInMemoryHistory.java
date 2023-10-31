@@ -3,7 +3,7 @@ package appeng.client.guidebook.screen;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
-import var;
+
 import appeng.client.guidebook.PageAnchor;
 
 public class GlobalInMemoryHistory implements GuideScreenHistory {

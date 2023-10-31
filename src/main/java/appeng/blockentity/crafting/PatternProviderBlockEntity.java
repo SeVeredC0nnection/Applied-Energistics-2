@@ -24,7 +24,7 @@ import java.util.Locale;
 import java.util.Set;
 
 import org.jetbrains.annotations.Nullable;
-import var;
+
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.nbt.CompoundTag;

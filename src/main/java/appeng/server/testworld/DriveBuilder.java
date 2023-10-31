@@ -3,7 +3,7 @@ package appeng.server.testworld;
 import java.util.List;
 
 import org.jetbrains.annotations.Nullable;
-import var;
+
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.ItemLike;
 import net.minecraft.world.level.material.Fluid;

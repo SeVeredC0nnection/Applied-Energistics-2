@@ -3,9 +3,9 @@ package appeng.crafting.pattern;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNull;
 
-import AEProcessingPattern;
+
 import org.junit.jupiter.api.Test;
-import var;
+
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.nbt.Tag;
 import net.minecraft.world.item.ItemStack;

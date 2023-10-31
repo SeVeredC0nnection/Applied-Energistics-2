@@ -7,7 +7,7 @@ import com.mojang.brigadier.builder.LiteralArgumentBuilder;
 import net.minecraft.commands.CommandSourceStack;
 import net.minecraft.commands.Commands;
 import net.minecraft.network.chat.Component;
-import var;
+
 import appeng.core.AEConfig;
 import appeng.siteexport.FabricClientCommandSource;
 import appeng.siteexport.SiteExporter;

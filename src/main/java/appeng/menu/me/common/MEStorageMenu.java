@@ -31,7 +31,7 @@ import com.google.common.collect.Sets;
 import com.google.common.primitives.Ints;
 
 import org.jetbrains.annotations.Nullable;
-import var;
+
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.inventory.MenuType;

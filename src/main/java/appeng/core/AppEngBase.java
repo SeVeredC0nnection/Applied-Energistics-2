@@ -24,7 +24,7 @@ import java.util.Collections;
 import com.mojang.brigadier.CommandDispatcher;
 
 import org.jetbrains.annotations.Nullable;
-import var;
+
 import net.minecraft.commands.CommandSourceStack;
 import net.minecraft.core.Registry;
 import net.minecraft.core.registries.BuiltInRegistries;

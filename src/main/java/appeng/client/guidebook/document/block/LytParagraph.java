@@ -3,7 +3,7 @@ package appeng.client.guidebook.document.block;
 import java.util.stream.Stream;
 
 import org.jetbrains.annotations.Nullable;
-import var;
+
 import net.minecraft.client.renderer.MultiBufferSource;
 
 import appeng.client.guidebook.document.LytRect;

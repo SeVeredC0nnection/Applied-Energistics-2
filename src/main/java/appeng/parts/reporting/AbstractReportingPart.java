@@ -29,7 +29,7 @@ import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.phys.Vec3;
 import net.neoforged.neoforge.client.model.data.ModelData;
-import var;
+
 import appeng.api.implementations.parts.IMonitorPart;
 import appeng.api.networking.GridFlags;
 import appeng.api.parts.IPartCollisionHelper;

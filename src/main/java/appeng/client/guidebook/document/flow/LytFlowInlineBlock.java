@@ -1,7 +1,7 @@
 package appeng.client.guidebook.document.flow;
 
 import java.util.Optional;
-import var;
+
 import appeng.client.guidebook.document.LytSize;
 import appeng.client.guidebook.document.block.LytBlock;
 import appeng.client.guidebook.document.block.LytVisitor;

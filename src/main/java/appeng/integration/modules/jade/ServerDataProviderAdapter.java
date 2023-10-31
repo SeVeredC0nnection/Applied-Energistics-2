@@ -5,7 +5,7 @@ import net.minecraft.resources.ResourceLocation;
 
 import snownee.jade.api.BlockAccessor;
 import snownee.jade.api.IServerDataProvider;
-import var;
+
 import appeng.api.integrations.igtooltip.providers.ServerDataProvider;
 import appeng.core.AppEng;
 

@@ -22,7 +22,7 @@ import java.util.Arrays;
 import java.util.function.Consumer;
 
 import org.apache.commons.lang3.StringUtils;
-import var;
+
 import net.minecraft.core.Direction;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.FriendlyByteBuf;

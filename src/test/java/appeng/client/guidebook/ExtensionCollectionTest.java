@@ -7,7 +7,7 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 import java.util.List;
 
 import org.junit.jupiter.api.Test;
-import var;
+
 import appeng.client.guidebook.extensions.Extension;
 import appeng.client.guidebook.extensions.ExtensionCollection;
 import appeng.client.guidebook.extensions.ExtensionPoint;

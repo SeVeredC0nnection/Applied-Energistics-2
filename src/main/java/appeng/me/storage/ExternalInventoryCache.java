@@ -3,7 +3,7 @@ package appeng.me.storage;
 import java.util.Arrays;
 import java.util.HashSet;
 import java.util.Set;
-import var;
+
 import appeng.api.stacks.AEKey;
 import appeng.api.stacks.GenericStack;
 import appeng.api.stacks.KeyCounter;

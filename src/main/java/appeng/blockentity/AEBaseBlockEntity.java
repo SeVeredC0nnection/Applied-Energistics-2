@@ -27,7 +27,7 @@ import java.util.Objects;
 import org.jetbrains.annotations.ApiStatus;
 import org.jetbrains.annotations.MustBeInvokedByOverriders;
 import org.jetbrains.annotations.Nullable;
-import var;
+
 import io.netty.buffer.Unpooled;
 
 import net.minecraft.core.BlockPos;

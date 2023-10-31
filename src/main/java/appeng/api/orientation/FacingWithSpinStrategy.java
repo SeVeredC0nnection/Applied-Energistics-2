@@ -8,7 +8,7 @@ import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraft.world.level.block.state.properties.Property;
-import var;
+
 
 /**
  * Extends {@link FacingStrategy} to also allow the block to be rotated around its facing axis.

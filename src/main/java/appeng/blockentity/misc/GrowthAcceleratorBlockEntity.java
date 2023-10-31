@@ -29,7 +29,7 @@ import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.state.BlockState;
 import net.neoforged.neoforge.common.capabilities.Capability;
 import net.neoforged.neoforge.common.util.LazyOptional;
-import var;
+
 import appeng.api.ids.AETags;
 import appeng.api.implementations.IPowerChannelState;
 import appeng.api.implementations.blockentities.ICrankable;

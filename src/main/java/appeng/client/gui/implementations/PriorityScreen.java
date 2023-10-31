@@ -21,7 +21,7 @@ package appeng.client.gui.implementations;
 import java.util.OptionalInt;
 
 import org.jetbrains.annotations.Nullable;
-import var;
+
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.entity.player.Inventory;
 

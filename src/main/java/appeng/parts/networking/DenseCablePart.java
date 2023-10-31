@@ -21,7 +21,7 @@ package appeng.parts.networking;
 import java.util.function.Predicate;
 
 import org.jetbrains.annotations.Nullable;
-import var;
+
 import net.minecraft.core.Direction;
 
 import appeng.api.networking.GridFlags;

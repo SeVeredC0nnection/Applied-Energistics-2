@@ -3,8 +3,8 @@ package appeng.api.behaviors;
 import com.google.common.primitives.Ints;
 
 import org.jetbrains.annotations.Nullable;
-import record;
-import var;
+
+
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.inventory.AbstractContainerMenu;
 import net.minecraft.world.item.ItemStack;

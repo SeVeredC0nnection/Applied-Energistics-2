@@ -25,7 +25,7 @@ import net.minecraft.data.models.BlockModelGenerators;
 import net.minecraft.data.models.blockstates.Variant;
 import net.minecraft.data.models.blockstates.VariantProperties;
 import net.neoforged.neoforge.common.data.ExistingFileHelper;
-import var;
+
 import appeng.core.AppEng;
 import appeng.core.definitions.AEBlocks;
 

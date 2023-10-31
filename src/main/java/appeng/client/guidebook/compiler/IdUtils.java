@@ -4,7 +4,7 @@ import java.net.URI;
 
 import net.minecraft.ResourceLocationException;
 import net.minecraft.resources.ResourceLocation;
-import var;
+
 
 /**
  * Helper to resolve shorthand and relative IDs found in markdown pages.

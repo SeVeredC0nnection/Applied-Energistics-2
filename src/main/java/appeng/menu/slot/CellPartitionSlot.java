@@ -3,7 +3,7 @@ package appeng.menu.slot;
 import java.util.List;
 
 import org.jetbrains.annotations.Nullable;
-import var;
+
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.ItemStack;
 

@@ -6,7 +6,7 @@ import net.minecraft.client.gui.GuiGraphics;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.TooltipFlag;
 import net.neoforged.neoforge.fluids.FluidStack;
-import var;
+
 import mezz.jei.api.ingredients.IIngredientRenderer;
 
 import appeng.integration.modules.jeirei.FluidBlockRendering;

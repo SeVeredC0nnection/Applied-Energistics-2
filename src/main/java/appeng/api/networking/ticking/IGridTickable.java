@@ -23,7 +23,6 @@
 
 package appeng.api.networking.ticking;
 
-import TickingRequest;
 import appeng.api.networking.IGridNode;
 import appeng.api.networking.IGridNodeService;
 

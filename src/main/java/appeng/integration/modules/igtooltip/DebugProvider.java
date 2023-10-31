@@ -3,7 +3,7 @@ package appeng.integration.modules.igtooltip;
 import java.util.ArrayList;
 
 import org.jetbrains.annotations.Nullable;
-import var;
+
 import net.minecraft.ChatFormatting;
 import net.minecraft.core.Direction;
 import net.minecraft.nbt.CompoundTag;

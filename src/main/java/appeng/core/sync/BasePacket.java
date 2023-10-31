@@ -18,13 +18,13 @@
 
 package appeng.core.sync;
 
-import org.apache.commons.lang3.tuple.Pair;
+import net.neoforged.neoforge.network.INetworkDirection;
+import net.neoforged.neoforge.network.PlayNetworkDirection;
 
 import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.network.protocol.Packet;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.entity.player.Player;
-import net.neoforged.neoforge.network.NetworkDirection;
 import appeng.core.AEConfig;
 import appeng.core.AELog;
 import appeng.core.sync.network.NetworkHandler;
@@ -52,7 +52,7 @@ public abstract class BasePacket {
         this.p = data;
     }
 
-    public Packet<?> toPacket(NetworkDirection direction) {
+    public Packet<?> toPacket(PlayNetworkDirection direction) {
         if (this.p.array().length > 2 * 1024 * 1024) // 2k walking room :)
         {
             throw new IllegalArgumentException(
@@ -63,6 +63,6 @@ public abstract class BasePacket {
             AELog.info(this.getClass().getName() + " : " + p.readableBytes());
         }
 
-        return direction.buildPacket(Pair.of(p, 0), NetworkHandler.instance().getChannel()).getThis();
+        return direction.buildPacket(new INetworkDirection.PacketData(p, 0), NetworkHandler.instance().getChannel());
     }
 }

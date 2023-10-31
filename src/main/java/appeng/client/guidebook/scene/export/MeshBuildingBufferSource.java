@@ -12,7 +12,7 @@ import com.mojang.blaze3d.vertex.BufferBuilder;
 
 import net.minecraft.client.renderer.MultiBufferSource;
 import net.minecraft.client.renderer.RenderType;
-import var;
+
 
 /**
  * A buffer source we pass into the standard renderer to capture all rendered 3D data in buffers suitable for export.

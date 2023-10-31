@@ -28,7 +28,7 @@ import java.util.Objects;
 import com.google.common.primitives.Ints;
 
 import net.minecraft.nbt.CompoundTag;
-import var;
+
 import appeng.api.config.Actionable;
 import appeng.api.config.PowerMultiplier;
 import appeng.api.networking.crafting.ICraftingLink;

@@ -6,8 +6,8 @@ import java.util.ArrayList;
 
 import org.jetbrains.annotations.NotNull;
 import org.junit.jupiter.api.Test;
-import record;
-import var;
+
+
 import appeng.client.guidebook.document.flow.LytFlowSpan;
 import appeng.client.guidebook.document.flow.LytFlowText;
 import appeng.client.guidebook.layout.FontMetrics;

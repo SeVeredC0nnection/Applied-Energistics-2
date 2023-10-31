@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import net.minecraft.world.inventory.Slot;
-import var;
+
 import appeng.client.gui.style.StyleManager;
 import appeng.menu.AEBaseMenu;
 import appeng.menu.SlotSemantic;

@@ -21,7 +21,7 @@ package appeng.util;
 import java.math.RoundingMode;
 import java.text.DecimalFormat;
 import java.text.DecimalFormatSymbols;
-import var;
+
 import com.google.common.base.Preconditions;
 
 /**

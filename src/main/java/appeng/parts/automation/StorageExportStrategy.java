@@ -2,7 +2,7 @@ package appeng.parts.automation;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import var;
+
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.server.level.ServerLevel;

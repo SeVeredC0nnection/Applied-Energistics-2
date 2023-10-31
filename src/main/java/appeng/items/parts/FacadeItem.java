@@ -37,7 +37,7 @@ import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.RenderShape;
 import net.minecraft.world.level.block.state.BlockState;
-import var;
+
 import appeng.api.ids.AETags;
 import appeng.api.implementations.items.IFacadeItem;
 import appeng.api.parts.IFacadePart;

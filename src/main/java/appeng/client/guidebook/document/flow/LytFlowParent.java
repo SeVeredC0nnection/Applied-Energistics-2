@@ -4,7 +4,7 @@ import java.util.Optional;
 
 import net.minecraft.network.chat.FormattedText;
 import net.minecraft.network.chat.Style;
-import var;
+
 import appeng.client.guidebook.compiler.PageCompiler;
 import appeng.client.guidebook.document.LytErrorSink;
 import appeng.libs.unist.UnistNode;

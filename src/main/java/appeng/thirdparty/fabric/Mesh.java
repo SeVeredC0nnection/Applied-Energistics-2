@@ -22,7 +22,7 @@ import java.util.function.Consumer;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.block.model.BakedQuad;
 import net.minecraft.client.renderer.texture.TextureAtlas;
-import var;
+
 
 /**
  * A bundle of one or more {@link QuadView} instances encoded by the renderer.

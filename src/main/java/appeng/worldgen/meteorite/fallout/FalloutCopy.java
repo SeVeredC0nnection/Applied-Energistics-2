@@ -25,7 +25,7 @@ import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.state.BlockState;
 import net.neoforged.neoforge.common.Tags;
-import var;
+
 import appeng.worldgen.meteorite.MeteoriteBlockPutter;
 
 public class FalloutCopy extends Fallout {

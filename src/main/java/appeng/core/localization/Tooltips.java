@@ -9,16 +9,15 @@ import java.util.concurrent.TimeUnit;
 import com.mojang.blaze3d.platform.InputConstants;
 
 import org.jetbrains.annotations.NotNull;
-import record;
-import var;
+
+
 import net.minecraft.ChatFormatting;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.MutableComponent;
 import net.minecraft.network.chat.Style;
 import net.minecraft.network.chat.TextColor;
 import net.minecraft.world.item.ItemStack;
-import Amount;
-import MaxedAmount;
+
 import appeng.api.behaviors.EmptyingAction;
 import appeng.api.config.PowerUnits;
 import appeng.api.stacks.AEItemKey;

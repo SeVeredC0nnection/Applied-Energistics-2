@@ -29,7 +29,7 @@ import net.minecraft.world.level.levelgen.Heightmap;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.neoforge.common.NeoForge;
 import net.neoforged.neoforge.event.level.ChunkEvent;
-import var;
+
 import appeng.core.AEConfig;
 import appeng.core.AELog;
 import appeng.server.ISubCommand;

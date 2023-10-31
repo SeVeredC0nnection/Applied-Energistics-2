@@ -1,7 +1,7 @@
 package appeng.crafting.pattern;
 
 import org.jetbrains.annotations.Nullable;
-import var;
+
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.world.SimpleContainer;
 import net.minecraft.world.item.ItemStack;

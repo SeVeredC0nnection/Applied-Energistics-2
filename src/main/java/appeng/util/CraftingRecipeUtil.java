@@ -8,7 +8,7 @@ import net.minecraft.world.item.crafting.Recipe;
 import net.minecraft.world.item.crafting.SmithingTransformRecipe;
 import net.minecraft.world.item.crafting.SmithingTrimRecipe;
 import net.neoforged.neoforge.common.crafting.IShapedRecipe;
-import var;
+
 
 public final class CraftingRecipeUtil {
     private CraftingRecipeUtil() {

@@ -24,7 +24,7 @@ import java.util.List;
 import com.mojang.blaze3d.systems.RenderSystem;
 
 import org.jetbrains.annotations.Nullable;
-import var;
+
 import net.minecraft.client.gui.GuiGraphics;
 import net.minecraft.client.gui.components.Button;
 import net.minecraft.client.gui.components.Button.OnPress;

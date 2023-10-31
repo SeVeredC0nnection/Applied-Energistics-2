@@ -6,7 +6,7 @@ import com.google.common.primitives.Ints;
 
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
-import var;
+
 import net.minecraft.world.item.ItemStack;
 
 import appeng.api.inventories.InternalInventory;

@@ -29,9 +29,9 @@ import net.minecraft.core.BlockPos;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.world.level.ChunkPos;
 import net.minecraft.world.level.chunk.ChunkAccess;
-import record;
-import var;
-import Result;
+
+
+
 import appeng.core.definitions.AEBlocks;
 
 public final class CompassService {

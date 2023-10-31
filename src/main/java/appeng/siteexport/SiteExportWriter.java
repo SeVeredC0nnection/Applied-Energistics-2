@@ -26,7 +26,7 @@ import com.google.gson.stream.JsonWriter;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import var;
+
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.nbt.NbtIo;
 import net.minecraft.resources.ResourceLocation;

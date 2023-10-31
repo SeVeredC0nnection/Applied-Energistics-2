@@ -24,7 +24,7 @@ import com.mojang.blaze3d.vertex.DefaultVertexFormat;
 
 import org.joml.Quaternionf;
 import org.joml.Vector3f;
-import var;
+
 import net.minecraft.client.renderer.block.model.BlockModel;
 import net.minecraft.core.Direction;
 

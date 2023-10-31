@@ -31,7 +31,7 @@ import java.util.Objects;
 import com.google.common.base.Preconditions;
 
 import org.jetbrains.annotations.Nullable;
-import var;
+
 import net.minecraft.client.resources.model.ModelBakery;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.Item;

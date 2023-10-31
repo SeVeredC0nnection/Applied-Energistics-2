@@ -36,7 +36,7 @@ import com.google.gson.JsonParseException;
 import net.minecraft.server.packs.resources.ReloadableResourceManager;
 import net.minecraft.server.packs.resources.ResourceManager;
 import net.minecraft.server.packs.resources.ResourceManagerReloadListener;
-import var;
+
 import appeng.core.AppEng;
 
 /**

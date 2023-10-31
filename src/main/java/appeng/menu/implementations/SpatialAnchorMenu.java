@@ -27,7 +27,7 @@ import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.inventory.MenuType;
 import net.minecraft.world.level.ChunkPos;
 import net.minecraft.world.level.LevelAccessor;
-import var;
+
 import appeng.api.config.Settings;
 import appeng.api.config.YesNo;
 import appeng.blockentity.spatial.SpatialAnchorBlockEntity;

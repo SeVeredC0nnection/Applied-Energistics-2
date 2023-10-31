@@ -29,7 +29,7 @@ import java.util.stream.Stream;
 import com.google.common.base.Preconditions;
 
 import org.jetbrains.annotations.Nullable;
-import var;
+
 import net.minecraft.core.Registry;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.FriendlyByteBuf;

@@ -9,7 +9,7 @@ import com.mojang.authlib.GameProfile;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.level.Level;
-import var;
+
 
 public final class FakePlayer {
     public static UUID DEFAULT_UUID = UUID.fromString("60C173A5-E1E6-4B87-85B1-272CE424521D");

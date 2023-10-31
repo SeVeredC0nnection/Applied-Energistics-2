@@ -25,7 +25,7 @@ import net.minecraft.core.BlockPos;
 import net.minecraft.core.SectionPos;
 import net.minecraft.server.MinecraftServer;
 import net.minecraft.world.level.ChunkPos;
-import var;
+
 import appeng.core.localization.PlayerMessages;
 import appeng.server.ISubCommand;
 

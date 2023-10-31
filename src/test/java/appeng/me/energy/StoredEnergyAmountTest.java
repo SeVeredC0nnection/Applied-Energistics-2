@@ -3,7 +3,7 @@ package appeng.me.energy;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-import StoredEnergyAmount;
+
 import java.util.ArrayList;
 import java.util.List;
 

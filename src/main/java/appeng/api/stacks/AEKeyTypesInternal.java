@@ -6,7 +6,7 @@ import net.neoforged.neoforge.registries.IForgeRegistry;
 import com.google.common.base.Preconditions;
 
 import org.jetbrains.annotations.ApiStatus;
-import var;
+
 
 /**
  * Manages the registry used to synchronize key spaces to the client.

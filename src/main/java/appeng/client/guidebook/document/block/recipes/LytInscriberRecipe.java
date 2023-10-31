@@ -2,7 +2,7 @@
 package appeng.client.guidebook.document.block.recipes;
 
 import net.minecraft.resources.ResourceLocation;
-import var;
+
 import appeng.client.guidebook.document.LytRect;
 import appeng.client.guidebook.document.block.LytSlot;
 import appeng.client.guidebook.layout.LayoutContext;

@@ -26,7 +26,7 @@ package appeng.api.stacks;
 import java.util.Objects;
 
 import net.minecraft.resources.ResourceLocation;
-import var;
+
 
 /**
  * AE2's registry of all known {@link AEKeyType key types}.

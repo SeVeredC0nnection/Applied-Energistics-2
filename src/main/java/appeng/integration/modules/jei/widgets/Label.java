@@ -9,8 +9,8 @@ import net.minecraft.client.gui.GuiGraphics;
 import net.minecraft.client.renderer.Rect2i;
 import net.minecraft.network.chat.Component;
 import net.minecraft.util.FormattedCharSequence;
-import record;
-import var;
+
+
 
 public class Label extends AbstractWidget implements Widget {
     public final float x;

@@ -1,7 +1,7 @@
 package appeng.me.energy;
 
 import net.minecraft.util.Mth;
-import var;
+
 import appeng.api.networking.events.GridPowerStorageStateChanged;
 
 /**

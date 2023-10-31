@@ -3,7 +3,7 @@ package appeng.client.guidebook.document.block;
 import appeng.client.guidebook.color.SymbolicColor;
 import appeng.client.guidebook.document.DefaultStyles;
 import appeng.client.guidebook.render.RenderContext;
-import var;
+
 
 public class LytHeading extends LytParagraph {
     private int depth = 1;

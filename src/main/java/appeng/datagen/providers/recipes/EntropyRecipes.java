@@ -18,10 +18,13 @@
 
 package appeng.datagen.providers.recipes;
 
+import java.util.concurrent.CompletableFuture;
 import java.util.function.Consumer;
 
+import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.recipes.FinishedRecipe;
+import net.minecraft.data.recipes.RecipeOutput;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.level.block.Blocks;
@@ -31,17 +34,17 @@ import appeng.core.AppEng;
 import appeng.recipes.entropy.EntropyRecipeBuilder;
 
 public class EntropyRecipes extends AE2RecipeProvider {
-    public EntropyRecipes(PackOutput output) {
-        super(output);
+    public EntropyRecipes(PackOutput output, CompletableFuture<HolderLookup.Provider> lookupProvider) {
+        super(output, lookupProvider);
     }
 
     @Override
-    public void buildRecipes(Consumer<FinishedRecipe> consumer) {
+    public void buildRecipes(RecipeOutput consumer) {
         buildCoolRecipes(consumer);
         buildHeatRecipes(consumer);
     }
 
-    private void buildCoolRecipes(Consumer<FinishedRecipe> consumer) {
+    private void buildCoolRecipes(RecipeOutput consumer) {
 
         EntropyRecipeBuilder.cool(AppEng.makeId("entropy/cool/flowing_water_snowball"))
                 .setInputFluid(Fluids.FLOWING_WATER)
@@ -75,7 +78,7 @@ public class EntropyRecipes extends AE2RecipeProvider {
 
     }
 
-    private void buildHeatRecipes(Consumer<FinishedRecipe> consumer) {
+    private void buildHeatRecipes(RecipeOutput consumer) {
 
         EntropyRecipeBuilder.heat(AppEng.makeId("entropy/heat/cobblestone_stone"))
                 .setInputBlock(Blocks.COBBLESTONE)

@@ -18,6 +18,7 @@
 
 plugins {
     id "net.neoforged.gradle.userdev"
+    id "net.neoforged.gradle.mixin"
     id "maven-publish"
     id "com.diffplug.spotless"
     id "com.github.johnrengelman.shadow"
@@ -148,9 +149,6 @@ dependencies {
     testImplementation("org.mockito:mockito-junit-jupiter:5.3.1")
 
     compileOnly 'org.apache.commons:commons-configuration2:2.9.0'
-
-    // Annotation Processors
-    annotationProcessor 'org.spongepowered:mixin:0.8.4:processor'
 }
 archivesBaseName = artifact_basename
 
@@ -315,6 +313,10 @@ minecraft {
     }
 }
 
+mixin {
+    config "ae2.mixins.json"
+}
+
 runs {
     client {
         with commonRunProperties
@@ -401,7 +403,6 @@ shadowJar {
                 "Implementation-Title"  : "${project.name}",
                 "Implementation-Version": "${project.version}",
                 "Implementation-Vendor" : "TeamAppliedEnergistics",
-                "MixinConfigs"          : "ae2.mixins.json"
         ])
     }
 
@@ -540,18 +541,6 @@ task downloadFromCrowdin(type: JavaExec) {
     mainClass = 'Crowdin'
     args 'update_translations'
     workingDir "."
-}
-
-////////////////
-// IntelliJ Project Import
-// The Mixin annotation process does not have an obfuscation source when running through the IntelliJ compiler,
-// thus we have to prevent it from being activated as part of importing this Gradle project into IntelliJ.
-if (System.getProperty("idea.sync.active") == "true") {
-    afterEvaluate {
-        tasks.withType(JavaCompile).all {
-            it.options.annotationProcessorPath = files()
-        }
-    }
 }
 
 // See https://github.com/AppliedEnergistics/Applied-Energistics-2/issues/5259

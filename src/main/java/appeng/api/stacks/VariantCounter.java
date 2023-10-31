@@ -3,7 +3,7 @@ package appeng.api.stacks;
 import java.util.Collection;
 import java.util.Iterator;
 import java.util.NoSuchElementException;
-import var;
+
 import it.unimi.dsi.fastutil.objects.Object2LongMap;
 import it.unimi.dsi.fastutil.objects.Object2LongSortedMap;
 

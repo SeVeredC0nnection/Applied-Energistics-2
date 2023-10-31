@@ -25,7 +25,7 @@ import org.bytedeco.ffmpeg.global.swscale;
 import org.bytedeco.ffmpeg.swscale.SwsContext;
 import org.bytedeco.javacpp.BytePointer;
 import org.bytedeco.javacpp.DoublePointer;
-import var;
+
 
 /**
  * Uses ffmpeg to write WebP animations.

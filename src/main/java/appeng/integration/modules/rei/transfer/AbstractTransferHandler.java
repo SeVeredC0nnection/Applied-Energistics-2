@@ -1,7 +1,7 @@
 package appeng.integration.modules.rei.transfer;
 
 import org.jetbrains.annotations.Nullable;
-import var;
+
 import net.minecraft.world.item.crafting.Recipe;
 
 import me.shedaniel.rei.api.client.registry.display.DisplayRegistry;

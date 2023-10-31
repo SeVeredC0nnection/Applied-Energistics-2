@@ -22,7 +22,7 @@ import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.inventory.MenuType;
 import net.minecraft.world.item.ItemStack;
-import var;
+
 import appeng.api.features.GridLinkables;
 import appeng.api.inventories.InternalInventory;
 import appeng.blockentity.networking.WirelessAccessPointBlockEntity;

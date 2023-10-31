@@ -4,7 +4,7 @@ import java.util.Map;
 import java.util.Objects;
 
 import net.minecraft.network.chat.Component;
-import var;
+
 import appeng.api.config.Actionable;
 import appeng.api.networking.security.IActionSource;
 import appeng.api.networking.ticking.TickRateModulation;

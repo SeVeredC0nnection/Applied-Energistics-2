@@ -26,7 +26,7 @@ import com.google.common.collect.BiMap;
 import com.google.common.collect.HashBiMap;
 
 import org.jetbrains.annotations.Nullable;
-import var;
+
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.server.MinecraftServer;
 import net.minecraft.server.level.ServerLevel;
@@ -66,9 +66,11 @@ final class PlayerRegistryInternal extends AESavedData implements IPlayerRegistr
             throw new IllegalStateException("Cannot retrieve player data for a server that has no overworld.");
         }
         return overworld.getDataStorage().computeIfAbsent(
-                nbt -> PlayerRegistryInternal.load(server, nbt),
-                () -> new PlayerRegistryInternal(server),
-                PlayerRegistryInternal.NAME);
+                new Factory<>(
+                        () -> new PlayerRegistryInternal(server),
+                        nbt -> PlayerRegistryInternal.load(server, nbt),
+                        null
+                ), PlayerRegistryInternal.NAME);
     }
 
     @Nullable

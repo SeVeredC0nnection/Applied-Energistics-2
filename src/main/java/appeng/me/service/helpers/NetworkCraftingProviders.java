@@ -15,8 +15,8 @@ import java.util.Set;
 import com.google.common.collect.Iterators;
 
 import org.jetbrains.annotations.Nullable;
-import record;
-import var;
+
+
 import appeng.api.config.FuzzyMode;
 import appeng.api.crafting.IPatternDetails;
 import appeng.api.networking.IGridNode;

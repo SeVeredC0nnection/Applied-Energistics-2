@@ -20,8 +20,9 @@ package appeng.spatial;
 
 import java.util.List;
 
+import net.minecraft.world.level.saveddata.SavedData;
 import org.jetbrains.annotations.Nullable;
-import var;
+
 import net.minecraft.core.BlockPos;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.world.level.block.state.BlockState;
@@ -34,6 +35,12 @@ import appeng.core.definitions.AEBlocks;
  * Allocates and manages plots for spatial storage in the spatial storage level.
  */
 public final class SpatialStoragePlotManager {
+
+    private static final SavedData.Factory<SpatialStorageWorldData> FACTORY = new SavedData.Factory<>(
+            SpatialStorageWorldData::new,
+            SpatialStorageWorldData::load,
+            null
+    );
 
     public static final SpatialStoragePlotManager INSTANCE = new SpatialStoragePlotManager();
 
@@ -57,8 +64,7 @@ public final class SpatialStoragePlotManager {
 
     private SpatialStorageWorldData getWorldData() {
         return getLevel().getChunkSource().getDataStorage().computeIfAbsent(
-                SpatialStorageWorldData::load,
-                SpatialStorageWorldData::new,
+                FACTORY,
                 SpatialStorageWorldData.ID);
     }
 

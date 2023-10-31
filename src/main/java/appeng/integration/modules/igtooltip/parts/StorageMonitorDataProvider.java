@@ -5,7 +5,7 @@ import appeng.api.integrations.igtooltip.TooltipContext;
 import appeng.api.integrations.igtooltip.providers.BodyProvider;
 import appeng.core.localization.InGameTooltip;
 import appeng.parts.reporting.AbstractMonitorPart;
-import var;
+
 
 /**
  * Displays the stack if present and if the monitor is locked.

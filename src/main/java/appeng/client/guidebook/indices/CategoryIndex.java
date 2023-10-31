@@ -8,7 +8,7 @@ import com.google.gson.stream.JsonWriter;
 import org.apache.commons.lang3.tuple.Pair;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import var;
+
 import appeng.client.guidebook.PageAnchor;
 import appeng.client.guidebook.compiler.ParsedGuidePage;
 

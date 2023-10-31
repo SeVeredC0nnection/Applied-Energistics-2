@@ -8,7 +8,7 @@ import snownee.jade.api.IBlockComponentProvider;
 import snownee.jade.api.ITooltip;
 import snownee.jade.api.Identifiers;
 import snownee.jade.api.config.IPluginConfig;
-import var;
+
 import appeng.api.integrations.igtooltip.providers.NameProvider;
 
 class NameProviderAdapter<T> extends BaseProvider implements IBlockComponentProvider {

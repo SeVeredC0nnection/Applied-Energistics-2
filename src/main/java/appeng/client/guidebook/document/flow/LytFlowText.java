@@ -1,7 +1,7 @@
 package appeng.client.guidebook.document.flow;
 
 import appeng.client.guidebook.document.block.LytVisitor;
-import var;
+
 
 public class LytFlowText extends LytFlowContent {
     private String text = "";

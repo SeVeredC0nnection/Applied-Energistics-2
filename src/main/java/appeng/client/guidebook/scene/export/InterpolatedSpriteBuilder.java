@@ -3,13 +3,13 @@ package appeng.client.guidebook.scene.export;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
-import InterpolatedResult;
+
 import com.mojang.blaze3d.platform.NativeImage;
 
 import net.minecraft.client.renderer.texture.SpriteContents;
 import net.minecraft.util.FastColor;
-import record;
-import var;
+
+
 import it.unimi.dsi.fastutil.ints.IntArrayList;
 
 /**

@@ -3,11 +3,11 @@ package appeng.me;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.junit.jupiter.api.Assertions.assertSame;
 
-import ManagedGridNode;
+
 import org.assertj.core.data.Offset;
 import org.jetbrains.annotations.NotNull;
 import org.junit.jupiter.api.Test;
-import var;
+
 import net.minecraft.core.BlockPos;
 import net.minecraft.nbt.CompoundTag;
 

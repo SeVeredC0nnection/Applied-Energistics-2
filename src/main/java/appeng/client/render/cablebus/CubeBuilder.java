@@ -26,7 +26,7 @@ import java.util.List;
 import com.google.common.base.Preconditions;
 
 import org.joml.Vector4f;
-import var;
+
 import net.minecraft.client.renderer.LightTexture;
 import net.minecraft.client.renderer.block.model.BakedQuad;
 import net.minecraft.client.renderer.texture.TextureAtlasSprite;

@@ -3,7 +3,7 @@ package appeng.integration.modules.rei;
 import com.google.common.primitives.Ints;
 
 import org.jetbrains.annotations.Nullable;
-import var;
+
 import net.minecraft.world.item.ItemStack;
 
 import me.shedaniel.rei.api.common.entry.EntryStack;

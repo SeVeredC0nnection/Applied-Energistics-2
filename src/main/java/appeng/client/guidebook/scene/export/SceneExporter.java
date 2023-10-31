@@ -25,15 +25,14 @@ import com.mojang.blaze3d.vertex.VertexSorting;
 import org.joml.Matrix4f;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import record;
-import var;
+
+
 import net.minecraft.client.renderer.RenderStateShard;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.texture.TextureAtlasSprite;
 
 import it.unimi.dsi.fastutil.ints.IntArrayList;
-import GeneratedIndexBuffer;
-import IndexBufferAttributes;
+
 import appeng.client.guidebook.scene.CameraSettings;
 import appeng.client.guidebook.scene.GuidebookLevelRenderer;
 import appeng.client.guidebook.scene.GuidebookScene;

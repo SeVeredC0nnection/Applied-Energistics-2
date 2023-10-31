@@ -27,7 +27,7 @@ import java.util.Iterator;
 import java.util.NoSuchElementException;
 
 import net.minecraft.world.item.ItemStack;
-import var;
+
 
 /**
  * Iterates over the slots of an {@link InternalInventory} that are not empty.

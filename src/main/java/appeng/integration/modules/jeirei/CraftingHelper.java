@@ -6,7 +6,7 @@ import java.util.Map;
 import net.minecraft.core.NonNullList;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.crafting.Recipe;
-import var;
+
 import appeng.api.stacks.AEItemKey;
 import appeng.core.AELog;
 import appeng.core.sync.network.NetworkHandler;

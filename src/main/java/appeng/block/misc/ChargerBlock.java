@@ -20,7 +20,7 @@ package appeng.block.misc;
 
 import org.jetbrains.annotations.Nullable;
 import org.joml.Vector3f;
-import var;
+
 import net.minecraft.client.Minecraft;
 import net.minecraft.core.BlockPos;
 import net.minecraft.util.Mth;

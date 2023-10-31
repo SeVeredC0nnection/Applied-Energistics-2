@@ -21,7 +21,7 @@ package appeng.recipes.mattercannon;
 import com.google.gson.JsonObject;
 
 import org.jetbrains.annotations.Nullable;
-import var;
+
 import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.crafting.Ingredient;

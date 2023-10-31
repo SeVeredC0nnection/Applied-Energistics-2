@@ -5,7 +5,7 @@ import java.util.HashMap;
 import org.junit.jupiter.api.Test;
 import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoSettings;
-import var;
+
 import appeng.client.guidebook.compiler.PageCompiler;
 import appeng.client.guidebook.document.LytErrorSink;
 import appeng.libs.mdast.mdx.model.MdxJsxAttribute;

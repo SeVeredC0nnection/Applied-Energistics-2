@@ -3,9 +3,8 @@ package appeng.client.guidebook.style;
 import java.util.function.Consumer;
 
 import org.jetbrains.annotations.Nullable;
-import var;
-import ResolvedTextStyle;
-import TextStyle;
+
+
 import appeng.client.guidebook.document.DefaultStyles;
 
 public interface Styleable {

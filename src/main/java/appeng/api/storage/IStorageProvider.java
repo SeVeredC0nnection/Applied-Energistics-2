@@ -25,7 +25,7 @@ package appeng.api.storage;
 
 import appeng.api.networking.IGridNodeService;
 import appeng.api.networking.IManagedGridNode;
-import var;
+
 
 /**
  * Allows you to provide storage to the grid's storage system. Implementations that are attached as grid node services

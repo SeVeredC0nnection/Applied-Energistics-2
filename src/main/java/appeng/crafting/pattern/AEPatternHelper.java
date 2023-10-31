@@ -1,7 +1,7 @@
 package appeng.crafting.pattern;
 
 import java.util.LinkedHashMap;
-import var;
+
 import appeng.api.stacks.AEKey;
 import appeng.api.stacks.GenericStack;
 

@@ -35,7 +35,7 @@ import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.neoforged.neoforge.client.extensions.common.IClientFluidTypeExtensions;
 import net.neoforged.neoforge.fluids.FluidStack;
-import var;
+
 import appeng.blockentity.storage.SkyStoneTankBlockEntity;
 import appeng.client.render.cablebus.CubeBuilder;
 

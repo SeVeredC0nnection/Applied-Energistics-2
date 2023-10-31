@@ -26,7 +26,7 @@ import appeng.api.stacks.KeyCounter;
 import appeng.api.storage.MEStorage;
 import appeng.util.prioritylist.DefaultPriorityList;
 import appeng.util.prioritylist.IPartitionList;
-import var;
+
 
 public class MEInventoryHandler extends DelegatingMEInventory {
 

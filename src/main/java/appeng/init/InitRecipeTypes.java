@@ -7,7 +7,7 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.crafting.Recipe;
 import net.minecraft.world.item.crafting.RecipeType;
 import net.neoforged.neoforge.registries.IForgeRegistry;
-import record;
+
 
 public class InitRecipeTypes {
     private record ToRegister(RecipeType<?> recipeType, ResourceLocation id) {

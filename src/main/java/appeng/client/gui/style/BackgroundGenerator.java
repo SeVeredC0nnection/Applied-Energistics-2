@@ -1,7 +1,7 @@
 package appeng.client.gui.style;
 
 import net.minecraft.client.gui.GuiGraphics;
-import var;
+
 
 /**
  * Generates a background of arbitrary size by tiling a pre-defined background.

@@ -27,13 +27,13 @@ import java.util.WeakHashMap;
 import com.google.common.collect.ImmutableSet;
 
 import org.jetbrains.annotations.Nullable;
-import record;
-import var;
+
+
 import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.inventory.MenuType;
-import CraftingCpuList;
+
 import appeng.api.config.CpuSelectionMode;
 import appeng.api.networking.IGrid;
 import appeng.api.networking.crafting.ICraftingCPU;

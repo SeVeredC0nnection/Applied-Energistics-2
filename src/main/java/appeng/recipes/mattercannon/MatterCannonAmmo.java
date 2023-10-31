@@ -25,8 +25,10 @@ import com.google.common.base.Preconditions;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
 
+import net.minecraft.advancements.AdvancementHolder;
+import net.minecraft.data.recipes.RecipeOutput;
 import org.jetbrains.annotations.Nullable;
-import record;
+
 import net.minecraft.core.NonNullList;
 import net.minecraft.core.RegistryAccess;
 import net.minecraft.data.recipes.FinishedRecipe;
@@ -42,8 +44,8 @@ import net.minecraft.world.item.crafting.RecipeType;
 import net.minecraft.world.level.ItemLike;
 import net.minecraft.world.level.Level;
 import net.neoforged.neoforge.common.crafting.CraftingHelper;
-import net.neoforged.neoforge.common.crafting.conditions.NotCondition;
-import net.neoforged.neoforge.common.crafting.conditions.TagEmptyCondition;
+import net.neoforged.neoforge.common.conditions.NotCondition;
+import net.neoforged.neoforge.common.conditions.TagEmptyCondition;
 import appeng.core.AppEng;
 import appeng.init.InitRecipeTypes;
 
@@ -69,15 +71,15 @@ public class MatterCannonAmmo implements Recipe<Container> {
         this.weight = weight;
     }
 
-    public static void ammo(Consumer<FinishedRecipe> consumer, ResourceLocation id, ItemLike item, float weight) {
+    public static void ammo(RecipeOutput consumer, ResourceLocation id, ItemLike item, float weight) {
         consumer.accept(new Ammo(id, null, Ingredient.of(item), weight));
     }
 
-    public static void ammo(Consumer<FinishedRecipe> consumer, ResourceLocation id, Ingredient ammo, float weight) {
+    public static void ammo(RecipeOutput consumer, ResourceLocation id, Ingredient ammo, float weight) {
         consumer.accept(new Ammo(id, null, ammo, weight));
     }
 
-    public static void ammo(Consumer<FinishedRecipe> consumer, ResourceLocation id, TagKey<Item> tag, float weight) {
+    public static void ammo(RecipeOutput consumer, ResourceLocation id, TagKey<Item> tag, float weight) {
         consumer.accept(new Ammo(id, tag, null, weight));
     }
 
@@ -147,24 +149,18 @@ public class MatterCannonAmmo implements Recipe<Container> {
         }
 
         @Override
-        public ResourceLocation getId() {
+        public ResourceLocation id() {
             return this.id;
         }
 
         @Override
-        public RecipeSerializer<?> getType() {
+        public RecipeSerializer<?> type() {
             return MatterCannonAmmoSerializer.INSTANCE;
         }
 
         @Nullable
         @Override
-        public JsonObject serializeAdvancement() {
-            return null;
-        }
-
-        @Nullable
-        @Override
-        public ResourceLocation getAdvancementId() {
+        public AdvancementHolder advancement() {
             return null;
         }
     }

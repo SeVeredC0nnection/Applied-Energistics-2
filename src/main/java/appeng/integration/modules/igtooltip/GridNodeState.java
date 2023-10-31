@@ -1,7 +1,7 @@
 package appeng.integration.modules.igtooltip;
 
 import org.jetbrains.annotations.Nullable;
-import var;
+
 import net.minecraft.network.chat.MutableComponent;
 
 import appeng.api.networking.IGridNode;

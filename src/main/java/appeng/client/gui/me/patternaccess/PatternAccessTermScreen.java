@@ -33,8 +33,8 @@ import com.google.common.collect.HashMultimap;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import record;
-import var;
+
+
 import net.minecraft.client.gui.GuiGraphics;
 import net.minecraft.client.renderer.Rect2i;
 import net.minecraft.locale.Language;

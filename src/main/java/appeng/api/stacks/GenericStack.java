@@ -2,6 +2,7 @@ package appeng.api.stacks;
 
 import java.util.Objects;
 
+import net.neoforged.neoforge.fluids.FluidStack;
 import org.jetbrains.annotations.Nullable;
 
 import net.minecraft.nbt.CompoundTag;

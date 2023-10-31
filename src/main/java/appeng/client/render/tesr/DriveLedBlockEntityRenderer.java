@@ -21,7 +21,7 @@ package appeng.client.render.tesr;
 import com.mojang.blaze3d.vertex.PoseStack;
 
 import org.joml.Vector3f;
-import var;
+
 import net.minecraft.client.renderer.MultiBufferSource;
 import net.minecraft.client.renderer.blockentity.BlockEntityRenderer;
 import net.minecraft.client.renderer.blockentity.BlockEntityRendererProvider;

@@ -31,7 +31,7 @@ import com.google.common.collect.Iterables;
 import com.mojang.authlib.GameProfile;
 
 import org.jetbrains.annotations.Nullable;
-import var;
+
 import net.minecraft.ChatFormatting;
 import net.minecraft.client.Minecraft;
 import net.minecraft.core.BlockPos;

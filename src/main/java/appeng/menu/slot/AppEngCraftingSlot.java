@@ -26,7 +26,7 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.crafting.RecipeType;
 import net.minecraft.world.level.Level;
 import net.neoforged.neoforge.common.CommonHooks;
-import var;
+
 import appeng.api.inventories.InternalInventory;
 import appeng.crafting.CraftingEvent;
 import appeng.helpers.Inventories;

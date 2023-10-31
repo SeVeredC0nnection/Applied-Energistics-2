@@ -3,7 +3,7 @@ package appeng.me.service;
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
-import var;
+
 import it.unimi.dsi.fastutil.objects.ObjectArrayList;
 import it.unimi.dsi.fastutil.objects.ReferenceOpenHashSet;
 

@@ -34,7 +34,7 @@ import net.minecraft.world.phys.EntityHitResult;
 import net.minecraft.world.phys.HitResult;
 import net.minecraft.world.phys.Vec3;
 import net.neoforged.neoforge.common.NeoForgeMod;
-import var;
+
 import appeng.datagen.providers.tags.ConventionTags;
 import appeng.items.tools.NetworkToolItem;
 

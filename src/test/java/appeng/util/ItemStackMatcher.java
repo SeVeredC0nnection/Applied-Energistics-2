@@ -2,7 +2,7 @@ package appeng.util;
 
 import org.mockito.ArgumentMatcher;
 import org.mockito.Mockito;
-import var;
+
 import net.minecraft.world.item.ItemStack;
 
 public class ItemStackMatcher implements ArgumentMatcher<ItemStack> {

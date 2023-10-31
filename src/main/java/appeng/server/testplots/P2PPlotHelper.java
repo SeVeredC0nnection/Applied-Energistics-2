@@ -7,7 +7,7 @@ import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.world.level.Level;
-import var;
+
 import appeng.api.networking.IGrid;
 import appeng.api.parts.PartHelper;
 import appeng.core.definitions.ItemDefinition;

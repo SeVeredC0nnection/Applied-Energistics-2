@@ -4,7 +4,7 @@ package appeng.client.guidebook.scene;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Set;
-import var;
+
 import appeng.client.guidebook.color.SymbolicColor;
 import appeng.client.guidebook.compiler.PageCompiler;
 import appeng.client.guidebook.compiler.tags.BlockTagCompiler;

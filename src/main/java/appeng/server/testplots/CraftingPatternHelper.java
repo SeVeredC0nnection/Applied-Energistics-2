@@ -4,7 +4,7 @@ import net.minecraft.world.inventory.TransientCraftingContainer;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.crafting.RecipeType;
 import net.minecraft.world.level.Level;
-import var;
+
 import appeng.api.crafting.PatternDetailsHelper;
 import appeng.menu.AutoCraftingMenu;
 

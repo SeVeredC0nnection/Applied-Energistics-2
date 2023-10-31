@@ -28,11 +28,11 @@ import net.minecraft.server.RunningOnDifferentThreadException;
 import net.minecraft.server.level.ServerPlayer;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.DistExecutor;
-import net.neoforged.neoforge.network.NetworkDirection;
+import net.neoforged.neoforge.network.PlayNetworkDirection;
 import net.neoforged.neoforge.network.NetworkEvent;
 import net.neoforged.neoforge.network.NetworkRegistry;
 import net.neoforged.neoforge.network.event.EventNetworkChannel;
-import var;
+
 import appeng.core.AELog;
 import appeng.core.AppEng;
 import appeng.core.sync.BasePacket;
@@ -67,7 +67,7 @@ public class NetworkHandler {
     @SubscribeEvent
     public void serverPacket(final NetworkEvent.ClientCustomPayloadEvent ev) {
         try {
-            NetworkEvent.Context ctx = ev.getSource().get();
+            var ctx = ev.getSource();
             ctx.setPacketHandled(true);
             var packet = deserializePacket(ev.getPayload());
             var player = ctx.getSender();
@@ -91,7 +91,7 @@ public class NetworkHandler {
         }
         if (this.clientHandler != null) {
             try {
-                NetworkEvent.Context ctx = ev.getSource().get();
+                var ctx = ev.getSource();
                 ctx.setPacketHandled(true);
 
                 var packet = deserializePacket(ev.getPayload());
@@ -115,24 +115,24 @@ public class NetworkHandler {
     public void sendToAll(BasePacket message) {
         var server = AppEng.instance().getCurrentServer();
         if (server != null) {
-            server.getPlayerList().broadcastAll(message.toPacket(NetworkDirection.PLAY_TO_CLIENT));
+            server.getPlayerList().broadcastAll(message.toPacket(PlayNetworkDirection.PLAY_TO_CLIENT));
         }
     }
 
     public void sendTo(BasePacket message, ServerPlayer player) {
-        player.connection.send(message.toPacket(NetworkDirection.PLAY_TO_CLIENT));
+        player.connection.send(message.toPacket(PlayNetworkDirection.PLAY_TO_CLIENT));
     }
 
     public void sendToAllAround(BasePacket message, TargetPoint point) {
         var server = AppEng.instance().getCurrentServer();
         if (server != null) {
-            Packet<?> pkt = message.toPacket(NetworkDirection.PLAY_TO_CLIENT);
+            Packet<?> pkt = message.toPacket(PlayNetworkDirection.PLAY_TO_CLIENT);
             server.getPlayerList().broadcast(point.excluded, point.x, point.y, point.z, point.r2,
                     point.level.dimension(), pkt);
         }
     }
 
     public void sendToServer(BasePacket message) {
-        Minecraft.getInstance().getConnection().send(message.toPacket(NetworkDirection.PLAY_TO_SERVER));
+        Minecraft.getInstance().getConnection().send(message.toPacket(PlayNetworkDirection.PLAY_TO_SERVER));
     }
 }

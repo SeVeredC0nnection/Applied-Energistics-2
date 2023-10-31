@@ -21,7 +21,7 @@ package appeng.items.misc;
 import java.util.Objects;
 
 import org.jetbrains.annotations.Nullable;
-import var;
+
 import net.minecraft.world.entity.SlotAccess;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.inventory.ClickAction;

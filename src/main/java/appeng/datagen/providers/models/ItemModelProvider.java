@@ -6,7 +6,7 @@ import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
 import net.neoforged.neoforge.client.model.generators.ItemModelBuilder;
 import net.neoforged.neoforge.common.data.ExistingFileHelper;
-import var;
+
 import appeng.api.ids.AEItemIds;
 import appeng.api.util.AEColor;
 import appeng.client.render.model.MemoryCardModel;

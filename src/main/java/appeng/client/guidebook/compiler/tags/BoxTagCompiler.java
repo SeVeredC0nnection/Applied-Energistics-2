@@ -1,7 +1,7 @@
 package appeng.client.guidebook.compiler.tags;
 
 import java.util.Set;
-import var;
+
 import appeng.client.guidebook.compiler.PageCompiler;
 import appeng.client.guidebook.document.block.LytBlockContainer;
 import appeng.client.guidebook.document.block.LytBox;

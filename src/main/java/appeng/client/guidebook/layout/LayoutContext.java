@@ -3,7 +3,7 @@ package appeng.client.guidebook.layout;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.OptionalInt;
-import var;
+
 import com.google.common.collect.Streams;
 
 import appeng.client.guidebook.document.LytRect;

@@ -18,12 +18,12 @@
 
 package appeng.menu;
 
-import SlotSemantic;
+
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
 import org.jetbrains.annotations.Nullable;
-import var;
+
 
 /**
  * Registry for {@link SlotSemantic}.

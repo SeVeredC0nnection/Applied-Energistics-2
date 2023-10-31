@@ -19,7 +19,7 @@
 package appeng.block;
 
 import org.jetbrains.annotations.Nullable;
-import var;
+
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.CreativeModeTab;

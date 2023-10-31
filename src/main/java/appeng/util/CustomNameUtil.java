@@ -3,7 +3,7 @@ package appeng.util;
 import com.google.gson.JsonParseException;
 
 import org.jetbrains.annotations.Nullable;
-import var;
+
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.nbt.Tag;
 import net.minecraft.network.chat.Component;

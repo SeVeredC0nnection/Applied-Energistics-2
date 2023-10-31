@@ -21,7 +21,7 @@ package appeng.hooks;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.item.Tiers;
 import net.neoforged.neoforge.event.entity.player.PlayerEvent;
-import var;
+
 import appeng.core.definitions.AEBlocks;
 
 /**

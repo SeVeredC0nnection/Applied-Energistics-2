@@ -24,7 +24,7 @@ import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.screens.Screen;
 import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.world.entity.player.Player;
-import var;
+
 import appeng.client.gui.me.crafting.CraftingCPUScreen;
 import appeng.core.sync.BasePacket;
 import appeng.menu.me.crafting.CraftingStatus;

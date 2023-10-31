@@ -11,7 +11,7 @@ import net.neoforged.api.distmarker.OnlyIn;
 import com.google.common.collect.ImmutableSet;
 
 import org.jetbrains.annotations.Nullable;
-import var;
+
 import appeng.api.stacks.AEKey;
 
 @OnlyIn(Dist.CLIENT)

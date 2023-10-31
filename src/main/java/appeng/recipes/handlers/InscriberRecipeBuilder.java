@@ -5,8 +5,10 @@ import java.util.function.Consumer;
 
 import com.google.gson.JsonObject;
 
+import net.minecraft.advancements.AdvancementHolder;
+import net.minecraft.data.recipes.RecipeOutput;
 import org.jetbrains.annotations.Nullable;
-import var;
+
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.data.recipes.FinishedRecipe;
 import net.minecraft.resources.ResourceLocation;
@@ -57,7 +59,7 @@ public class InscriberRecipeBuilder {
         return this;
     }
 
-    public void save(Consumer<FinishedRecipe> consumer, ResourceLocation id) {
+    public void save(RecipeOutput consumer, ResourceLocation id) {
         consumer.accept(new Result(id));
     }
 
@@ -91,24 +93,18 @@ public class InscriberRecipeBuilder {
         }
 
         @Override
-        public ResourceLocation getId() {
+        public ResourceLocation id() {
             return id;
         }
 
         @Override
-        public RecipeSerializer<?> getType() {
+        public RecipeSerializer<?> type() {
             return InscriberRecipeSerializer.INSTANCE;
         }
 
         @Nullable
         @Override
-        public JsonObject serializeAdvancement() {
-            return null;
-        }
-
-        @Nullable
-        @Override
-        public ResourceLocation getAdvancementId() {
+        public AdvancementHolder advancement() {
             return null;
         }
     }

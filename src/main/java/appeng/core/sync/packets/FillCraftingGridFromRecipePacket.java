@@ -28,7 +28,7 @@ import com.google.common.base.Preconditions;
 import com.google.common.primitives.Ints;
 
 import org.jetbrains.annotations.Nullable;
-import var;
+
 import io.netty.buffer.Unpooled;
 
 import net.minecraft.core.NonNullList;

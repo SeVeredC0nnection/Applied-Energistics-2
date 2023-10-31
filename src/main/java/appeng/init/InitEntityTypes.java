@@ -20,7 +20,7 @@ package appeng.init;
 
 import net.minecraft.world.entity.EntityType;
 import net.neoforged.neoforge.registries.IForgeRegistry;
-import var;
+
 import appeng.core.definitions.AEEntities;
 
 public final class InitEntityTypes {

@@ -19,7 +19,7 @@
 package appeng.init.internal;
 
 import java.util.List;
-import var;
+
 import appeng.api.upgrades.Upgrades;
 import appeng.core.definitions.AEBlocks;
 import appeng.core.definitions.AEItems;

@@ -25,7 +25,7 @@ import java.util.OptionalInt;
 import com.google.common.collect.ImmutableSet;
 
 import org.jetbrains.annotations.Nullable;
-import var;
+
 import net.minecraft.core.Direction;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.chat.Component;

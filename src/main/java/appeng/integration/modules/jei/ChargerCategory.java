@@ -3,7 +3,7 @@ package appeng.integration.modules.jei;
 import java.util.List;
 
 import net.minecraft.network.chat.Component;
-import var;
+
 import mezz.jei.api.gui.builder.IRecipeLayoutBuilder;
 import mezz.jei.api.gui.drawable.IDrawable;
 import mezz.jei.api.gui.drawable.IDrawableStatic;

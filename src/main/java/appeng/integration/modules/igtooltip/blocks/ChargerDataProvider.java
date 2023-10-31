@@ -2,7 +2,7 @@ package appeng.integration.modules.igtooltip.blocks;
 
 import net.minecraft.ChatFormatting;
 import net.minecraft.util.Mth;
-import var;
+
 import appeng.api.implementations.items.IAEItemPowerStorage;
 import appeng.api.integrations.igtooltip.TooltipBuilder;
 import appeng.api.integrations.igtooltip.TooltipContext;

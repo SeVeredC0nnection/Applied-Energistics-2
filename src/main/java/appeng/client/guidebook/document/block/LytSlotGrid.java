@@ -3,7 +3,7 @@ package appeng.client.guidebook.document.block;
 import java.util.List;
 
 import net.minecraft.world.item.crafting.Ingredient;
-import var;
+
 import appeng.client.gui.Icon;
 import appeng.client.guidebook.color.ConstantColor;
 import appeng.client.guidebook.document.LytRect;

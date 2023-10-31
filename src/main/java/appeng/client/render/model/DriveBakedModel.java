@@ -27,7 +27,7 @@ import javax.annotation.Nullable;
 import com.mojang.math.Transformation;
 
 import org.joml.Vector3f;
-import var;
+
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.block.model.BakedQuad;
 import net.minecraft.client.resources.model.BakedModel;

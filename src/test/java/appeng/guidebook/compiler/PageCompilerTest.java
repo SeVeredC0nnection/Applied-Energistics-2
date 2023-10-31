@@ -7,7 +7,7 @@ import java.nio.file.Paths;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import var;
+
 import appeng.client.guidebook.Guide;
 import appeng.client.guidebook.GuidePage;
 import appeng.client.guidebook.compiler.PageCompiler;

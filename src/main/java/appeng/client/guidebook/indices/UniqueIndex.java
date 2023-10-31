@@ -12,8 +12,8 @@ import org.apache.commons.lang3.tuple.Pair;
 import org.jetbrains.annotations.Nullable;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import record;
-import var;
+
+
 import net.minecraft.resources.ResourceLocation;
 
 import appeng.client.guidebook.GuidePageChange;

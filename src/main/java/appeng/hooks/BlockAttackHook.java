@@ -10,7 +10,7 @@ import net.neoforged.api.distmarker.Dist;
 import net.neoforged.api.distmarker.OnlyIn;
 import net.neoforged.neoforge.common.NeoForge;
 import net.neoforged.neoforge.event.entity.player.PlayerInteractEvent;
-import var;
+
 import appeng.api.parts.IPartHost;
 import appeng.core.sync.network.NetworkHandler;
 import appeng.core.sync.packets.PartLeftClickPacket;

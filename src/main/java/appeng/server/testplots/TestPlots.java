@@ -16,7 +16,7 @@ import java.util.function.Consumer;
 import com.google.common.collect.Sets;
 
 import org.jetbrains.annotations.Nullable;
-import var;
+
 import net.minecraft.Util;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
@@ -654,7 +654,8 @@ public final class TestPlots {
             Set<AEItemKey> neededIngredients = new HashSet<>();
             Set<AEItemKey> providedResults = new HashSet<>();
 
-            for (var recipe : craftingRecipes) {
+            for (var holder : craftingRecipes) {
+                var recipe = holder.value();
                 if (recipe.isSpecial()) {
                     continue;
                 }

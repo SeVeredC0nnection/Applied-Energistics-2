@@ -24,7 +24,7 @@ import com.google.common.base.Preconditions;
 import com.google.common.collect.ImmutableList;
 
 import org.jetbrains.annotations.Nullable;
-import var;
+
 import net.minecraft.core.Direction;
 
 import appeng.api.networking.GridFlags;

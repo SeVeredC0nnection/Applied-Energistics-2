@@ -1,7 +1,7 @@
 package appeng.util;
 
 import org.jetbrains.annotations.Nullable;
-import var;
+
 import net.minecraft.world.item.ItemStack;
 import net.neoforged.neoforge.fluids.FluidUtil;
 import appeng.api.stacks.GenericStack;

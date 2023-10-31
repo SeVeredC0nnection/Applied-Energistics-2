@@ -24,7 +24,7 @@ import java.util.Map;
 import com.google.common.collect.ImmutableMap;
 
 import org.jetbrains.annotations.Nullable;
-import var;
+
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.block.model.BakedQuad;
 import net.minecraft.client.renderer.block.model.ItemOverrides;
