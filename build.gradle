@@ -350,7 +350,10 @@ runs {
     data {
         with commonRunProperties
         programArguments = [
-                '--mod', 'ae2', '--all', '--output', file('src/generated/resources/'), "--existing", file("src/main/resources")
+                '--mod', 'ae2',
+                '--all',
+                '--output', file('src/generated/resources/').absolutePath,
+                '--existing', file('src/main/resources').absolutePath
         ]
     }
     guideexport {

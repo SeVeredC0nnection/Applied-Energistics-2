@@ -46,59 +46,59 @@ public class EntropyRecipes extends AE2RecipeProvider {
 
     private void buildCoolRecipes(RecipeOutput consumer) {
 
-        EntropyRecipeBuilder.cool(AppEng.makeId("entropy/cool/flowing_water_snowball"))
+        EntropyRecipeBuilder.cool()
                 .setInputFluid(Fluids.FLOWING_WATER)
                 .setDrops(new ItemStack(Items.SNOWBALL))
-                .save(consumer);
+                .save(consumer, AppEng.makeId("entropy/cool/flowing_water_snowball"));
 
-        EntropyRecipeBuilder.cool(AppEng.makeId("entropy/cool/grass_block_dirt"))
+        EntropyRecipeBuilder.cool()
                 .setInputBlock(Blocks.GRASS_BLOCK)
                 .setOutputBlock(Blocks.DIRT)
-                .save(consumer);
+                .save(consumer, AppEng.makeId("entropy/cool/grass_block_dirt"));
 
-        EntropyRecipeBuilder.cool(AppEng.makeId("entropy/cool/lava_obsidian"))
+        EntropyRecipeBuilder.cool()
                 .setInputFluid(Fluids.LAVA)
                 .setOutputBlock(Blocks.OBSIDIAN)
-                .save(consumer);
+                .save(consumer, AppEng.makeId("entropy/cool/lava_obsidian"));
 
-        EntropyRecipeBuilder.cool(AppEng.makeId("entropy/cool/stone_bricks_cracked_stone_bricks"))
+        EntropyRecipeBuilder.cool()
                 .setInputBlock(Blocks.STONE_BRICKS)
                 .setOutputBlock(Blocks.CRACKED_STONE_BRICKS)
-                .save(consumer);
+                .save(consumer, AppEng.makeId("entropy/cool/stone_bricks_cracked_stone_bricks"));
 
-        EntropyRecipeBuilder.cool(AppEng.makeId("entropy/cool/stone_cobblestone"))
+        EntropyRecipeBuilder.cool()
                 .setInputBlock(Blocks.STONE)
                 .setOutputBlock(Blocks.COBBLESTONE)
-                .save(consumer);
+                .save(consumer, AppEng.makeId("entropy/cool/stone_cobblestone"));
 
-        EntropyRecipeBuilder.cool(AppEng.makeId("entropy/cool/water_ice"))
+        EntropyRecipeBuilder.cool()
                 .setInputFluid(Fluids.WATER)
                 .setOutputBlock(Blocks.ICE)
-                .save(consumer);
+                .save(consumer, AppEng.makeId("entropy/cool/water_ice"));
 
     }
 
     private void buildHeatRecipes(RecipeOutput consumer) {
 
-        EntropyRecipeBuilder.heat(AppEng.makeId("entropy/heat/cobblestone_stone"))
+        EntropyRecipeBuilder.heat()
                 .setInputBlock(Blocks.COBBLESTONE)
                 .setOutputBlock(Blocks.STONE)
-                .save(consumer);
+                .save(consumer, AppEng.makeId("entropy/heat/cobblestone_stone"));
 
-        EntropyRecipeBuilder.heat(AppEng.makeId("entropy/heat/ice_water"))
+        EntropyRecipeBuilder.heat()
                 .setInputBlock(Blocks.ICE)
                 .setOutputFluid(Fluids.WATER)
-                .save(consumer);
+                .save(consumer, AppEng.makeId("entropy/heat/ice_water"));
 
-        EntropyRecipeBuilder.heat(AppEng.makeId("entropy/heat/snow_water"))
+        EntropyRecipeBuilder.heat()
                 .setInputBlock(Blocks.SNOW)
                 .setOutputFluid(Fluids.FLOWING_WATER)
-                .save(consumer);
+                .save(consumer, AppEng.makeId("entropy/heat/snow_water"));
 
-        EntropyRecipeBuilder.heat(AppEng.makeId("entropy/heat/water_air"))
+        EntropyRecipeBuilder.heat()
                 .setInputFluid(Fluids.WATER)
                 .setOutputBlock(Blocks.AIR)
-                .save(consumer);
+                .save(consumer, AppEng.makeId("entropy/heat/water_air"));
 
     }
 

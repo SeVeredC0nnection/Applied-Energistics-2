@@ -81,7 +81,7 @@ public final class FacadeRecipe extends CustomRecipe {
 
     public static RecipeSerializer<FacadeRecipe> getSerializer(FacadeItem facade) {
         if (SERIALIZER == null) {
-            SERIALIZER = new SimpleCraftingRecipeSerializer<>((id, category) -> new FacadeRecipe(category, facade));
+            SERIALIZER = new SimpleCraftingRecipeSerializer<>((category) -> new FacadeRecipe(category, facade));
         }
         return SERIALIZER;
     }

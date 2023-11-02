@@ -1,7 +1,12 @@
 package appeng.recipes.handlers;
 
+import appeng.core.AppEng;
+import appeng.init.InitRecipeTypes;
+import com.mojang.serialization.Codec;
+import com.mojang.serialization.codecs.RecordCodecBuilder;
 import net.minecraft.core.NonNullList;
 import net.minecraft.core.RegistryAccess;
+import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.Container;
 import net.minecraft.world.item.Item;
@@ -12,9 +17,6 @@ import net.minecraft.world.item.crafting.RecipeSerializer;
 import net.minecraft.world.item.crafting.RecipeType;
 import net.minecraft.world.level.Level;
 
-import appeng.core.AppEng;
-import appeng.init.InitRecipeTypes;
-
 public class ChargerRecipe implements Recipe<Container> {
     public static final ResourceLocation TYPE_ID = AppEng.makeId("charger");
 
@@ -23,6 +25,13 @@ public class ChargerRecipe implements Recipe<Container> {
     public final Ingredient ingredient;
     public final NonNullList<Ingredient> ingredients;
     public final Item result;
+
+    public static final Codec<ChargerRecipe> CODEC = RecordCodecBuilder.create(builder -> {
+        return builder.group(
+                Ingredient.CODEC_NONEMPTY.fieldOf("ingredient").forGetter(ChargerRecipe::getIngredient),
+                BuiltInRegistries.ITEM.byNameCodec().fieldOf("result").forGetter(cr -> cr.result)
+        ).apply(builder, ChargerRecipe::new);
+    });
 
     public ChargerRecipe(Ingredient ingredient, Item result) {
         this.ingredient = ingredient;

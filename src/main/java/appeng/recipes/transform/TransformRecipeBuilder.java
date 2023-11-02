@@ -44,7 +44,7 @@ public class TransformRecipeBuilder {
             json.add("result", stackObj);
 
             JsonArray inputs = new JsonArray();
-            ingredients.forEach(ingredient -> inputs.add(ingredient.toJson()));
+            ingredients.forEach(ingredient -> inputs.add(ingredient.toJson(false)));
             json.add("ingredients", inputs);
             json.add("circumstance", circumstance.toJson());
         }

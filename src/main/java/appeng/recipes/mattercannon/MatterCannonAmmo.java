@@ -18,15 +18,22 @@
 
 package appeng.recipes.mattercannon;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Objects;
 import java.util.function.Consumer;
 
 import com.google.common.base.Preconditions;
 import com.google.gson.JsonArray;
+import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 
+import com.mojang.serialization.DataResult;
+import com.mojang.serialization.JsonOps;
+import net.minecraft.Util;
 import net.minecraft.advancements.AdvancementHolder;
 import net.minecraft.data.recipes.RecipeOutput;
+import net.neoforged.neoforge.common.conditions.ICondition;
 import org.jetbrains.annotations.Nullable;
 
 import net.minecraft.core.NonNullList;
@@ -127,17 +134,18 @@ public class MatterCannonAmmo implements Recipe<Container> {
             float weight) implements FinishedRecipe {
 
         public void serializeRecipeData(JsonObject json) {
-            JsonArray conditions = new JsonArray();
+            List<ICondition> conditions = new ArrayList<>();
             if (tag != null) {
-                json.add("ammo", Ingredient.of(tag).toJson());
-                conditions.add(CraftingHelper.serialize(new NotCondition(
-                        new TagEmptyCondition(tag.location()))));
+                json.add("ammo", Ingredient.of(tag).toJson(false));
+                conditions.add(new NotCondition(
+                        new TagEmptyCondition(tag.location())));
             } else if (nonTag != null) {
-                json.add("ammo", nonTag.toJson());
+                json.add("ammo", nonTag.toJson(false));
             }
 
             json.addProperty("weight", this.weight);
-            json.add("conditions", conditions);
+            var conditionsJson = Util.getOrThrow(ICondition.LIST_CODEC.encodeStart(JsonOps.INSTANCE, conditions), IllegalStateException::new);
+            json.add("conditions", conditionsJson);
         }
 
         @Override

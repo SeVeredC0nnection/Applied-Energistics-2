@@ -18,21 +18,46 @@
 
 package appeng.recipes.handlers;
 
+import appeng.core.AppEng;
+import appeng.init.InitRecipeTypes;
+import com.mojang.serialization.Codec;
+import com.mojang.serialization.codecs.RecordCodecBuilder;
 import net.minecraft.core.NonNullList;
 import net.minecraft.core.RegistryAccess;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.util.ExtraCodecs;
 import net.minecraft.world.Container;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.crafting.CraftingRecipeCodecs;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.item.crafting.Recipe;
 import net.minecraft.world.item.crafting.RecipeSerializer;
 import net.minecraft.world.item.crafting.RecipeType;
 import net.minecraft.world.level.Level;
 
-import appeng.core.AppEng;
-import appeng.init.InitRecipeTypes;
-
 public class InscriberRecipe implements Recipe<Container> {
+
+    private static final Codec<InscriberProcessType> MODE_CODEC = ExtraCodecs.stringResolverCodec(
+            mode -> switch (mode) {
+                case INSCRIBE -> "inscribe";
+                case PRESS -> "press";
+            },
+            mode -> switch (mode) {
+                default -> InscriberProcessType.INSCRIBE;
+                case "press" -> InscriberProcessType.PRESS;
+            }
+    );
+
+    public static final Codec<InscriberRecipe> CODEC = RecordCodecBuilder.create(
+            builder -> builder.group(
+                    Ingredient.CODEC_NONEMPTY.fieldOf("middle").forGetter(ir -> ir.middleInput),
+                    CraftingRecipeCodecs.ITEMSTACK_OBJECT_CODEC.fieldOf("result").forGetter(ir -> ir.output),
+                    Ingredient.CODEC.fieldOf("top").forGetter(ir -> ir.topOptional),
+                    Ingredient.CODEC.fieldOf("bottom").forGetter(ir -> ir.bottomOptional),
+                    MODE_CODEC.fieldOf("mode").forGetter(ir -> ir.processType)
+            ).apply(builder, InscriberRecipe::new)
+    );
+
     public static final ResourceLocation TYPE_ID = AppEng.makeId("inscriber");
 
     public static final RecipeType<InscriberRecipe> TYPE = InitRecipeTypes.register(TYPE_ID.toString());
@@ -44,7 +69,7 @@ public class InscriberRecipe implements Recipe<Container> {
     private final InscriberProcessType processType;
 
     public InscriberRecipe(Ingredient middleInput, ItemStack output,
-            Ingredient topOptional, Ingredient bottomOptional, InscriberProcessType processType) {
+                           Ingredient topOptional, Ingredient bottomOptional, InscriberProcessType processType) {
         this.middleInput = middleInput;
         this.output = output;
         this.topOptional = topOptional;
