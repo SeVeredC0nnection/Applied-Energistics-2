@@ -13,6 +13,7 @@ modId="ae2"
 version="0.0.0"
 displayName="Applied Energistics 2"
 description="A Mod about Matter, Energy and using them to conquer the world.."
+mixin="ae2.mixins.json"
 
 [[dependencies.ae2]]
     modId="neoforge"
